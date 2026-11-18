@@ -1,0 +1,1846 @@
+{
+  "datagovau:acnc-register:8fb32972": {
+    "unchanged": 26,
+    "fields_changed": 0,
+    "unlinked": 24,
+    "details": [
+      {
+        "entity": "abn:11008484197",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "entity_type",
+            "website"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.214,
+            "legal_name": -0.462
+          }
+        }
+      },
+      {
+        "entity": "abn:11036390091",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "abn",
+            "entity_type",
+            "legal_name",
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {}
+        }
+      },
+      {
+        "entity": "abn:11102379386",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "abn": -0.174,
+            "legal_name": -0.337
+          }
+        }
+      },
+      {
+        "entity": "abn:20628702821",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:asic-credit-licensee:35953a01"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "website"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.171,
+            "address": 0.359,
+            "entity_type": -0.234,
+            "legal_name": -0.199
+          }
+        }
+      },
+      {
+        "entity": "abn:11079815697",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "entity_type",
+            "website"
+          ],
+          "winner_changed": [
+            "legal_name"
+          ],
+          "confidence_moved": {
+            "abn": -0.248
+          }
+        }
+      },
+      {
+        "entity": "abn:11434864088",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "abn",
+            "entity_type",
+            "legal_name",
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {}
+        }
+      },
+      {
+        "entity": "abn:31617685757",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "abn": -0.174,
+            "entity_type": -0.204,
+            "legal_name": -0.337
+          }
+        }
+      },
+      {
+        "entity": "abn:11099754393",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "website"
+          ],
+          "winner_changed": [
+            "legal_name"
+          ],
+          "confidence_moved": {
+            "abn": -0.214,
+            "entity_type": -0.18
+          }
+        }
+      },
+      {
+        "entity": "abn:14026871233",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "abn",
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "legal_name": -0.297
+          }
+        }
+      },
+      {
+        "entity": "abn:32139515503",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "abn": -0.174,
+            "legal_name": -0.337
+          }
+        }
+      },
+      {
+        "entity": "abn:11477115050",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "website"
+          ],
+          "winner_changed": [
+            "legal_name"
+          ],
+          "confidence_moved": {
+            "abn": -0.248
+          }
+        }
+      },
+      {
+        "entity": "abn:15327568072",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "abn",
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "entity_type": -0.244,
+            "legal_name": -0.297
+          }
+        }
+      },
+      {
+        "entity": "abn:34022593124",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "abn": -0.174,
+            "entity_type": -0.204,
+            "legal_name": -0.337
+          }
+        }
+      },
+      {
+        "entity": "abn:11566496319",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "website"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.214,
+            "entity_type": -0.228,
+            "legal_name": -0.462
+          }
+        }
+      },
+      {
+        "entity": "abn:16012612342",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "abn",
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "entity_type": -0.244,
+            "legal_name": -0.297
+          }
+        }
+      },
+      {
+        "entity": "abn:40047335486",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "abn": -0.174,
+            "legal_name": -0.337
+          }
+        }
+      },
+      {
+        "entity": "abn:11650414765",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "website"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.214,
+            "entity_type": -0.228,
+            "legal_name": -0.462
+          }
+        }
+      },
+      {
+        "entity": "abn:16613859423",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "abn",
+            "entity_type",
+            "legal_name",
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {}
+        }
+      },
+      {
+        "entity": "abn:54921860625",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "website"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.174,
+            "entity_type": -0.204,
+            "legal_name": -0.337
+          }
+        }
+      },
+      {
+        "entity": "abn:11835071529",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "website"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.214,
+            "entity_type": -0.228,
+            "legal_name": -0.462
+          }
+        }
+      },
+      {
+        "entity": "abn:17141108241",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "abn",
+            "legal_name",
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {}
+        }
+      },
+      {
+        "entity": "abn:55621826051",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "abn": -0.174,
+            "entity_type": -0.204,
+            "legal_name": -0.337
+          }
+        }
+      },
+      {
+        "entity": "abn:12003741878",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "entity_type",
+            "website"
+          ],
+          "winner_changed": [
+            "legal_name"
+          ],
+          "confidence_moved": {
+            "abn": -0.214
+          }
+        }
+      },
+      {
+        "entity": "abn:17462007615",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "abn",
+            "entity_type",
+            "legal_name",
+            "website"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {}
+        }
+      }
+    ],
+    "profiles_affected": 24,
+    "of_unlinked_winner_would_change": 18,
+    "of_unlinked_field_would_vanish": 23,
+    "fields_resting_on_this_source_alone": 51,
+    "all_entities": {
+      "touching_this_source": 525,
+      "would_no_longer_link": 525,
+      "of_all_entities": 654,
+      "links_lost": 525
+    }
+  },
+  "datagovau:asic-credit-licensee:35953a01": {
+    "unchanged": 41,
+    "fields_changed": 0,
+    "unlinked": 9,
+    "details": [
+      {
+        "entity": "abn:11005357522",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "trading_names"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.199,
+            "entity_type": -0.228,
+            "legal_name": -0.356
+          }
+        }
+      },
+      {
+        "entity": "abn:20628702821",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "abn": -0.109,
+            "entity_type": -0.234,
+            "legal_name": -0.136
+          }
+        }
+      },
+      {
+        "entity": "abn:38270143010",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "trading_names"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "abn": -0.161,
+            "legal_name": -0.311
+          }
+        }
+      },
+      {
+        "entity": "abn:12004044937",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "trading_names"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.199,
+            "entity_type": -0.228,
+            "legal_name": -0.427
+          }
+        }
+      },
+      {
+        "entity": "abn:32003417650",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.199,
+            "entity_type": -0.228,
+            "legal_name": -0.427
+          }
+        }
+      },
+      {
+        "entity": "abn:33007457141",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "trading_names"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.199,
+            "legal_name": -0.356
+          }
+        }
+      },
+      {
+        "entity": "abn:44153391283",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.199,
+            "entity_type": -0.228,
+            "legal_name": -0.427
+          }
+        }
+      },
+      {
+        "entity": "abn:47088129613",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [
+            "legal_name"
+          ],
+          "confidence_moved": {
+            "abn": -0.199
+          }
+        }
+      },
+      {
+        "entity": "abn:48123123124",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address",
+            "trading_names"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.199,
+            "legal_name": -0.284
+          }
+        }
+      }
+    ],
+    "profiles_affected": 9,
+    "of_unlinked_winner_would_change": 3,
+    "of_unlinked_field_would_vanish": 8,
+    "fields_resting_on_this_source_alone": 12,
+    "all_entities": {
+      "touching_this_source": 14,
+      "would_no_longer_link": 14,
+      "of_all_entities": 654,
+      "links_lost": 14
+    }
+  },
+  "datagovau:kzmf-7uhp:5cf1e4ea": {
+    "unchanged": 18,
+    "fields_changed": 1,
+    "unlinked": 31,
+    "details": [
+      {
+        "entity": "abn:95000029729",
+        "fields_lost": [],
+        "winner_changed": [],
+        "confidence_moved": {
+          "entity_type": -0.207,
+          "legal_name": 0.214
+        }
+      },
+      {
+        "entity": "abn:11008484197",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.102,
+            "legal_name": -0.078
+          }
+        }
+      },
+      {
+        "entity": "abn:11002317133",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": 0.227
+          }
+        }
+      },
+      {
+        "entity": "abn:18007122527",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:system_procurement_contract-disclosure-report:09335d0c"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "entity_type"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.195
+          }
+        }
+      },
+      {
+        "entity": "abn:11005357522",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:asic-credit-licensee:35953a01"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.149,
+            "entity_type": -0.238,
+            "legal_name": 0.183
+          }
+        }
+      },
+      {
+        "entity": "abn:11079815697",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.146,
+            "legal_name": 0.258
+          }
+        }
+      },
+      {
+        "entity": "abn:11139502891",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.151,
+            "entity_type": -0.207,
+            "legal_name": -0.179
+          }
+        }
+      },
+      {
+        "entity": "abn:24008445743",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:system_procurement_contract-disclosure-report:09335d0c"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "entity_type"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": 0.081
+          }
+        }
+      },
+      {
+        "entity": "abn:12004044937",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:asic-credit-licensee:35953a01"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.149,
+            "entity_type": -0.238,
+            "legal_name": -0.106
+          }
+        }
+      },
+      {
+        "entity": "abn:11099754393",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.102,
+            "entity_type": 0.127,
+            "legal_name": 0.423
+          }
+        }
+      },
+      {
+        "entity": "abn:12073056149",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.151,
+            "entity_type": -0.207,
+            "legal_name": -0.179
+          }
+        }
+      },
+      {
+        "entity": "abn:26004280273",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:system_procurement_contract-disclosure-report:09335d0c"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.195
+          }
+        }
+      },
+      {
+        "entity": "abn:32003417650",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:asic-credit-licensee:35953a01"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.149,
+            "entity_type": -0.238,
+            "legal_name": -0.106
+          }
+        }
+      },
+      {
+        "entity": "abn:11477115050",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "entity_type"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.146,
+            "legal_name": 0.258
+          }
+        }
+      },
+      {
+        "entity": "abn:13161165966",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.151,
+            "entity_type": -0.207,
+            "legal_name": -0.179
+          }
+        }
+      },
+      {
+        "entity": "abn:26087330416",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:system_procurement_contract-disclosure-report:09335d0c"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "entity_type"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.229,
+            "legal_name": 0.209
+          }
+        }
+      },
+      {
+        "entity": "abn:33007457141",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:asic-credit-licensee:35953a01"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.149,
+            "legal_name": 0.183
+          }
+        }
+      },
+      {
+        "entity": "abn:11566496319",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.102,
+            "entity_type": -0.238,
+            "legal_name": -0.078
+          }
+        }
+      },
+      {
+        "entity": "abn:14010654994",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.151,
+            "entity_type": -0.207,
+            "legal_name": -0.179
+          }
+        }
+      },
+      {
+        "entity": "abn:29003001205",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:system_procurement_contract-disclosure-report:09335d0c"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "entity_type"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187
+          }
+        }
+      },
+      {
+        "entity": "abn:44153391283",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:asic-credit-licensee:35953a01"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.149,
+            "entity_type": -0.238,
+            "legal_name": -0.106
+          }
+        }
+      },
+      {
+        "entity": "abn:11650414765",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.102,
+            "entity_type": -0.238,
+            "legal_name": -0.078
+          }
+        }
+      },
+      {
+        "entity": "abn:16009690251",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.151,
+            "entity_type": -0.207,
+            "legal_name": -0.179
+          }
+        }
+      },
+      {
+        "entity": "abn:30117449911",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:system_procurement_contract-disclosure-report:09335d0c"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "entity_type"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.195
+          }
+        }
+      },
+      {
+        "entity": "abn:47088129613",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:asic-credit-licensee:35953a01"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.149,
+            "legal_name": 0.276
+          }
+        }
+      },
+      {
+        "entity": "abn:11835071529",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.102,
+            "entity_type": -0.238,
+            "legal_name": -0.078
+          }
+        }
+      },
+      {
+        "entity": "abn:17004973684",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.151,
+            "entity_type": -0.207,
+            "legal_name": 0.305
+          }
+        }
+      },
+      {
+        "entity": "abn:32099911449",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:system_procurement_contract-disclosure-report:09335d0c"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "entity_type"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.195
+          }
+        }
+      },
+      {
+        "entity": "abn:48123123124",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:asic-credit-licensee:35953a01"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "entity_type"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.149,
+            "legal_name": 0.328
+          }
+        }
+      },
+      {
+        "entity": "abn:12003741878",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.102,
+            "legal_name": 0.285
+          }
+        }
+      },
+      {
+        "entity": "abn:17007820322",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.151,
+            "entity_type": -0.207,
+            "legal_name": 0.229
+          }
+        }
+      },
+      {
+        "entity": "abn:32121089665",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:system_procurement_contract-disclosure-report:09335d0c"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "entity_type"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.195
+          }
+        }
+      }
+    ],
+    "profiles_affected": 32,
+    "of_unlinked_winner_would_change": 0,
+    "of_unlinked_field_would_vanish": 9,
+    "fields_resting_on_this_source_alone": 9,
+    "all_entities": {
+      "touching_this_source": 513,
+      "would_no_longer_link": 512,
+      "of_all_entities": 654,
+      "links_lost": 514
+    }
+  },
+  "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc": {
+    "unchanged": 42,
+    "fields_changed": 0,
+    "unlinked": 8,
+    "details": [
+      {
+        "entity": "abn:11036390091",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "address": -0.18
+          }
+        }
+      },
+      {
+        "entity": "abn:11434864088",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "address": -0.18
+          }
+        }
+      },
+      {
+        "entity": "abn:14026871233",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "entity_type",
+            "trading_names"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "address": -0.175,
+            "legal_name": -0.171
+          }
+        }
+      },
+      {
+        "entity": "abn:15327568072",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "address": -0.175,
+            "entity_type": -0.253,
+            "legal_name": -0.171
+          }
+        }
+      },
+      {
+        "entity": "abn:16012612342",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "trading_names"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "address": -0.175,
+            "entity_type": -0.253,
+            "legal_name": -0.171
+          }
+        }
+      },
+      {
+        "entity": "abn:16613859423",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "address": -0.18
+          }
+        }
+      },
+      {
+        "entity": "abn:17141108241",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "address": -0.18
+          }
+        }
+      },
+      {
+        "entity": "abn:17462007615",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "address": -0.18
+          }
+        }
+      }
+    ],
+    "profiles_affected": 8,
+    "of_unlinked_winner_would_change": 0,
+    "of_unlinked_field_would_vanish": 2,
+    "fields_resting_on_this_source_alone": 3,
+    "all_entities": {
+      "touching_this_source": 124,
+      "would_no_longer_link": 124,
+      "of_all_entities": 654,
+      "links_lost": 124
+    }
+  },
+  "datagovau:qbcc-licensed-contractors-register:25608781": {
+    "unchanged": 32,
+    "fields_changed": 1,
+    "unlinked": 17,
+    "details": [
+      {
+        "entity": "abn:95000029729",
+        "fields_lost": [
+          "acn"
+        ],
+        "winner_changed": [
+          "address"
+        ],
+        "confidence_moved": {
+          "entity_type": -0.246,
+          "legal_name": -0.13
+        }
+      },
+      {
+        "entity": "abn:11002317133",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn",
+            "address",
+            "entity_type"
+          ],
+          "winner_changed": [
+            "legal_name"
+          ],
+          "confidence_moved": {
+            "abn": -0.23
+          }
+        }
+      },
+      {
+        "entity": "abn:11102379386",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.109,
+            "address": -0.153,
+            "legal_name": -0.106
+          }
+        }
+      },
+      {
+        "entity": "abn:38270143010",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:asic-credit-licensee:35953a01"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.158,
+            "address": 0.355,
+            "legal_name": -0.143
+          }
+        }
+      },
+      {
+        "entity": "abn:32001255312",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:system_procurement_contract-disclosure-report:09335d0c"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn",
+            "entity_type"
+          ],
+          "winner_changed": [
+            "address"
+          ],
+          "confidence_moved": {
+            "abn": -0.198,
+            "legal_name": -0.263
+          }
+        }
+      },
+      {
+        "entity": "abn:11139502891",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn",
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.198,
+            "entity_type": -0.246,
+            "legal_name": -0.332
+          }
+        }
+      },
+      {
+        "entity": "abn:31617685757",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.109,
+            "address": -0.153,
+            "entity_type": -0.253,
+            "legal_name": -0.106
+          }
+        }
+      },
+      {
+        "entity": "abn:12073056149",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn",
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.198,
+            "entity_type": -0.246,
+            "legal_name": -0.332
+          }
+        }
+      },
+      {
+        "entity": "abn:32139515503",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.109,
+            "address": -0.153,
+            "legal_name": -0.106
+          }
+        }
+      },
+      {
+        "entity": "abn:13161165966",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn",
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.198,
+            "entity_type": -0.246,
+            "legal_name": -0.332
+          }
+        }
+      },
+      {
+        "entity": "abn:34022593124",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.109,
+            "address": -0.153,
+            "entity_type": -0.253,
+            "legal_name": -0.106
+          }
+        }
+      },
+      {
+        "entity": "abn:14010654994",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn",
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.198,
+            "entity_type": -0.246,
+            "legal_name": -0.332
+          }
+        }
+      },
+      {
+        "entity": "abn:40047335486",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.109,
+            "address": -0.153,
+            "legal_name": -0.106
+          }
+        }
+      },
+      {
+        "entity": "abn:16009690251",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn",
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.198,
+            "entity_type": -0.246,
+            "legal_name": -0.332
+          }
+        }
+      },
+      {
+        "entity": "abn:54921860625",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.109,
+            "entity_type": -0.253,
+            "legal_name": -0.106
+          }
+        }
+      },
+      {
+        "entity": "abn:17004973684",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn",
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.198,
+            "entity_type": -0.246,
+            "legal_name": -0.175
+          }
+        }
+      },
+      {
+        "entity": "abn:55621826051",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:acnc-register:8fb32972"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.109,
+            "address": -0.153,
+            "entity_type": -0.253,
+            "legal_name": -0.106
+          }
+        }
+      },
+      {
+        "entity": "abn:17007820322",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "acn",
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.198,
+            "entity_type": -0.246,
+            "legal_name": -0.215
+          }
+        }
+      }
+    ],
+    "profiles_affected": 18,
+    "of_unlinked_winner_would_change": 2,
+    "of_unlinked_field_would_vanish": 14,
+    "fields_resting_on_this_source_alone": 25,
+    "all_entities": {
+      "touching_this_source": 99,
+      "would_no_longer_link": 98,
+      "of_all_entities": 654,
+      "links_lost": 100
+    }
+  },
+  "datagovau:system_procurement_contract-disclosure-report:09335d0c": {
+    "unchanged": 40,
+    "fields_changed": 1,
+    "unlinked": 9,
+    "details": [
+      {
+        "entity": "abn:95000029729",
+        "fields_lost": [],
+        "winner_changed": [],
+        "confidence_moved": {
+          "address": 0.315,
+          "legal_name": -0.113
+        }
+      },
+      {
+        "entity": "abn:18007122527",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.313
+          }
+        }
+      },
+      {
+        "entity": "abn:32001255312",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:qbcc-licensed-contractors-register:25608781"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.151,
+            "address": 0.315,
+            "legal_name": -0.228
+          }
+        }
+      },
+      {
+        "entity": "abn:24008445743",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.255
+          }
+        }
+      },
+      {
+        "entity": "abn:26004280273",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.313
+          }
+        }
+      },
+      {
+        "entity": "abn:26087330416",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [
+            "legal_name"
+          ],
+          "confidence_moved": {
+            "abn": -0.229
+          }
+        }
+      },
+      {
+        "entity": "abn:29003001205",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.104
+          }
+        }
+      },
+      {
+        "entity": "abn:30117449911",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.313
+          }
+        }
+      },
+      {
+        "entity": "abn:32099911449",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.313
+          }
+        }
+      },
+      {
+        "entity": "abn:32121089665",
+        "effect": "no longer links two sources; the entity would not exist",
+        "remaining_sources": [
+          "datagovau:kzmf-7uhp:5cf1e4ea"
+        ],
+        "if_kept_as_a_single_source_record": {
+          "fields_lost": [
+            "address"
+          ],
+          "winner_changed": [],
+          "confidence_moved": {
+            "abn": -0.187,
+            "legal_name": -0.313
+          }
+        }
+      }
+    ],
+    "profiles_affected": 10,
+    "of_unlinked_winner_would_change": 1,
+    "of_unlinked_field_would_vanish": 8,
+    "fields_resting_on_this_source_alone": 7,
+    "all_entities": {
+      "touching_this_source": 34,
+      "would_no_longer_link": 33,
+      "of_all_entities": 654,
+      "links_lost": 35
+    }
+  }
+}

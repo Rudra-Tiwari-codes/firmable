@@ -1,0 +1,114 @@
+{
+  "profiles": 50,
+  "as_of": "2026-11-06",
+  "matcher_version": "rules-0.2.0",
+  "profiles_with_a_contested_field": 15,
+  "contested_by_field": {
+    "legal_name": 15,
+    "entity_type": 1
+  },
+  "field_fill": {
+    "legal_name": 50,
+    "abn": 50,
+    "acn": 14,
+    "entity_type": 42,
+    "status": 0,
+    "website": 23,
+    "industry_code": 0,
+    "date_registered": 0,
+    "trading_names": 7,
+    "address": 50
+  },
+  "source_deletion": {
+    "datagovau:acnc-register:8fb32972": {
+      "unchanged": 26,
+      "fields_changed": 0,
+      "unlinked": 24,
+      "profiles_affected": 24,
+      "of_unlinked_winner_would_change": 18,
+      "of_unlinked_field_would_vanish": 23,
+      "fields_resting_on_this_source_alone": 51,
+      "all_entities": {
+        "touching_this_source": 525,
+        "would_no_longer_link": 525,
+        "of_all_entities": 654,
+        "links_lost": 525
+      }
+    },
+    "datagovau:asic-credit-licensee:35953a01": {
+      "unchanged": 41,
+      "fields_changed": 0,
+      "unlinked": 9,
+      "profiles_affected": 9,
+      "of_unlinked_winner_would_change": 3,
+      "of_unlinked_field_would_vanish": 8,
+      "fields_resting_on_this_source_alone": 12,
+      "all_entities": {
+        "touching_this_source": 14,
+        "would_no_longer_link": 14,
+        "of_all_entities": 654,
+        "links_lost": 14
+      }
+    },
+    "datagovau:kzmf-7uhp:5cf1e4ea": {
+      "unchanged": 18,
+      "fields_changed": 1,
+      "unlinked": 31,
+      "profiles_affected": 32,
+      "of_unlinked_winner_would_change": 0,
+      "of_unlinked_field_would_vanish": 9,
+      "fields_resting_on_this_source_alone": 9,
+      "all_entities": {
+        "touching_this_source": 513,
+        "would_no_longer_link": 512,
+        "of_all_entities": 654,
+        "links_lost": 514
+      }
+    },
+    "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc": {
+      "unchanged": 42,
+      "fields_changed": 0,
+      "unlinked": 8,
+      "profiles_affected": 8,
+      "of_unlinked_winner_would_change": 0,
+      "of_unlinked_field_would_vanish": 2,
+      "fields_resting_on_this_source_alone": 3,
+      "all_entities": {
+        "touching_this_source": 124,
+        "would_no_longer_link": 124,
+        "of_all_entities": 654,
+        "links_lost": 124
+      }
+    },
+    "datagovau:qbcc-licensed-contractors-register:25608781": {
+      "unchanged": 32,
+      "fields_changed": 1,
+      "unlinked": 17,
+      "profiles_affected": 18,
+      "of_unlinked_winner_would_change": 2,
+      "of_unlinked_field_would_vanish": 14,
+      "fields_resting_on_this_source_alone": 25,
+      "all_entities": {
+        "touching_this_source": 99,
+        "would_no_longer_link": 98,
+        "of_all_entities": 654,
+        "links_lost": 100
+      }
+    },
+    "datagovau:system_procurement_contract-disclosure-report:09335d0c": {
+      "unchanged": 40,
+      "fields_changed": 1,
+      "unlinked": 9,
+      "profiles_affected": 10,
+      "of_unlinked_winner_would_change": 1,
+      "of_unlinked_field_would_vanish": 8,
+      "fields_resting_on_this_source_alone": 7,
+      "all_entities": {
+        "touching_this_source": 34,
+        "would_no_longer_link": 33,
+        "of_all_entities": 654,
+        "links_lost": 35
+      }
+    }
+  }
+}
