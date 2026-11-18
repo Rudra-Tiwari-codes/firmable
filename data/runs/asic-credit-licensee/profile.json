@@ -1,0 +1,1069 @@
+{
+  "records_profiled": 4313,
+  "columns": [
+    {
+      "column": "\ufeffREGISTER_NAME",
+      "non_empty_rate": 1.0,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Credit Licence",
+          4313
+        ]
+      ],
+      "examples": [
+        "Credit Licence",
+        "Credit Licence",
+        "Credit Licence",
+        "Credit Licence",
+        "Credit Licence"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "CRED_LIC_NUM",
+      "non_empty_rate": 1.0,
+      "distinct": 4313,
+      "top_values": [
+        [
+          "219612",
+          1
+        ],
+        [
+          "222213",
+          1
+        ],
+        [
+          "222640",
+          1
+        ],
+        [
+          "222835",
+          1
+        ],
+        [
+          "223246",
+          1
+        ]
+      ],
+      "examples": [
+        "553783",
+        "506375",
+        "429300",
+        "546774",
+        "481664"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "CRED_LIC_NAME",
+      "non_empty_rate": 1.0,
+      "distinct": 4313,
+      "top_values": [
+        [
+          "RELI CAPITAL LTD",
+          1
+        ],
+        [
+          "LA TROBE FINANCIAL ASSET MANAGEMENT LIMITED",
+          1
+        ],
+        [
+          "GLOBAL MUTUAL FUNDS PTY LTD",
+          1
+        ],
+        [
+          "PLANNING PARTNERS PTY. LTD.",
+          1
+        ],
+        [
+          "RMBL INVESTMENTS LIMITED",
+          1
+        ]
+      ],
+      "examples": [
+        "PK INVEST PTY LTD",
+        "BULL & BEAR ASSET MANAGEMENT PTY LTD",
+        "LEESVILLE CONSULTANT PTY LTD",
+        "AMALGAMATED FINANCIAL SERVICES PTY LTD",
+        "MUSLIM COMMUNITY CO-OPERATIVE AUSTRALIA LTD"
+      ],
+      "pattern_rates": {
+        "acn_checksum_valid": 0.001,
+        "company_suffix": 0.901
+      }
+    },
+    {
+      "column": "CRED_LIC_START_DT",
+      "non_empty_rate": 1.0,
+      "distinct": 1729,
+      "top_values": [
+        [
+          "21/12/2010",
+          43
+        ],
+        [
+          "01/01/2011",
+          42
+        ],
+        [
+          "12/01/2011",
+          36
+        ],
+        [
+          "11/02/2011",
+          35
+        ],
+        [
+          "15/02/2011",
+          33
+        ]
+      ],
+      "examples": [
+        "02/12/2010",
+        "18/04/2011",
+        "22/12/2010",
+        "19/04/2013",
+        "20/01/2011"
+      ],
+      "pattern_rates": {
+        "date_like": 1.0
+      }
+    },
+    {
+      "column": "CRED_LIC_END_DT",
+      "non_empty_rate": 0.0,
+      "distinct": 0,
+      "top_values": [],
+      "examples": []
+    },
+    {
+      "column": "CRED_LIC_STATUS",
+      "non_empty_rate": 1.0,
+      "distinct": 2,
+      "top_values": [
+        [
+          "APPR",
+          4306
+        ],
+        [
+          "SUSP",
+          7
+        ]
+      ],
+      "examples": [
+        "APPR",
+        "APPR",
+        "APPR",
+        "APPR",
+        "APPR"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "CRED_LIC_ABN_ACN",
+      "non_empty_rate": 1.0,
+      "distinct": 4245,
+      "top_values": [
+        [
+          "0",
+          69
+        ],
+        [
+          "80005443292",
+          1
+        ],
+        [
+          "27007332363",
+          1
+        ],
+        [
+          "20090555436",
+          1
+        ],
+        [
+          "64090069239",
+          1
+        ]
+      ],
+      "examples": [
+        "627424640",
+        "89163972585",
+        "56110272574",
+        "93657834485",
+        "63643806759"
+      ],
+      "pattern_rates": {
+        "abn_checksum_valid": 0.893,
+        "acn_checksum_valid": 0.08
+      }
+    },
+    {
+      "column": "CRED_LIC_AFSL_NUM",
+      "non_empty_rate": 1.0,
+      "distinct": 311,
+      "top_values": [
+        [
+          "0",
+          4003
+        ],
+        [
+          "219612",
+          1
+        ],
+        [
+          "222213",
+          1
+        ],
+        [
+          "222640",
+          1
+        ],
+        [
+          "222835",
+          1
+        ]
+      ],
+      "examples": [
+        "0",
+        "0",
+        "0",
+        "241066",
+        "0"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "CRED_LIC_STATUS_HISTORY",
+      "non_empty_rate": 0.006,
+      "distinct": 26,
+      "top_values": [
+        [
+          "Suspended at the request of Licensee/Registrant 18/07/2018 1",
+          1
+        ],
+        [
+          "Suspended at the request of Licensee/Registrant 19/09/2016 3",
+          1
+        ],
+        [
+          "Suspended at the request of Licensee/Registrant 01/01/2018 2",
+          1
+        ],
+        [
+          "Licensee contravenes a licence condition 02/01/2013 02/04/20",
+          1
+        ],
+        [
+          "Licensee has/will not act efficient honest or fair 19/09/201",
+          1
+        ]
+      ],
+      "examples": [
+        "Suspended at the request of Licensee/Registrant 28/03/2019 27/06/2019",
+        "Suspended at the request of Licensee/Registrant 07/04/2014 14/05/2014 ~Suspended",
+        "Person contravenes credit legislation or regulatio 20/04/2023 15/05/2024 ~Licens",
+        "Suspended at the request of Licensee/Registrant 01/11/2021 12/01/2023",
+        "Licensee not a member of EDRS 01/12/2020 18/08/2021"
+      ],
+      "pattern_rates": {
+        "date_like": 1.0
+      }
+    },
+    {
+      "column": "CRED_LIC_LOCALITY",
+      "non_empty_rate": 1.0,
+      "distinct": 1394,
+      "top_values": [
+        [
+          "SYDNEY",
+          377
+        ],
+        [
+          "MELBOURNE",
+          184
+        ],
+        [
+          "NORTH SYDNEY",
+          55
+        ],
+        [
+          "PARRAMATTA",
+          52
+        ],
+        [
+          "ADELAIDE",
+          42
+        ]
+      ],
+      "examples": [
+        "PARRAMATTA",
+        "GORDON",
+        "FIVE DOCK",
+        "SURRY HILLS",
+        "SYDNEY"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "CRED_LIC_STATE",
+      "non_empty_rate": 1.0,
+      "distinct": 8,
+      "top_values": [
+        [
+          "NSW",
+          1835
+        ],
+        [
+          "VIC",
+          988
+        ],
+        [
+          "QLD",
+          755
+        ],
+        [
+          "WA",
+          461
+        ],
+        [
+          "SA",
+          194
+        ]
+      ],
+      "examples": [
+        "WA",
+        "NSW",
+        "VIC",
+        "WA",
+        "VIC"
+      ],
+      "pattern_rates": {
+        "state_like": 1.0
+      }
+    },
+    {
+      "column": "CRED_LIC_PCODE",
+      "non_empty_rate": 1.0,
+      "distinct": 876,
+      "top_values": [
+        [
+          "2000",
+          403
+        ],
+        [
+          "3000",
+          122
+        ],
+        [
+          "2153",
+          72
+        ],
+        [
+          "4000",
+          57
+        ],
+        [
+          "2150",
+          56
+        ]
+      ],
+      "examples": [
+        "6020",
+        "0800",
+        "4575",
+        "2153",
+        "2144"
+      ],
+      "pattern_rates": {
+        "postcode_like": 1.0
+      }
+    },
+    {
+      "column": "CRED_LIC_LAT",
+      "non_empty_rate": 0.998,
+      "distinct": 1410,
+      "top_values": [
+        [
+          "-33.8698439",
+          378
+        ],
+        [
+          "-37.8142454",
+          184
+        ],
+        [
+          "-33.8354519",
+          55
+        ],
+        [
+          "-33.8139843",
+          52
+        ],
+        [
+          "-34.9281805",
+          42
+        ]
+      ],
+      "examples": [
+        "-37.9755762",
+        "-37.9103266",
+        "-32.0493729",
+        "-33.7317524",
+        "-37.7919518"
+      ],
+      "pattern_rates": {
+        "acn_checksum_valid": 0.085
+      }
+    },
+    {
+      "column": "CRED_LIC_LNG",
+      "non_empty_rate": 0.998,
+      "distinct": 1408,
+      "top_values": [
+        [
+          "151.2082848",
+          378
+        ],
+        [
+          "144.9631732",
+          184
+        ],
+        [
+          "151.2083011",
+          55
+        ],
+        [
+          "151.002666",
+          52
+        ],
+        [
+          "138.5999312",
+          42
+        ]
+      ],
+      "examples": [
+        "144.9631732",
+        "145.1723107",
+        "138.5999312",
+        "150.9414378",
+        "115.7529313"
+      ],
+      "pattern_rates": {
+        "acn_checksum_valid": 0.006
+      }
+    },
+    {
+      "column": "CRED_LIC_EDRS",
+      "non_empty_rate": 0.996,
+      "distinct": 7,
+      "top_values": [
+        [
+          "AFCA",
+          3235
+        ],
+        [
+          "COSL",
+          522
+        ],
+        [
+          "AFCA~COSL",
+          269
+        ],
+        [
+          "FOS",
+          206
+        ],
+        [
+          "AFCA~FOS",
+          59
+        ]
+      ],
+      "examples": [
+        "AFCA",
+        "AFCA",
+        "AFCA",
+        "AFCA",
+        "AFCA"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "CRED_LIC_BN",
+      "non_empty_rate": 0.341,
+      "distinct": 1446,
+      "top_values": [
+        [
+          "HOME LOAN OPTIONS",
+          3
+        ],
+        [
+          "UNITED FINANCIAL SERVICES",
+          3
+        ],
+        [
+          "BLUESTONE MORTGAGES",
+          3
+        ],
+        [
+          "LATITUDE FINANCIAL SERVICES",
+          3
+        ],
+        [
+          "MORTGAGE SOLUTIONS AUSTRALIA",
+          2
+        ]
+      ],
+      "examples": [
+        "SJ FINANCIAL SERVICES",
+        "SYNERGY LIFESTYLE FINANCE",
+        "FINANCIAL DECISIONS",
+        "MY DEBT HELP",
+        "RENTPAY"
+      ],
+      "pattern_rates": {
+        "company_suffix": 0.001
+      }
+    },
+    {
+      "column": "CRED_LIC_AUTHORISATIONS",
+      "non_empty_rate": 1.0,
+      "distinct": 21,
+      "top_values": [
+        [
+          "This licence authorises the licensee to:~Engage in credit ac",
+          3292
+        ],
+        [
+          "This licence authorises the licensee to:~Engage in credit ac",
+          517
+        ],
+        [
+          "This licence authorises the licensee to:~Engage in credit ac",
+          360
+        ],
+        [
+          "This licence authorises the licensee to:~Engage in credit ac",
+          58
+        ],
+        [
+          "This licence authorises the licensee to:~Engage in credit ac",
+          32
+        ]
+      ],
+      "examples": [
+        "This licence authorises the licensee to:~Engage in credit activities other than ",
+        "This licence authorises the licensee to:~Engage in credit activities other than ",
+        "This licence authorises the licensee to:~Engage in credit activities other than ",
+        "This licence authorises the licensee to:~Engage in credit activities as a credit",
+        "This licence authorises the licensee to:~Engage in credit activities other than "
+      ],
+      "pattern_rates": {
+        "company_suffix": 0.012
+      }
+    }
+  ],
+  "sample_idx_note": "sample = first 25 of a seed-1 shuffle; holdout = next 500",
+  "holdout_idx": [
+    2491,
+    752,
+    3238,
+    1864,
+    358,
+    3754,
+    1991,
+    2773,
+    2066,
+    534,
+    539,
+    3380,
+    3601,
+    2686,
+    3633,
+    2058,
+    1611,
+    1406,
+    2423,
+    3039,
+    4154,
+    3686,
+    547,
+    1132,
+    3072,
+    2103,
+    1186,
+    1578,
+    4018,
+    853,
+    671,
+    3863,
+    3764,
+    4060,
+    1862,
+    1656,
+    3978,
+    419,
+    1579,
+    1968,
+    2008,
+    2934,
+    1168,
+    691,
+    2758,
+    155,
+    4237,
+    167,
+    747,
+    3330,
+    3271,
+    47,
+    2158,
+    230,
+    4005,
+    895,
+    3992,
+    1078,
+    1756,
+    1323,
+    253,
+    2667,
+    2537,
+    2429,
+    2139,
+    1735,
+    194,
+    4232,
+    4129,
+    1944,
+    4193,
+    3042,
+    2749,
+    3379,
+    3932,
+    103,
+    2945,
+    616,
+    3837,
+    614,
+    3450,
+    564,
+    2970,
+    1918,
+    2346,
+    3325,
+    51,
+    149,
+    425,
+    3999,
+    3214,
+    1245,
+    4037,
+    102,
+    680,
+    3191,
+    3814,
+    941,
+    3373,
+    3963,
+    2573,
+    1011,
+    2956,
+    3596,
+    3638,
+    2296,
+    3584,
+    1527,
+    4110,
+    458,
+    1184,
+    2396,
+    3304,
+    2755,
+    1845,
+    4064,
+    4121,
+    2290,
+    1422,
+    3920,
+    4145,
+    3548,
+    1955,
+    91,
+    3904,
+    2588,
+    2477,
+    1577,
+    1412,
+    3141,
+    2302,
+    2154,
+    2902,
+    1154,
+    630,
+    4306,
+    1175,
+    1117,
+    1830,
+    114,
+    4087,
+    1994,
+    3073,
+    4312,
+    2107,
+    4164,
+    2997,
+    2469,
+    831,
+    3898,
+    3306,
+    3926,
+    3779,
+    4073,
+    3544,
+    826,
+    3159,
+    2263,
+    3722,
+    863,
+    3105,
+    0,
+    2988,
+    2948,
+    3935,
+    4142,
+    1249,
+    3573,
+    771,
+    1682,
+    3588,
+    1976,
+    3606,
+    4097,
+    940,
+    587,
+    2111,
+    3360,
+    3460,
+    1866,
+    339,
+    757,
+    3400,
+    1863,
+    2733,
+    4108,
+    1077,
+    2974,
+    159,
+    157,
+    3274,
+    2127,
+    1575,
+    3721,
+    3861,
+    1489,
+    2775,
+    2873,
+    1652,
+    510,
+    1588,
+    11,
+    3332,
+    4085,
+    3136,
+    1831,
+    186,
+    1365,
+    1438,
+    4122,
+    411,
+    980,
+    1849,
+    560,
+    3113,
+    2874,
+    3819,
+    2800,
+    4243,
+    3403,
+    3323,
+    2162,
+    511,
+    4268,
+    1560,
+    4093,
+    3845,
+    974,
+    2763,
+    2683,
+    696,
+    797,
+    2292,
+    668,
+    2349,
+    452,
+    1125,
+    2759,
+    1808,
+    2895,
+    897,
+    2649,
+    3728,
+    496,
+    2801,
+    2276,
+    3404,
+    1439,
+    2846,
+    4185,
+    1464,
+    1821,
+    3412,
+    3649,
+    131,
+    150,
+    3201,
+    562,
+    4265,
+    4160,
+    1148,
+    73,
+    20,
+    3013,
+    1075,
+    805,
+    2007,
+    3276,
+    3377,
+    1404,
+    648,
+    2241,
+    3405,
+    3924,
+    3960,
+    1314,
+    1008,
+    957,
+    1081,
+    1589,
+    2578,
+    3591,
+    1089,
+    4070,
+    1497,
+    996,
+    3493,
+    3363,
+    3692,
+    522,
+    1492,
+    3356,
+    68,
+    4282,
+    1679,
+    3162,
+    1455,
+    3168,
+    1657,
+    2769,
+    558,
+    1289,
+    918,
+    1738,
+    3407,
+    1957,
+    3574,
+    3836,
+    3003,
+    3914,
+    1939,
+    2984,
+    664,
+    3317,
+    3329,
+    1293,
+    284,
+    4205,
+    2432,
+    3004,
+    4071,
+    3346,
+    3651,
+    3987,
+    1344,
+    3871,
+    457,
+    1893,
+    794,
+    261,
+    2084,
+    540,
+    1200,
+    79,
+    3817,
+    1178,
+    434,
+    1978,
+    1364,
+    3631,
+    1793,
+    2184,
+    4292,
+    217,
+    2761,
+    3165,
+    1873,
+    1241,
+    3243,
+    1074,
+    3822,
+    1836,
+    4020,
+    1762,
+    3663,
+    3675,
+    1919,
+    1924,
+    3656,
+    104,
+    2191,
+    2979,
+    4230,
+    1384,
+    4231,
+    3911,
+    2011,
+    809,
+    1676,
+    1943,
+    1413,
+    858,
+    3772,
+    169,
+    2917,
+    2141,
+    2245,
+    2006,
+    3966,
+    2279,
+    3453,
+    1467,
+    1537,
+    3719,
+    1172,
+    2806,
+    3218,
+    923,
+    371,
+    3592,
+    3733,
+    1032,
+    3078,
+    2416,
+    4267,
+    3647,
+    173,
+    449,
+    1969,
+    2246,
+    970,
+    106,
+    1183,
+    913,
+    241,
+    1206,
+    1345,
+    2786,
+    444,
+    2890,
+    1687,
+    3324,
+    1040,
+    3131,
+    4254,
+    1857,
+    762,
+    561,
+    494,
+    3869,
+    775,
+    2259,
+    2269,
+    3149,
+    1449,
+    1754,
+    1960,
+    3080,
+    2038,
+    4151,
+    1112,
+    3406,
+    1435,
+    2159,
+    2608,
+    892,
+    828,
+    3101,
+    1763,
+    3610,
+    3842,
+    4196,
+    4217,
+    3454,
+    3903,
+    2177,
+    911,
+    712,
+    2108,
+    1888,
+    415,
+    2289,
+    3484,
+    1639,
+    3210,
+    1022,
+    3120,
+    3850,
+    3917,
+    1028,
+    1861,
+    2211,
+    1504,
+    3925,
+    1936,
+    4030,
+    969,
+    1159,
+    1945,
+    2041,
+    4245,
+    3964,
+    2034,
+    3232,
+    3665,
+    582,
+    2283,
+    2792,
+    506,
+    1800,
+    3808,
+    2389,
+    3161,
+    383,
+    3611,
+    3170,
+    3308,
+    3459,
+    1603,
+    3087,
+    2151,
+    3497,
+    436,
+    1304,
+    917,
+    3063,
+    966,
+    1979,
+    1514,
+    1655
+  ]
+}

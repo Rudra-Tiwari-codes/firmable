@@ -1,0 +1,8 @@
+{
+  "resource_id": "09335d0c-cfba-43e0-b036-4461c8345a73",
+  "fallback_ids": [
+    "15c1bcea-7924-432c-9ece-f70fae1a5a0d",
+    "30026b85-0102-4a55-8c4b-a53de647f1d0"
+  ],
+  "reason": "The 2025-26 report is the most recently modified CSV (2026-06-30) and has an active datastore. Each row should be a contract naming a supplier, so it is the freshest source of business entities. The 2024-25 and 2022/23 reports are the next most recent datastore-active CSVs with the same 'System Procurement' scope. The 2019-20 report is skipped because it is older and describes 'Strategic Procurement'. I haven't inspected the columns, so the supplier-name field is assumed and needs checking at the next step."
+}

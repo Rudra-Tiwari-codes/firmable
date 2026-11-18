@@ -1,0 +1,5 @@
+{
+  "resource_id": "530d86bc-cdc3-4e3f-b828-5106cd0e48c3",
+  "fallback_ids": [],
+  "reason": "Only resource: a 5.5 MB CSV (datastore active) premises list, likely one row per licensed liquor premises (business-like entity). Note: the dataset licence field says CC BY 3.0 AU but the description cites CC BY 4.0, a discrepancy to flag for review."
+}

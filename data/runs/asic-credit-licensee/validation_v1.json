@@ -1,0 +1,624 @@
+{
+  "passed": true,
+  "structural_issues": [],
+  "failing": [],
+  "empirical": {
+    "holdout_records": 500,
+    "per_mapping": [
+      {
+        "index": 0,
+        "canonical": "entity.legal_name",
+        "source": "CRED_LIC_NAME",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 1,
+        "canonical": "entity.trading_name",
+        "source": "CRED_LIC_BN",
+        "raw_non_empty": 158,
+        "records_with_value": 158,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 2,
+        "canonical": "entity.abn",
+        "source": "CRED_LIC_ABN_ACN",
+        "raw_non_empty": 500,
+        "records_with_value": 452,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 3,
+        "canonical": "entity.acn",
+        "source": "CRED_LIC_ABN_ACN",
+        "raw_non_empty": 500,
+        "records_with_value": 42,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 4,
+        "canonical": "entity.entity_type",
+        "source": "CRED_LIC_NAME",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 5,
+        "canonical": "address.locality",
+        "source": "CRED_LIC_LOCALITY",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 6,
+        "canonical": "address.state",
+        "source": "CRED_LIC_STATE",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 7,
+        "canonical": "address.postcode",
+        "source": "CRED_LIC_PCODE",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 8,
+        "canonical": "address.country",
+        "source": null,
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 9,
+        "canonical": "observation.valid_from",
+        "source": "CRED_LIC_START_DT",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 10,
+        "canonical": "observation.valid_to",
+        "source": "CRED_LIC_END_DT",
+        "raw_non_empty": 0,
+        "records_with_value": 0,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      }
+    ],
+    "record_id_duplicates": 0,
+    "preview": [
+      {
+        "entity.legal_name": {
+          "raw": "THE UNIQUE REAL ESTATE & MORTGAGE COMPANY PTY LTD",
+          "values": [
+            "THE UNIQUE REAL ESTATE & MORTGAGE COMPANY PTY LTD"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "",
+          "values": []
+        },
+        "entity.abn": {
+          "raw": "42160437016",
+          "values": [
+            "42160437016"
+          ]
+        },
+        "entity.acn": {
+          "raw": "42160437016",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "THE UNIQUE REAL ESTATE & MORTGAGE COMPANY PTY LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "address.locality": {
+          "raw": "ERSKINE PARK",
+          "values": [
+            "ERSKINE PARK"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2759",
+          "values": [
+            "2759"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        },
+        "observation.valid_from": {
+          "raw": "20/11/2012",
+          "values": [
+            "2012-11-20"
+          ]
+        },
+        "observation.valid_to": {
+          "raw": "",
+          "values": []
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "ADA HOME LOANS PTY LTD",
+          "values": [
+            "ADA HOME LOANS PTY LTD"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "",
+          "values": []
+        },
+        "entity.abn": {
+          "raw": "96979654",
+          "values": []
+        },
+        "entity.acn": {
+          "raw": "96979654",
+          "values": [
+            "096979654"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "ADA HOME LOANS PTY LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "address.locality": {
+          "raw": "SANS SOUCI",
+          "values": [
+            "SANS SOUCI"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2219",
+          "values": [
+            "2219"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        },
+        "observation.valid_from": {
+          "raw": "05/12/2010",
+          "values": [
+            "2010-12-05"
+          ]
+        },
+        "observation.valid_to": {
+          "raw": "",
+          "values": []
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "RATESEEKER PTY LTD",
+          "values": [
+            "RATESEEKER PTY LTD"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "",
+          "values": []
+        },
+        "entity.abn": {
+          "raw": "91616470930",
+          "values": [
+            "91616470930"
+          ]
+        },
+        "entity.acn": {
+          "raw": "91616470930",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "RATESEEKER PTY LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "address.locality": {
+          "raw": "SYDNEY",
+          "values": [
+            "SYDNEY"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2000",
+          "values": [
+            "2000"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        },
+        "observation.valid_from": {
+          "raw": "05/02/2018",
+          "values": [
+            "2018-02-05"
+          ]
+        },
+        "observation.valid_to": {
+          "raw": "",
+          "values": []
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "MORTGAGE PROCUREMENT SERVICES PTY LTD",
+          "values": [
+            "MORTGAGE PROCUREMENT SERVICES PTY LTD"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "MORTGAGE PROCUREMENT SERVICES",
+          "values": [
+            "MORTGAGE PROCUREMENT SERVICES"
+          ]
+        },
+        "entity.abn": {
+          "raw": "71123331840",
+          "values": [
+            "71123331840"
+          ]
+        },
+        "entity.acn": {
+          "raw": "71123331840",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "MORTGAGE PROCUREMENT SERVICES PTY LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "address.locality": {
+          "raw": "SUBIACO",
+          "values": [
+            "SUBIACO"
+          ]
+        },
+        "address.state": {
+          "raw": "WA",
+          "values": [
+            "WA"
+          ]
+        },
+        "address.postcode": {
+          "raw": "6008",
+          "values": [
+            "6008"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        },
+        "observation.valid_from": {
+          "raw": "17/01/2011",
+          "values": [
+            "2011-01-17"
+          ]
+        },
+        "observation.valid_to": {
+          "raw": "",
+          "values": []
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "CAPITAL CONTACTS PTY LTD",
+          "values": [
+            "CAPITAL CONTACTS PTY LTD"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "CAPITAL CONTACTS COMMERCIAL FINANCE",
+          "values": [
+            "CAPITAL CONTACTS COMMERCIAL FINANCE"
+          ]
+        },
+        "entity.abn": {
+          "raw": "13061449232",
+          "values": [
+            "13061449232"
+          ]
+        },
+        "entity.acn": {
+          "raw": "13061449232",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "CAPITAL CONTACTS PTY LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "address.locality": {
+          "raw": "ADELAIDE",
+          "values": [
+            "ADELAIDE"
+          ]
+        },
+        "address.state": {
+          "raw": "SA",
+          "values": [
+            "SA"
+          ]
+        },
+        "address.postcode": {
+          "raw": "5000",
+          "values": [
+            "5000"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        },
+        "observation.valid_from": {
+          "raw": "15/09/2010",
+          "values": [
+            "2010-09-15"
+          ]
+        },
+        "observation.valid_to": {
+          "raw": "",
+          "values": []
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "SG CREDIT PTY LTD",
+          "values": [
+            "SG CREDIT PTY LTD"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "",
+          "values": []
+        },
+        "entity.abn": {
+          "raw": "32653025533",
+          "values": [
+            "32653025533"
+          ]
+        },
+        "entity.acn": {
+          "raw": "32653025533",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "SG CREDIT PTY LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "address.locality": {
+          "raw": "SYDNEY",
+          "values": [
+            "SYDNEY"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2000",
+          "values": [
+            "2000"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        },
+        "observation.valid_from": {
+          "raw": "19/09/2022",
+          "values": [
+            "2022-09-19"
+          ]
+        },
+        "observation.valid_to": {
+          "raw": "",
+          "values": []
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "MERITON PROPERTY FINANCE PTY. LIMITED",
+          "values": [
+            "MERITON PROPERTY FINANCE PTY. LIMITED"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "",
+          "values": []
+        },
+        "entity.abn": {
+          "raw": "36101180607",
+          "values": [
+            "36101180607"
+          ]
+        },
+        "entity.acn": {
+          "raw": "36101180607",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "MERITON PROPERTY FINANCE PTY. LIMITED",
+          "values": [
+            "company"
+          ]
+        },
+        "address.locality": {
+          "raw": "SYDNEY",
+          "values": [
+            "SYDNEY"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2000",
+          "values": [
+            "2000"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        },
+        "observation.valid_from": {
+          "raw": "03/02/2011",
+          "values": [
+            "2011-02-03"
+          ]
+        },
+        "observation.valid_to": {
+          "raw": "",
+          "values": []
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "AUSTRALIA PACIFIC INCOME FUND LTD",
+          "values": [
+            "AUSTRALIA PACIFIC INCOME FUND LTD"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "",
+          "values": []
+        },
+        "entity.abn": {
+          "raw": "32140213690",
+          "values": [
+            "32140213690"
+          ]
+        },
+        "entity.acn": {
+          "raw": "32140213690",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "AUSTRALIA PACIFIC INCOME FUND LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "address.locality": {
+          "raw": "MELBOURNE",
+          "values": [
+            "MELBOURNE"
+          ]
+        },
+        "address.state": {
+          "raw": "VIC",
+          "values": [
+            "VIC"
+          ]
+        },
+        "address.postcode": {
+          "raw": "3000",
+          "values": [
+            "3000"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        },
+        "observation.valid_from": {
+          "raw": "30/09/2014",
+          "values": [
+            "2014-09-30"
+          ]
+        },
+        "observation.valid_to": {
+          "raw": "",
+          "values": []
+        }
+      }
+    ]
+  },
+  "max_error_rate": 0.05
+}

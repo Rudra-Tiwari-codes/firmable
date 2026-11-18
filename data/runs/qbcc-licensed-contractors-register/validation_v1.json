@@ -1,0 +1,550 @@
+{
+  "passed": false,
+  "structural_issues": [],
+  "failing": [
+    {
+      "index": 0,
+      "canonical": "entity.legal_name",
+      "source": "Licensee Name",
+      "raw_non_empty": 500,
+      "records_with_value": 175,
+      "errors": 325,
+      "error_rate": 0.65,
+      "error_examples": [
+        {
+          "raw": "MALCOLM LENARD PALMER",
+          "error": "'MALCOLM LENARD PALMER' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+        },
+        {
+          "raw": "TIMOTHY STEPHEN COOK",
+          "error": "'TIMOTHY STEPHEN COOK' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+        },
+        {
+          "raw": "PHILLIP JAMES PRENDERGAST",
+          "error": "'PHILLIP JAMES PRENDERGAST' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+        },
+        {
+          "raw": "PAUL JAISEN HARMS",
+          "error": "'PAUL JAISEN HARMS' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+        },
+        {
+          "raw": "DARREN WAYNE LIND",
+          "error": "'DARREN WAYNE LIND' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+        }
+      ]
+    }
+  ],
+  "empirical": {
+    "holdout_records": 500,
+    "per_mapping": [
+      {
+        "index": 0,
+        "canonical": "entity.legal_name",
+        "source": "Licensee Name",
+        "raw_non_empty": 500,
+        "records_with_value": 175,
+        "errors": 325,
+        "error_rate": 0.65,
+        "error_examples": [
+          {
+            "raw": "MALCOLM LENARD PALMER",
+            "error": "'MALCOLM LENARD PALMER' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+          },
+          {
+            "raw": "TIMOTHY STEPHEN COOK",
+            "error": "'TIMOTHY STEPHEN COOK' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+          },
+          {
+            "raw": "PHILLIP JAMES PRENDERGAST",
+            "error": "'PHILLIP JAMES PRENDERGAST' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+          },
+          {
+            "raw": "PAUL JAISEN HARMS",
+            "error": "'PAUL JAISEN HARMS' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+          },
+          {
+            "raw": "DARREN WAYNE LIND",
+            "error": "'DARREN WAYNE LIND' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "canonical": "entity.entity_type",
+        "source": "Licensee Name",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 2,
+        "canonical": "entity.acn",
+        "source": "ACN",
+        "raw_non_empty": 175,
+        "records_with_value": 174,
+        "errors": 1,
+        "error_rate": 0.006,
+        "error_examples": [
+          {
+            "raw": "347 823 989",
+            "error": "ACN '347 823 989' fails checksum"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "canonical": "entity.abn",
+        "source": "ABN",
+        "raw_non_empty": 313,
+        "records_with_value": 312,
+        "errors": 1,
+        "error_rate": 0.003,
+        "error_examples": [
+          {
+            "raw": "42 277 568 976",
+            "error": "ABN '42 277 568 976' fails checksum"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "canonical": "address.full",
+        "source": "Licensee Business Address",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 5,
+        "canonical": "address.state",
+        "source": "Licensee Business Address",
+        "raw_non_empty": 500,
+        "records_with_value": 490,
+        "errors": 10,
+        "error_rate": 0.02,
+        "error_examples": [
+          {
+            "raw": "43 WEBB DRIVE Mt St John Queensland 4818",
+            "error": "'43 WEBB DRIVE Mt St John Queensland 4818' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT)\\\\s+\\\\d{4}\\\\s*$'"
+          },
+          {
+            "raw": "21/25 Alex Fisher Drive, Burleigh Heads Gold Coast Queensland 4220",
+            "error": "'21/25 Alex Fisher Drive, Burleigh Heads Gold Coast Queensland 4220' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT)\\\\s+\\\\d{4}\\\\s*$'"
+          },
+          {
+            "raw": "61 Mamaku Street Fernvale Queensland 4306",
+            "error": "'61 Mamaku Street Fernvale Queensland 4306' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT)\\\\s+\\\\d{4}\\\\s*$'"
+          },
+          {
+            "raw": "4 TINONEE COURT EAST MACKAY QUEENSLAND 4740",
+            "error": "'4 TINONEE COURT EAST MACKAY QUEENSLAND 4740' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT)\\\\s+\\\\d{4}\\\\s*$'"
+          },
+          {
+            "raw": "10 Richards Street Svensson Heights Queensland 4670",
+            "error": "'10 Richards Street Svensson Heights Queensland 4670' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT)\\\\s+\\\\d{4}\\\\s*$'"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "canonical": "address.postcode",
+        "source": "Licensee Business Address",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 7,
+        "canonical": "address.country",
+        "source": null,
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      }
+    ],
+    "record_id_duplicates": 0,
+    "preview": [
+      {
+        "entity.legal_name": {
+          "raw": "NAGAUR HOLDINGS PTY LTD",
+          "values": [
+            "NAGAUR HOLDINGS PTY LTD"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "NAGAUR HOLDINGS PTY LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "entity.acn": {
+          "raw": "003 188 074",
+          "values": [
+            "003188074"
+          ]
+        },
+        "entity.abn": {
+          "raw": "38 003 188 074",
+          "values": [
+            "38003188074"
+          ]
+        },
+        "address.full": {
+          "raw": "17 SHEATHER ST BALLINA NSW 2478",
+          "values": [
+            "17 SHEATHER ST BALLINA NSW 2478"
+          ]
+        },
+        "address.state": {
+          "raw": "17 SHEATHER ST BALLINA NSW 2478",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "17 SHEATHER ST BALLINA NSW 2478",
+          "values": [
+            "2478"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "MALCOLM LENARD PALMER",
+          "error": "'MALCOLM LENARD PALMER' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+        },
+        "entity.entity_type": {
+          "raw": "MALCOLM LENARD PALMER",
+          "values": [
+            "unknown"
+          ]
+        },
+        "entity.acn": {
+          "raw": "",
+          "values": []
+        },
+        "entity.abn": {
+          "raw": "",
+          "values": []
+        },
+        "address.full": {
+          "raw": "8/11 DOMINION ROAD ASHMORE QLD 4214",
+          "values": [
+            "8/11 DOMINION ROAD ASHMORE QLD 4214"
+          ]
+        },
+        "address.state": {
+          "raw": "8/11 DOMINION ROAD ASHMORE QLD 4214",
+          "values": [
+            "QLD"
+          ]
+        },
+        "address.postcode": {
+          "raw": "8/11 DOMINION ROAD ASHMORE QLD 4214",
+          "values": [
+            "4214"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "BALLARD BUILDING PTY LTD",
+          "values": [
+            "BALLARD BUILDING PTY LTD"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "BALLARD BUILDING PTY LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "entity.acn": {
+          "raw": "132 898 143",
+          "values": [
+            "132898143"
+          ]
+        },
+        "entity.abn": {
+          "raw": "97 132 898 143",
+          "values": [
+            "97132898143"
+          ]
+        },
+        "address.full": {
+          "raw": "11 TOOHEY STREET PACIFIC PINES QLD 4211",
+          "values": [
+            "11 TOOHEY STREET PACIFIC PINES QLD 4211"
+          ]
+        },
+        "address.state": {
+          "raw": "11 TOOHEY STREET PACIFIC PINES QLD 4211",
+          "values": [
+            "QLD"
+          ]
+        },
+        "address.postcode": {
+          "raw": "11 TOOHEY STREET PACIFIC PINES QLD 4211",
+          "values": [
+            "4211"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "TIMOTHY STEPHEN COOK",
+          "error": "'TIMOTHY STEPHEN COOK' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+        },
+        "entity.entity_type": {
+          "raw": "TIMOTHY STEPHEN COOK",
+          "values": [
+            "unknown"
+          ]
+        },
+        "entity.acn": {
+          "raw": "",
+          "values": []
+        },
+        "entity.abn": {
+          "raw": "",
+          "values": []
+        },
+        "address.full": {
+          "raw": "37 Cobbs Road Woombye QLD 4559",
+          "values": [
+            "37 Cobbs Road Woombye QLD 4559"
+          ]
+        },
+        "address.state": {
+          "raw": "37 Cobbs Road Woombye QLD 4559",
+          "values": [
+            "QLD"
+          ]
+        },
+        "address.postcode": {
+          "raw": "37 Cobbs Road Woombye QLD 4559",
+          "values": [
+            "4559"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "PHILLIP JAMES PRENDERGAST",
+          "error": "'PHILLIP JAMES PRENDERGAST' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+        },
+        "entity.entity_type": {
+          "raw": "PHILLIP JAMES PRENDERGAST",
+          "values": [
+            "unknown"
+          ]
+        },
+        "entity.acn": {
+          "raw": "",
+          "values": []
+        },
+        "entity.abn": {
+          "raw": "48 450 640 420",
+          "values": [
+            "48450640420"
+          ]
+        },
+        "address.full": {
+          "raw": "204 McKenzie Rd Oakey QLD 4401",
+          "values": [
+            "204 McKenzie Rd Oakey QLD 4401"
+          ]
+        },
+        "address.state": {
+          "raw": "204 McKenzie Rd Oakey QLD 4401",
+          "values": [
+            "QLD"
+          ]
+        },
+        "address.postcode": {
+          "raw": "204 McKenzie Rd Oakey QLD 4401",
+          "values": [
+            "4401"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "PAUL JAISEN HARMS",
+          "error": "'PAUL JAISEN HARMS' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+        },
+        "entity.entity_type": {
+          "raw": "PAUL JAISEN HARMS",
+          "values": [
+            "unknown"
+          ]
+        },
+        "entity.acn": {
+          "raw": "",
+          "values": []
+        },
+        "entity.abn": {
+          "raw": "",
+          "values": []
+        },
+        "address.full": {
+          "raw": "664 Tallebudgera Creek Road Tallebudgera Valley QLD 4228",
+          "values": [
+            "664 Tallebudgera Creek Road Tallebudgera Valley QLD 4228"
+          ]
+        },
+        "address.state": {
+          "raw": "664 Tallebudgera Creek Road Tallebudgera Valley QLD 4228",
+          "values": [
+            "QLD"
+          ]
+        },
+        "address.postcode": {
+          "raw": "664 Tallebudgera Creek Road Tallebudgera Valley QLD 4228",
+          "values": [
+            "4228"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "DARREN WAYNE LIND",
+          "error": "'DARREN WAYNE LIND' does not match '(?i)^(.*\\\\b(?:PTY|LTD|LIMITED|PROPRIETARY)\\\\b.*)$'"
+        },
+        "entity.entity_type": {
+          "raw": "DARREN WAYNE LIND",
+          "values": [
+            "unknown"
+          ]
+        },
+        "entity.acn": {
+          "raw": "",
+          "values": []
+        },
+        "entity.abn": {
+          "raw": "",
+          "values": []
+        },
+        "address.full": {
+          "raw": "7 Brett Road VICTORIA POINT QLD 4165",
+          "values": [
+            "7 Brett Road VICTORIA POINT QLD 4165"
+          ]
+        },
+        "address.state": {
+          "raw": "7 Brett Road VICTORIA POINT QLD 4165",
+          "values": [
+            "QLD"
+          ]
+        },
+        "address.postcode": {
+          "raw": "7 Brett Road VICTORIA POINT QLD 4165",
+          "values": [
+            "4165"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "TCL Projects Pty Ltd",
+          "values": [
+            "TCL Projects Pty Ltd"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "TCL Projects Pty Ltd",
+          "values": [
+            "company"
+          ]
+        },
+        "entity.acn": {
+          "raw": "651 376 180",
+          "values": [
+            "651376180"
+          ]
+        },
+        "entity.abn": {
+          "raw": "72 651 376 180",
+          "values": [
+            "72651376180"
+          ]
+        },
+        "address.full": {
+          "raw": "5 Banks Ct Bargara QLD 4670",
+          "values": [
+            "5 Banks Ct Bargara QLD 4670"
+          ]
+        },
+        "address.state": {
+          "raw": "5 Banks Ct Bargara QLD 4670",
+          "values": [
+            "QLD"
+          ]
+        },
+        "address.postcode": {
+          "raw": "5 Banks Ct Bargara QLD 4670",
+          "values": [
+            "4670"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      }
+    ]
+  },
+  "max_error_rate": 0.05
+}

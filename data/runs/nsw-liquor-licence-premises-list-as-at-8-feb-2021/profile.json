@@ -1,0 +1,1509 @@
+{
+  "records_profiled": 5000,
+  "columns": [
+    {
+      "column": "Licence number",
+      "non_empty_rate": 1.0,
+      "distinct": 4995,
+      "top_values": [
+        [
+          "LIQC324007158",
+          2
+        ],
+        [
+          "LIQL500881175",
+          2
+        ],
+        [
+          "LIQL524006237",
+          2
+        ],
+        [
+          "LIQL550027907",
+          2
+        ],
+        [
+          "LIQL550031863",
+          2
+        ]
+      ],
+      "examples": [
+        "LIQH400123264",
+        "LIQL500801562",
+        "LIQC300230236",
+        "LIQH400110820",
+        "LIQL550010043"
+      ],
+      "pattern_rates": {
+        "acn_checksum_valid": 0.099
+      }
+    },
+    {
+      "column": "Licence type",
+      "non_empty_rate": 1.0,
+      "distinct": 4,
+      "top_values": [
+        [
+          "Liquor - hotel licence",
+          2127
+        ],
+        [
+          "Liquor - limited licence",
+          1374
+        ],
+        [
+          "Liquor - club licence",
+          1286
+        ],
+        [
+          "Liquor - on-premises licence",
+          213
+        ]
+      ],
+      "examples": [
+        "Liquor - limited licence",
+        "Liquor - hotel licence",
+        "Liquor - hotel licence",
+        "Liquor - limited licence",
+        "Liquor - hotel licence"
+      ],
+      "pattern_rates": {
+        "company_suffix": 0.275
+      }
+    },
+    {
+      "column": "Status",
+      "non_empty_rate": 1.0,
+      "distinct": 2,
+      "top_values": [
+        [
+          "Current",
+          4997
+        ],
+        [
+          "Suspended",
+          3
+        ]
+      ],
+      "examples": [
+        "Current",
+        "Current",
+        "Current",
+        "Current",
+        "Current"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Start date",
+      "non_empty_rate": 1.0,
+      "distinct": 3426,
+      "top_values": [
+        [
+          "07/07/1947",
+          27
+        ],
+        [
+          "06/04/1955",
+          17
+        ],
+        [
+          "05/07/1947",
+          15
+        ],
+        [
+          "18/05/1955",
+          15
+        ],
+        [
+          "07/04/1955",
+          14
+        ]
+      ],
+      "examples": [
+        "15/04/1977",
+        "04/05/1955",
+        "15/03/1934",
+        "28/05/2011",
+        "02/12/1983"
+      ],
+      "pattern_rates": {
+        "date_like": 1.0
+      }
+    },
+    {
+      "column": "Trading Status",
+      "non_empty_rate": 1.0,
+      "distinct": 2,
+      "top_values": [
+        [
+          "Trading",
+          4817
+        ],
+        [
+          "Temporarily Ceased Trading",
+          183
+        ]
+      ],
+      "examples": [
+        "Trading",
+        "Trading",
+        "Trading",
+        "Trading",
+        "Trading"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Licence name",
+      "non_empty_rate": 1.0,
+      "distinct": 4585,
+      "top_values": [
+        [
+          "Royal Hotel",
+          81
+        ],
+        [
+          "Commercial Hotel",
+          37
+        ],
+        [
+          "Railway Hotel",
+          24
+        ],
+        [
+          "Imperial Hotel",
+          21
+        ],
+        [
+          "Tattersalls Hotel",
+          15
+        ]
+      ],
+      "examples": [
+        "Wingham Show Society Inc",
+        "Lavington Panthers Bowling Club Inc.",
+        "Newcastle Club Limited",
+        "Attunga Hotel",
+        "Mudgee Race Club"
+      ],
+      "pattern_rates": {
+        "date_like": 0.002,
+        "company_suffix": 0.307
+      }
+    },
+    {
+      "column": "Address",
+      "non_empty_rate": 1.0,
+      "distinct": 4598,
+      "top_values": [
+        [
+          "NULL",
+          150
+        ],
+        [
+          "Pacific Hwy",
+          16
+        ],
+        [
+          "Main St",
+          12
+        ],
+        [
+          "Princes Hwy",
+          10
+        ],
+        [
+          "New England Hwy",
+          10
+        ]
+      ],
+      "examples": [
+        "Market St",
+        "118-122 Campbell Pde",
+        "491 Schlapp St",
+        "Hargreaves St",
+        "Beechwood Rd"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Suburb",
+      "non_empty_rate": 1.0,
+      "distinct": 1448,
+      "top_values": [
+        [
+          "NULL",
+          151
+        ],
+        [
+          "SYDNEY",
+          145
+        ],
+        [
+          "BROKEN HILL",
+          36
+        ],
+        [
+          "SURRY HILLS",
+          35
+        ],
+        [
+          "ALBURY",
+          32
+        ]
+      ],
+      "examples": [
+        "SAWTELL",
+        "BERRIDALE",
+        "CAMPBELLTOWN",
+        "ST IVES",
+        "CASTLE COVE"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Postcode",
+      "non_empty_rate": 1.0,
+      "distinct": 594,
+      "top_values": [
+        [
+          "2000",
+          194
+        ],
+        [
+          "NULL",
+          152
+        ],
+        [
+          "2010",
+          66
+        ],
+        [
+          "2340",
+          50
+        ],
+        [
+          "2650",
+          45
+        ]
+      ],
+      "examples": [
+        "2333",
+        "2650",
+        "2448",
+        "2517",
+        "2281"
+      ],
+      "pattern_rates": {
+        "postcode_like": 0.97
+      }
+    },
+    {
+      "column": "Latitude",
+      "non_empty_rate": 1.0,
+      "distinct": 4635,
+      "top_values": [
+        [
+          "NULL",
+          254
+        ],
+        [
+          "-32.7739290000",
+          3
+        ],
+        [
+          "-32.9424520000",
+          3
+        ],
+        [
+          "-33.3602190000",
+          3
+        ],
+        [
+          "-33.1290240000",
+          3
+        ]
+      ],
+      "examples": [
+        "-34.4682180000",
+        "-32.9270610000",
+        "-33.0843470000",
+        "-33.9860460000",
+        "NULL"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Longitude",
+      "non_empty_rate": 1.0,
+      "distinct": 4633,
+      "top_values": [
+        [
+          "NULL",
+          254
+        ],
+        [
+          "149.1016640000",
+          4
+        ],
+        [
+          "151.2931630000",
+          3
+        ],
+        [
+          "151.7550270000",
+          3
+        ],
+        [
+          "151.3734360000",
+          3
+        ]
+      ],
+      "examples": [
+        "151.2069330000",
+        "149.5783090000",
+        "149.8571040000",
+        "153.5264020000",
+        "150.8605950000"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "LGA",
+      "non_empty_rate": 1.0,
+      "distinct": 130,
+      "top_values": [
+        [
+          "Council of the City of Sydney",
+          392
+        ],
+        [
+          "Newcastle City Council",
+          161
+        ],
+        [
+          "Central Coast Council",
+          152
+        ],
+        [
+          "NULL",
+          148
+        ],
+        [
+          "Wollongong City Council",
+          141
+        ]
+      ],
+      "examples": [
+        "Tweed Shire Council",
+        "Lismore City Council",
+        "Mid-Coast Council",
+        "Ballina Shire Council",
+        "Wagga Wagga City Council"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Precinct",
+      "non_empty_rate": 0.047,
+      "distinct": 2,
+      "top_values": [
+        [
+          "Sydney CBD Precinct",
+          224
+        ],
+        [
+          "Kings Cross Precinct",
+          13
+        ]
+      ],
+      "examples": [
+        "Sydney CBD Precinct",
+        "Kings Cross Precinct",
+        "Sydney CBD Precinct",
+        "Sydney CBD Precinct",
+        "Sydney CBD Precinct"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Licensee",
+      "non_empty_rate": 1.0,
+      "distinct": 4710,
+      "top_values": [
+        [
+          "WYONG RUGBY LEAGUE CLUB LTD",
+          8
+        ],
+        [
+          "MOUNT PRITCHARD & DISTRICT COMMUNITY CLUB LTD",
+          7
+        ],
+        [
+          "TAPHOUSE INVESTMENTS PTY LIMITED",
+          7
+        ],
+        [
+          "BANKSTOWN DISTRICT SPORTS CLUB LTD",
+          6
+        ],
+        [
+          "WESTERN SUBURBS (N'CLE) LEAGUES CLUB LTD",
+          6
+        ]
+      ],
+      "examples": [
+        "TOTTENHAM BOWLING CLUB LTD",
+        "Michael Borenstein",
+        "Jonathan Bortoli",
+        "Neil Wade",
+        "Richard Rodham"
+      ],
+      "pattern_rates": {
+        "company_suffix": 0.354
+      }
+    },
+    {
+      "column": "Business type",
+      "non_empty_rate": 0.743,
+      "distinct": 10,
+      "top_values": [
+        [
+          "Full hotel",
+          2023
+        ],
+        [
+          "Multi-function",
+          1372
+        ],
+        [
+          "Restaurant",
+          159
+        ],
+        [
+          "General bar",
+          104
+        ],
+        [
+          "Accommodation,Restaurant",
+          45
+        ]
+      ],
+      "examples": [
+        "Multi-function",
+        "Multi-function",
+        "Multi-function",
+        "Multi-function",
+        "Full hotel"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Authorisation restriction name",
+      "non_empty_rate": 0.692,
+      "distinct": 57,
+      "top_values": [
+        [
+          "Extended trading authorisation,Minors area authorisation,Rig",
+          857
+        ],
+        [
+          "Club functions authorisation,Non-restricted area authorisati",
+          625
+        ],
+        [
+          "Minors area authorisation,Right to keep gaming machines",
+          597
+        ],
+        [
+          "Non-restricted area authorisation,Right to keep gaming machi",
+          386
+        ],
+        [
+          "Right to keep gaming machines",
+          154
+        ]
+      ],
+      "examples": [
+        "Extended trading authorisation,Minors area authorisation,Right to keep gaming ma",
+        "Club functions authorisation,Non-restricted area authorisation,Right to keep gam",
+        "Right to keep gaming machines",
+        "Minors area authorisation,Reduced trading hours",
+        "Extended trading authorisation,Minors area authorisation,Right to keep gaming ma"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Extended trading",
+      "non_empty_rate": 1.0,
+      "distinct": 2,
+      "top_values": [
+        [
+          "No",
+          3732
+        ],
+        [
+          "Yes",
+          1268
+        ]
+      ],
+      "examples": [
+        "No",
+        "No",
+        "Yes",
+        "No",
+        "Yes"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Reduced trading",
+      "non_empty_rate": 1.0,
+      "distinct": 2,
+      "top_values": [
+        [
+          "No",
+          4616
+        ],
+        [
+          "Yes",
+          384
+        ]
+      ],
+      "examples": [
+        "No",
+        "No",
+        "No",
+        "No",
+        "No"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Primary service",
+      "non_empty_rate": 1.0,
+      "distinct": 2,
+      "top_values": [
+        [
+          "No",
+          4966
+        ],
+        [
+          "Yes",
+          34
+        ]
+      ],
+      "examples": [
+        "No",
+        "No",
+        "No",
+        "No",
+        "No"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Right to keep gaming",
+      "non_empty_rate": 1.0,
+      "distinct": 2,
+      "top_values": [
+        [
+          "Yes",
+          3308
+        ],
+        [
+          "No",
+          1692
+        ]
+      ],
+      "examples": [
+        "Yes",
+        "No",
+        "Yes",
+        "No",
+        "Yes"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Unrestricted",
+      "non_empty_rate": 1.0,
+      "distinct": 2,
+      "top_values": [
+        [
+          "No",
+          3761
+        ],
+        [
+          "Yes",
+          1239
+        ]
+      ],
+      "examples": [
+        "No",
+        "No",
+        "No",
+        "No",
+        "No"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "After12am",
+      "non_empty_rate": 1.0,
+      "distinct": 2,
+      "top_values": [
+        [
+          "No",
+          2592
+        ],
+        [
+          "Yes",
+          2408
+        ]
+      ],
+      "examples": [
+        "No",
+        "Yes",
+        "No",
+        "No",
+        "Yes"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "After3am",
+      "non_empty_rate": 1.0,
+      "distinct": 2,
+      "top_values": [
+        [
+          "No",
+          2902
+        ],
+        [
+          "Yes",
+          2098
+        ]
+      ],
+      "examples": [
+        "Yes",
+        "No",
+        "Yes",
+        "No",
+        "No"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "After5am",
+      "non_empty_rate": 1.0,
+      "distinct": 2,
+      "top_values": [
+        [
+          "No",
+          3332
+        ],
+        [
+          "Yes",
+          1668
+        ]
+      ],
+      "examples": [
+        "No",
+        "Yes",
+        "No",
+        "Yes",
+        "No"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "SA2",
+      "non_empty_rate": 0.661,
+      "distinct": 524,
+      "top_values": [
+        [
+          "Sydney - Haymarket - The Rocks",
+          164
+        ],
+        [
+          "Surry Hills",
+          30
+        ],
+        [
+          "Newcastle - Cooks Hill",
+          28
+        ],
+        [
+          "Broken Hill",
+          25
+        ],
+        [
+          "Redfern - Chippendale",
+          23
+        ]
+      ],
+      "examples": [
+        "Bateau Bay - Killarney Vale",
+        "Singleton",
+        "The Oaks - Oakdale",
+        "Greenacre - Mount Lewis",
+        "Seven Hills - Toongabbie"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Band",
+      "non_empty_rate": 1.0,
+      "distinct": 4,
+      "top_values": [
+        [
+          "0",
+          1695
+        ],
+        [
+          "2",
+          1308
+        ],
+        [
+          "1",
+          1119
+        ],
+        [
+          "3",
+          878
+        ]
+      ],
+      "examples": [
+        "2",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "GMEs",
+      "non_empty_rate": 1.0,
+      "distinct": 239,
+      "top_values": [
+        [
+          "0",
+          2600
+        ],
+        [
+          "15",
+          277
+        ],
+        [
+          "10",
+          105
+        ],
+        [
+          "12",
+          105
+        ],
+        [
+          "30",
+          94
+        ]
+      ],
+      "examples": [
+        "0",
+        "25",
+        "9",
+        "0",
+        "0"
+      ],
+      "pattern_rates": {
+        "postcode_like": 0.041
+      }
+    },
+    {
+      "column": "PMPs",
+      "non_empty_rate": 1.0,
+      "distinct": 16,
+      "top_values": [
+        [
+          "0",
+          4729
+        ],
+        [
+          "15",
+          66
+        ],
+        [
+          "5",
+          29
+        ],
+        [
+          "1",
+          25
+        ],
+        [
+          "2",
+          16
+        ]
+      ],
+      "examples": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Auth limit",
+      "non_empty_rate": 1.0,
+      "distinct": 239,
+      "top_values": [
+        [
+          "0",
+          2600
+        ],
+        [
+          "30",
+          260
+        ],
+        [
+          "15",
+          193
+        ],
+        [
+          "10",
+          105
+        ],
+        [
+          "12",
+          103
+        ]
+      ],
+      "examples": [
+        "0",
+        "0",
+        "169",
+        "0",
+        "97"
+      ],
+      "pattern_rates": {
+        "postcode_like": 0.041
+      }
+    },
+    {
+      "column": "Unfulfilled Quota",
+      "non_empty_rate": 1.0,
+      "distinct": 12,
+      "top_values": [
+        [
+          "0",
+          4987
+        ],
+        [
+          "5",
+          2
+        ],
+        [
+          "20",
+          2
+        ],
+        [
+          "4",
+          1
+        ],
+        [
+          "100",
+          1
+        ]
+      ],
+      "examples": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "GMT",
+      "non_empty_rate": 1.0,
+      "distinct": 239,
+      "top_values": [
+        [
+          "0",
+          2596
+        ],
+        [
+          "30",
+          264
+        ],
+        [
+          "15",
+          193
+        ],
+        [
+          "10",
+          105
+        ],
+        [
+          "12",
+          102
+        ]
+      ],
+      "examples": [
+        "0",
+        "30",
+        "10",
+        "0",
+        "0"
+      ],
+      "pattern_rates": {
+        "postcode_like": 0.042
+      }
+    },
+    {
+      "column": "EGMs",
+      "non_empty_rate": 1.0,
+      "distinct": 221,
+      "top_values": [
+        [
+          "0",
+          2694
+        ],
+        [
+          "30",
+          248
+        ],
+        [
+          "15",
+          175
+        ],
+        [
+          "12",
+          99
+        ],
+        [
+          "10",
+          95
+        ]
+      ],
+      "examples": [
+        "101",
+        "41",
+        "0",
+        "0",
+        "31"
+      ],
+      "pattern_rates": {
+        "postcode_like": 0.037
+      }
+    }
+  ],
+  "sample_idx_note": "sample = first 25 of a seed-1 shuffle; holdout = next 500",
+  "holdout_idx": [
+    2149,
+    25,
+    2160,
+    1532,
+    634,
+    3383,
+    369,
+    1752,
+    1361,
+    147,
+    3489,
+    1217,
+    4081,
+    999,
+    1525,
+    559,
+    3084,
+    135,
+    4568,
+    3104,
+    1003,
+    4824,
+    2690,
+    3010,
+    4017,
+    4864,
+    4510,
+    4075,
+    2954,
+    4196,
+    2419,
+    3006,
+    3613,
+    3470,
+    2157,
+    4829,
+    1438,
+    1620,
+    2900,
+    2644,
+    1588,
+    3612,
+    2364,
+    428,
+    3064,
+    4292,
+    4692,
+    1834,
+    1288,
+    3764,
+    1168,
+    2885,
+    492,
+    1122,
+    3782,
+    2581,
+    3081,
+    3970,
+    4634,
+    417,
+    3597,
+    1618,
+    4807,
+    3200,
+    957,
+    1105,
+    2154,
+    4914,
+    3493,
+    2976,
+    1426,
+    131,
+    4688,
+    2728,
+    4254,
+    1514,
+    4639,
+    1051,
+    788,
+    11,
+    3335,
+    2694,
+    278,
+    3281,
+    4314,
+    1839,
+    4640,
+    3638,
+    3405,
+    2647,
+    3702,
+    3971,
+    4282,
+    4246,
+    2878,
+    2343,
+    4427,
+    2887,
+    1764,
+    4204,
+    1267,
+    4560,
+    3312,
+    3779,
+    3430,
+    993,
+    2435,
+    996,
+    1008,
+    3279,
+    2388,
+    3596,
+    522,
+    3001,
+    567,
+    372,
+    4261,
+    1497,
+    4086,
+    4250,
+    1798,
+    583,
+    1505,
+    489,
+    1201,
+    206,
+    662,
+    430,
+    3048,
+    2749,
+    3231,
+    1126,
+    2743,
+    2558,
+    435,
+    2053,
+    1363,
+    167,
+    2050,
+    2084,
+    3856,
+    3975,
+    1467,
+    1979,
+    774,
+    4169,
+    473,
+    2051,
+    4751,
+    189,
+    940,
+    1873,
+    4398,
+    4369,
+    319,
+    4679,
+    2011,
+    291,
+    4386,
+    2736,
+    2995,
+    276,
+    3125,
+    3534,
+    236,
+    4789,
+    3449,
+    4987,
+    4397,
+    1319,
+    2415,
+    2313,
+    207,
+    895,
+    3009,
+    1785,
+    1968,
+    1760,
+    4232,
+    3089,
+    4079,
+    4084,
+    2833,
+    134,
+    4735,
+    2217,
+    500,
+    2590,
+    3011,
+    4793,
+    254,
+    1887,
+    3821,
+    1594,
+    3053,
+    2993,
+    3131,
+    1549,
+    1028,
+    4690,
+    2058,
+    1332,
+    4587,
+    3632,
+    1950,
+    1912,
+    1765,
+    1266,
+    103,
+    3013,
+    1040,
+    2174,
+    1054,
+    3451,
+    653,
+    4150,
+    1884,
+    95,
+    1688,
+    1755,
+    3832,
+    1696,
+    4283,
+    2648,
+    2362,
+    1155,
+    4072,
+    1936,
+    4691,
+    1194,
+    1012,
+    3629,
+    2959,
+    1895,
+    4635,
+    295,
+    2669,
+    1070,
+    4785,
+    1829,
+    3270,
+    1787,
+    866,
+    1835,
+    402,
+    3828,
+    1425,
+    2240,
+    889,
+    3429,
+    4041,
+    3427,
+    737,
+    3772,
+    4798,
+    4908,
+    4574,
+    2901,
+    4506,
+    1099,
+    1081,
+    209,
+    4277,
+    4802,
+    3212,
+    4482,
+    3705,
+    4834,
+    2677,
+    63,
+    1858,
+    47,
+    911,
+    2965,
+    4335,
+    4038,
+    3938,
+    4315,
+    4226,
+    568,
+    786,
+    4451,
+    1423,
+    4946,
+    4860,
+    603,
+    4737,
+    4278,
+    1504,
+    4298,
+    575,
+    1223,
+    3128,
+    1045,
+    1883,
+    380,
+    2660,
+    746,
+    565,
+    8,
+    1079,
+    2824,
+    2703,
+    3362,
+    3360,
+    3992,
+    3905,
+    3942,
+    4348,
+    766,
+    4554,
+    1960,
+    4200,
+    4786,
+    4602,
+    478,
+    158,
+    1757,
+    325,
+    2272,
+    2946,
+    1369,
+    4783,
+    3487,
+    3438,
+    1493,
+    3950,
+    694,
+    2707,
+    335,
+    45,
+    1074,
+    4660,
+    4172,
+    499,
+    2057,
+    4262,
+    106,
+    3309,
+    4214,
+    274,
+    4978,
+    4583,
+    2318,
+    2369,
+    1568,
+    3055,
+    2539,
+    3955,
+    4840,
+    2399,
+    339,
+    679,
+    3381,
+    3870,
+    729,
+    4481,
+    4849,
+    3022,
+    3251,
+    4544,
+    4029,
+    1871,
+    4513,
+    897,
+    2639,
+    3860,
+    2038,
+    2753,
+    838,
+    3683,
+    2815,
+    2797,
+    1673,
+    64,
+    4536,
+    1953,
+    363,
+    2199,
+    1550,
+    1547,
+    874,
+    1844,
+    4238,
+    2248,
+    1684,
+    4356,
+    2980,
+    4975,
+    1188,
+    971,
+    2460,
+    2570,
+    2145,
+    560,
+    1013,
+    4724,
+    3446,
+    4685,
+    3974,
+    643,
+    951,
+    125,
+    2986,
+    1316,
+    2245,
+    2678,
+    1358,
+    1383,
+    3498,
+    4064,
+    3561,
+    502,
+    4325,
+    434,
+    4048,
+    1726,
+    992,
+    110,
+    538,
+    3540,
+    3914,
+    3331,
+    1756,
+    2543,
+    66,
+    4009,
+    4603,
+    1165,
+    1185,
+    2872,
+    80,
+    2977,
+    2926,
+    2653,
+    1408,
+    830,
+    4712,
+    947,
+    2511,
+    3500,
+    2534,
+    1733,
+    4821,
+    4808,
+    1597,
+    4425,
+    1127,
+    1552,
+    3737,
+    67,
+    625,
+    3208,
+    3165,
+    4906,
+    2193,
+    701,
+    1609,
+    1184,
+    2208,
+    3524,
+    322,
+    1406,
+    4056,
+    443,
+    4526,
+    1323,
+    3030,
+    2550,
+    4228,
+    177,
+    4010,
+    3107,
+    2849,
+    1128,
+    4863,
+    3000,
+    4394,
+    3923,
+    2817,
+    712,
+    2575,
+    3603,
+    4454,
+    642,
+    4605,
+    821,
+    53,
+    1957,
+    1640,
+    391,
+    3392,
+    870,
+    3989,
+    4016,
+    3676,
+    98,
+    691,
+    3715,
+    4258
+  ]
+}

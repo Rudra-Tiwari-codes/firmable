@@ -1,0 +1,122 @@
+{
+  "slug": "asic-credit-licensee",
+  "created_at": "2026-10-31T09:17:41+00:00",
+  "steps": {
+    "select_resource": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:41+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:17:45+00:00",
+      "seconds": 3.5
+    },
+    "download": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:45+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:17:45+00:00",
+      "seconds": 0.5
+    },
+    "inspect": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:45+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:17:54+00:00",
+      "seconds": 9.0
+    },
+    "load": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:54+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:17:54+00:00",
+      "seconds": 0.1
+    },
+    "profile": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:54+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:17:56+00:00",
+      "seconds": 1.7
+    },
+    "propose": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:56+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:18:47+00:00",
+      "seconds": 50.5
+    },
+    "validate_revise": {
+      "status": "done",
+      "started_at": "2026-10-31T09:18:47+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:19:13+00:00",
+      "seconds": 26.7
+    },
+    "finalize": {
+      "status": "done",
+      "started_at": "2026-10-31T09:19:13+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:19:13+00:00",
+      "seconds": 0.0
+    }
+  },
+  "llm_calls": [
+    {
+      "input_tokens": 2129,
+      "output_tokens": 238,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3046,
+      "calls": 1,
+      "model": "claude-sonnet-5-5",
+      "seconds": 3.5,
+      "usd": 0.00725,
+      "step": "select_resource",
+      "at": "2026-10-31T09:17:45+00:00"
+    },
+    {
+      "input_tokens": 5829,
+      "output_tokens": 1272,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3046,
+      "calls": 1,
+      "model": "claude-sonnet-5-5",
+      "seconds": 9.0,
+      "usd": 0.02499,
+      "step": "inspect",
+      "at": "2026-10-31T09:17:54+00:00"
+    },
+    {
+      "input_tokens": 17479,
+      "output_tokens": 7349,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3046,
+      "calls": 1,
+      "model": "claude-sonnet-5-5",
+      "seconds": 50.5,
+      "usd": 0.10906,
+      "step": "propose",
+      "at": "2026-10-31T09:18:47+00:00"
+    },
+    {
+      "input_tokens": 8423,
+      "output_tokens": 4976,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3046,
+      "calls": 1,
+      "model": "claude-sonnet-5-5",
+      "seconds": 26.6,
+      "usd": 0.06722,
+      "step": "revise",
+      "at": "2026-10-31T09:19:13+00:00"
+    }
+  ],
+  "dataset": {
+    "id": "fa0b0d71-b8b8-4af8-bc59-0b000ce0d5e4",
+    "name": "asic-credit-licensee",
+    "title": "ASIC \u2013 Credit Licensee Dataset",
+    "publisher": "Australian Securities and Investments Commission (ASIC)",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "metadata_modified": "2026-10-29T00:48:31.902537",
+    "description": "###Update March 2025###\r\n\r\nFrom 20 March 2025, the dataset update frequency has change from monthly to weekly every Thursday.\r\n\r\n###Update April 2022###\r\n\r\nWe have replaced the .xlsx file resources for all our datasets. This was required due to the API and web page search functionality no longer being supported for .xlsx files on the Data.Gov platform.\r\n\r\n###Update April 2019 - addition of license authorisations to Credit Licensee dataset ###\r\n\r\nFrom 4 April 2019, the Credit Licensee dataset will include license authorisations. See the updated helpfile for further information.\r\n\r\n***\r\n###Dataset summary###\r\nASIC is Australia\u2019s corporate, markets and financial services regulator. ASIC contributes to Australia\u2019s economic reputation and wellbeing by ensuring that Australia's financial markets are fair and transparent, and supported by confident and informed investors and consumers. \r\n\r\nAustralian Credit Licensees are required to maintain their details on ASIC's registers. Information contained on the Credit Licensee Register is made available to the public to search via the ASIC Connect website. \r\n\r\nSelected data from the register will be uploaded each week to www.data.gov.au. The data made available will be a snapshot of the register at a point in time. Legislation prescribes the type of information ASIC is allowed to disclose to the public. \r\n\r\nThe information in the downloadable dataset includes: \r\n\r\n* Register Name\r\n* Credit licensee number\r\n* Credit licensee name\r\n* Date li"
+  },
+  "config_versions": 1
+}

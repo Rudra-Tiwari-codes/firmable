@@ -1,0 +1,207 @@
+{
+  "passed": true,
+  "structural_issues": [],
+  "failing": [],
+  "empirical": {
+    "holdout_records": 500,
+    "per_mapping": [
+      {
+        "index": 0,
+        "canonical": "entity.legal_name",
+        "source": "supplier_name",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 1,
+        "canonical": "entity.abn",
+        "source": "supplier_abn",
+        "raw_non_empty": 499,
+        "records_with_value": 498,
+        "errors": 1,
+        "error_rate": 0.002,
+        "error_examples": [
+          {
+            "raw": "75 490 121 060",
+            "error": "ABN '75490121060' fails checksum"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "canonical": "entity.entity_type",
+        "source": "supplier_name",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      }
+    ],
+    "record_id_duplicates": 0,
+    "preview": [
+      {
+        "entity.legal_name": {
+          "raw": "BOC LIMITED",
+          "values": [
+            "BOC LIMITED"
+          ]
+        },
+        "entity.abn": {
+          "raw": "95 000 029 729",
+          "values": [
+            "95000029729"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "BOC LIMITED",
+          "values": [
+            "company"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "AUSTRALIAN ELECTORAL COMMISSION",
+          "values": [
+            "AUSTRALIAN ELECTORAL COMMISSION"
+          ]
+        },
+        "entity.abn": {
+          "raw": "21 133 285 851",
+          "values": [
+            "21133285851"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "AUSTRALIAN ELECTORAL COMMISSION",
+          "values": [
+            "unknown"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "B BRAUN AUSTRALIA PTY LTD",
+          "values": [
+            "B BRAUN AUSTRALIA PTY LTD"
+          ]
+        },
+        "entity.abn": {
+          "raw": "56 002 945 155",
+          "values": [
+            "56002945155"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "B BRAUN AUSTRALIA PTY LTD",
+          "values": [
+            "company"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "ALCOHOL TOBACCO & OTHER DRUG ASSOCIATION",
+          "values": [
+            "ALCOHOL TOBACCO & OTHER DRUG ASSOCIATION"
+          ]
+        },
+        "entity.abn": {
+          "raw": "50 515 216 820",
+          "values": [
+            "50515216820"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "ALCOHOL TOBACCO & OTHER DRUG ASSOCIATION",
+          "values": [
+            "unknown"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "DELOITTE",
+          "values": [
+            "DELOITTE"
+          ]
+        },
+        "entity.abn": {
+          "raw": "75 490 121 060",
+          "error": "ABN '75490121060' fails checksum"
+        },
+        "entity.entity_type": {
+          "raw": "DELOITTE",
+          "values": [
+            "unknown"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "CALVARY JOHN JAMES HOSPITAL",
+          "values": [
+            "CALVARY JOHN JAMES HOSPITAL"
+          ]
+        },
+        "entity.abn": {
+          "raw": "83 121 852 088",
+          "values": [
+            "83121852088"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "CALVARY JOHN JAMES HOSPITAL",
+          "values": [
+            "unknown"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "MARSH PTY LTD",
+          "values": [
+            "MARSH PTY LTD"
+          ]
+        },
+        "entity.abn": {
+          "raw": "86 004 651 512",
+          "values": [
+            "86004651512"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "MARSH PTY LTD",
+          "values": [
+            "company"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "AUSTRALIAN BREASTFEEDING ASSOCIATION",
+          "values": [
+            "AUSTRALIAN BREASTFEEDING ASSOCIATION"
+          ]
+        },
+        "entity.abn": {
+          "raw": "64 005 081 523",
+          "values": [
+            "64005081523"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "AUSTRALIAN BREASTFEEDING ASSOCIATION",
+          "values": [
+            "unknown"
+          ]
+        }
+      }
+    ]
+  },
+  "max_error_rate": 0.05
+}

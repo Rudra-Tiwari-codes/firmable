@@ -1,0 +1,21 @@
+{
+  "reader": {
+    "format": "json",
+    "encoding": "utf-8"
+  },
+  "records_loaded": 5000,
+  "columns": [
+    ":id",
+    ":version",
+    ":created_at",
+    ":updated_at",
+    "supplier_name",
+    "supplier_abn",
+    "reporting_entity",
+    "publish_description",
+    "date_invoice_received",
+    "payment_date",
+    "payment_amount"
+  ],
+  "attempts": []
+}

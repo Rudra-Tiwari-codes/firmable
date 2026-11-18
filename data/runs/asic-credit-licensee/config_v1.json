@@ -1,0 +1,286 @@
+{
+  "record_id": {
+    "strategy": "fields",
+    "fields": [
+      "CRED_LIC_NUM"
+    ],
+    "rationale": "CRED_LIC_NUM is the ASIC credit licence number. It is non-empty and unique across all 4313 profiled rows (4313 distinct), and one row is one licence, so it traces back to the exact raw record."
+  },
+  "mappings": [
+    {
+      "canonical": "entity.legal_name",
+      "source": "CRED_LIC_NAME",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        }
+      ],
+      "confidence": 0.85,
+      "rationale": "Registered licensee name. About 90% carry company suffixes (PTY LTD, LIMITED). The rest look like individuals in 'SURNAME, FIRST' form, which is still the licensee's name on the register, so confidence is not higher."
+    },
+    {
+      "canonical": "entity.trading_name",
+      "source": "CRED_LIC_BN",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "split",
+          "sep": "~"
+        },
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        }
+      ],
+      "confidence": 0.85,
+      "rationale": "Registered business names (e.g. BEEWIZE HOME LOAN, PORTFOLIOCARE) that differ from the licensee name. Populated in about 34% of rows. Split on '~' defensively in case of multiple names, one observation each."
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "CRED_LIC_ABN_ACN",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "null_if",
+          "values": [
+            "0"
+          ]
+        },
+        {
+          "op": "digits_only"
+        },
+        {
+          "op": "length_in",
+          "lengths": [
+            11
+          ]
+        },
+        {
+          "op": "abn"
+        }
+      ],
+      "confidence": 0.9,
+      "rationale": "Mixed ABN-or-ACN column. 11-digit values are routed to ABN and checksum-validated (89.3% of values pass). '0' is a placeholder for no number and is nulled. Values failing the checksum are dropped, not emitted."
+    },
+    {
+      "canonical": "entity.acn",
+      "source": "CRED_LIC_ABN_ACN",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "null_if",
+          "values": [
+            "0"
+          ]
+        },
+        {
+          "op": "digits_only"
+        },
+        {
+          "op": "length_in",
+          "lengths": [
+            8,
+            9
+          ]
+        },
+        {
+          "op": "zfill",
+          "width": 9
+        },
+        {
+          "op": "acn"
+        }
+      ],
+      "confidence": 0.85,
+      "rationale": "9-digit values (about 8% of rows) are ACNs. Some arrive with a dropped leading zero (e.g. '50601093' is 8 digits), so 8-digit values are zero-padded to 9 before the ACN checksum. Length is restricted to 8 or 9 so shorter values are not padded into false matches."
+    },
+    {
+      "canonical": "entity.entity_type",
+      "source": "CRED_LIC_NAME",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "entity_type_from_name"
+        }
+      ],
+      "confidence": 0.7,
+      "rationale": "Deterministic from unambiguous legal suffixes only. Everything else, including individual names, stays unknown. We do not infer sole_trader, trust or partnership."
+    },
+    {
+      "canonical": "address.locality",
+      "source": "CRED_LIC_LOCALITY",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        }
+      ],
+      "confidence": 0.9,
+      "rationale": "Suburb or locality, 100% populated, upper-case as published."
+    },
+    {
+      "canonical": "address.state",
+      "source": "CRED_LIC_STATE",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "state"
+        }
+      ],
+      "confidence": 0.95,
+      "rationale": "8 distinct values, all state-like (NSW, VIC, QLD, WA, SA and so on)."
+    },
+    {
+      "canonical": "address.postcode",
+      "source": "CRED_LIC_PCODE",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "postcode"
+        }
+      ],
+      "confidence": 0.9,
+      "rationale": "4-digit AU postcodes, 100% postcode-like. Leading zeros are preserved in the file (e.g. 0800) and the transform would restore any that were dropped."
+    },
+    {
+      "canonical": "address.country",
+      "constant": "AU",
+      "confidence": 0.9,
+      "rationale": "All 8 distinct states are Australian states or territories (no NZ or OTHER values observed). The register is an Australian regulator's."
+    },
+    {
+      "canonical": "observation.valid_from",
+      "source": "CRED_LIC_START_DT",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "date",
+          "formats": [
+            "%d/%m/%Y"
+          ]
+        }
+      ],
+      "confidence": 0.7,
+      "rationale": "Licence start date (dd/mm/yyyy, 100% populated). It says when the licence, and so the licensee's listing on the register, began. It does not date every field in the record, e.g. the address."
+    },
+    {
+      "canonical": "observation.valid_to",
+      "source": "CRED_LIC_END_DT",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "date",
+          "formats": [
+            "%d/%m/%Y"
+          ]
+        }
+      ],
+      "confidence": 0.7,
+      "rationale": "Licence end date. It is empty in all 4313 rows of this snapshot, so every claim reads as current. The mapping is kept in case later snapshots populate it."
+    }
+  ],
+  "unmapped_source_fields": [
+    {
+      "source": "\ufeffREGISTER_NAME",
+      "reason": "Constant 'Credit Licence' (1 distinct value), no canonical field. The header starts with a UTF-8 BOM, so the engine should strip it or match on the BOM-prefixed name. No mapping uses this column."
+    },
+    {
+      "source": "CRED_LIC_STATUS",
+      "reason": "Values are APPR (4306) and SUSP (7). They describe the licence (approved or suspended), not the entity's registration status. Mapping them to entity.status would conflate the two, e.g. a suspended licence is not a suspended company. Left unmapped for the reviewer to decide."
+    },
+    {
+      "source": "CRED_LIC_AFSL_NUM",
+      "reason": "AFSL number: '0' in 4003 rows, otherwise equal to the licence number. It is a licence identifier, not ABN, ACN or any canonical business identifier."
+    },
+    {
+      "source": "CRED_LIC_STATUS_HISTORY",
+      "reason": "Only 0.6% populated. Free text mixing a suspension reason, dates and '~' separators in an unconfirmed layout. Parsing it into valid_from/valid_to would be a guess."
+    },
+    {
+      "source": "CRED_LIC_LAT",
+      "reason": "Geocoded latitude, no canonical field in this ontology subset. The ACN checksum pattern hit on this column is noise."
+    },
+    {
+      "source": "CRED_LIC_LNG",
+      "reason": "Geocoded longitude, no canonical field in this ontology subset."
+    },
+    {
+      "source": "CRED_LIC_EDRS",
+      "reason": "External dispute resolution scheme membership (AFCA, COSL, FOS), '~'-separated. No canonical field."
+    },
+    {
+      "source": "CRED_LIC_AUTHORISATIONS",
+      "reason": "Long free-text description of licence authorisations with '~' separators. No canonical field and not a business identifier."
+    }
+  ],
+  "unmapped_canonical_fields": [
+    {
+      "canonical": "entity.status",
+      "reason": "Source gives licence status, not entity status. See CRED_LIC_STATUS above."
+    },
+    {
+      "canonical": "entity.nzbn",
+      "reason": "Not present. This is an Australian register."
+    },
+    {
+      "canonical": "entity.website",
+      "reason": "Not present."
+    },
+    {
+      "canonical": "entity.industry_code",
+      "reason": "Not present. All records are credit licensees, but that is not an ANZSIC code."
+    },
+    {
+      "canonical": "entity.date_registered",
+      "reason": "CRED_LIC_START_DT is the licence start, not the entity's registration date, so it goes to observation.valid_from instead."
+    },
+    {
+      "canonical": "address.full",
+      "reason": "No street address, only locality, state and postcode. Synthesising a 'full' address from them would be misleading."
+    },
+    {
+      "canonical": "observation.observed_at",
+      "reason": "No per-record statement date. The engine will use the resource last-modified date (weekly snapshot)."
+    }
+  ],
+  "relationships": [],
+  "source_reliability": {
+    "value": 0.9,
+    "rationale": "ASIC is the statutory regulator and publisher of the credit licence register, so licence and name claims are authoritative. The ABN/ACN column is messy (placeholder '0', dropped leading zeros, about 1% failing checksum), and the address and geocodes are not formally validated."
+  },
+  "notes": [
+    "The ABN and ACN mappings share CRED_LIC_ABN_ACN and are routed by length. About 1.6% of rows hold the placeholder '0' (mostly individuals) and a further ~1% fail the checksum. These get no abn or acn observation, which is expected.",
+    "ACN is not derived from the last 9 digits of an 11-digit ABN. That is true for companies but not for sole traders or trusts, and we do not want an unverified identifier asserted as an L0 claim.",
+    "Roughly 10% of CRED_LIC_NAME values have no company suffix, including individuals in 'SURNAME, FIRST' format (e.g. TADROS, EMAD). They are kept as legal_name because it is the register's licensee name, but entity_type stays unknown.",
+    "Licence status is deliberately not mapped to entity.status. If the reviewer accepts that licence status is an acceptable proxy, APPR -> active and SUSP -> suspended is the obvious mapping with default unknown.",
+    "This is a weekly point-in-time snapshot of current licences. CRED_LIC_END_DT is empty throughout, so ceased licences are absent rather than flagged. Absence must not be read as deregistration.",
+    "The licence is CC BY 3.0 AU, taken from the dataset metadata, and attribution to ASIC is required.",
+    "CRED_LIC_AUTHORISATIONS is long and contains '~' separators, so the CSV must be read with proper quote handling. The sample was truncated, so row well-formedness across the whole file is unconfirmed."
+  ]
+}

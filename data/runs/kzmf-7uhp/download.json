@@ -1,0 +1,36 @@
+{
+  "resource": {
+    "cache_last_updated": null,
+    "cache_url": null,
+    "created": "2026-09-30T16:38:33.236809",
+    "datastore_active": false,
+    "datastore_contains_all_records_of_source_file": false,
+    "format": "JSON",
+    "hash": "",
+    "id": "5cf1e4ea-7509-4951-b235-11204fc7d3d5",
+    "last_modified": null,
+    "metadata_modified": "2026-09-30T16:38:33.215070",
+    "mimetype": "application/json",
+    "mimetype_inner": null,
+    "package_id": "9584dbb5-2d1f-4a73-9bba-e1bae966c124",
+    "position": 1,
+    "resource_type": null,
+    "size": null,
+    "state": "active",
+    "url": "https://www.data.act.gov.au/api/v3/views/kzmf-7uhp/query.json?accessType=DOWNLOAD",
+    "url_type": null,
+    "zip_extract": false
+  },
+  "path": "C:\\Users\\rudrat\\firmable-task\\data\\raw\\5cf1e4ea-7509-4951-b235-11204fc7d3d5.json",
+  "meta": {
+    "file": "5cf1e4ea-7509-4951-b235-11204fc7d3d5.json",
+    "url": "https://www.data.act.gov.au/api/v3/views/kzmf-7uhp/query.json?accessType=DOWNLOAD",
+    "final_url": "https://www.data.act.gov.au/api/v3/views/kzmf-7uhp/query.json?accessType=DOWNLOAD",
+    "bytes": 55132654,
+    "truncated": false,
+    "content_type": "application/json; charset=utf-8",
+    "sha256": "5f1ef1fd815f0817ff2b1e12403707566a13a6b7e09b985f592bd97a35f5f1ca",
+    "last_modified_header": "Sat, 31 Oct 2026 05:18:51 GMT"
+  },
+  "tried": []
+}

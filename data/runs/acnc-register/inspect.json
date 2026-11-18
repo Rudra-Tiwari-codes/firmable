@@ -1,0 +1,25 @@
+{
+  "what_it_is": "The ACNC Charity Register extract: a comma-delimited CSV with a single header row, listing Australian registered charities with ABN, legal name, other names, address, website, registration and establishment dates, size, states of operation, and Y-flag columns for purposes and beneficiaries. The declared format (CSV) matches the sniffed format (delimited text).",
+  "record_grain": "one record = one registered charity, identified by ABN. The sample rows show no duplicate ABNs, but uniqueness across the full file is not checked here.",
+  "contains_business_entities": true,
+  "evidence": "The header starts with ABN, Charity_Legal_Name and Other_Organisation_Names. Sample rows have 11-digit ABNs and registered names such as 'CLARK COURT LTD', 'HOPE ARABIC CHURCH INCORPORATED' and 'TECHNION AUSTRALIA PBI LIMITED'. They also have street addresses with state and postcode, and websites. The description says it is a subset of the ACNC Charity Register. The comma delimiter count is consistently 68 and no title or notes rows sit above the header.",
+  "reader": {
+    "format": "csv",
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "header_row": 0
+  },
+  "concerns": [
+    "Quoted cells contain commas (for example Other_Organisation_Names and Operating_Countries 'AUS, KHM'), so the reader must honour CSV quoting.",
+    "Other_Organisation_Names contains non-Latin text (Arabic), so the encoding must be UTF-8. Check the BOM and that the characters decode cleanly.",
+    "Dates look like dd/mm/yyyy (13/11/2024, 28/06/2024), which is day-first. Registration_Date and Date_Organisation_Established need an explicit format. Financial_Year_End is a day-month value like '30-Jun', not a full date.",
+    "Many cells are empty. Charity_Size is blank on some rows, and the Y-flag columns are sparse.",
+    "Postcodes and ABNs must be read as strings so leading zeros are preserved. Do not let the reader infer numeric types.",
+    "The file is a weekly-updated snapshot. The row-level observation time is not in the data, so the last-modified date is the likely fallback.",
+    "The description says charities can have information withheld, so the register is incomplete by design.",
+    "The description is truncated, so it may contain a further caveat I could not read.",
+    "The licence is CC BY 3.0 AU, which requires attribution. Record it in the envelope.",
+    "The Address_Type column shows 'Business' on all sample rows, but it may take other values elsewhere in the file.",
+    "Some sample names are not obviously registered legal entities (for example 'Frederick Miller Community Garden'). That is a concern for entity_type, not for reading the file."
+  ]
+}

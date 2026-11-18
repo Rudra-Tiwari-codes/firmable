@@ -1,0 +1,28 @@
+{
+  "bytes": 15156962,
+  "extension": ".csv",
+  "sniffed": "delimited text",
+  "first_lines": [
+    "ABN,Charity_Legal_Name,Other_Organisation_Names,Address_Type,Address_Line_1,Address_Line_2,Address_Line_3,Town_City,State,Postcode,Country,Charity_Website,Registration_Date,Date_Organisation_Established,Charity_Size,Number_of_Responsible_Persons,Financial_Year_End,Operates_in_ACT,Operates_in_NSW,Operates_in_NT,Operates_in_QLD,Operates_in_SA,Operates_in_TAS,Operates_in_VIC,Operates_in_WA,Operating_Countries,PBI,HPC,Preventing_or_relieving_suffering_of_animals,Advancing_Culture,Advancing_Education,Advancing_Health,Promote_or_oppose_a_change_to_law__government_poll_or_prac,Advancing_natual_environment,Promoting_or_protecting_human_rights,Purposes_beneficial_to_ther_general_public_and_other_analogous,Promoting_reconciliation__mutual_respect_and_tolerance,Advancing_Religion,Advancing_social_or_public_welfare,Advancing_security_or_safety_of_Australia_or_Australian_public,Aboriginal_or_TSI,Adults,Aged_Persons,Children,Communities_Overseas,Early_Childhood,Ethnic_Groups,Families,Females,Financially_Disadvantaged,LGBTIQA+,General_Community_in_Australia,Males,Migrants_Refugees_or_Asylum_Seekers,Other_Beneficiaries,Other_Charities,People_at_risk_of_homelessness,People_with_Chronic_Illness,People_with_Disabilities,Pre_Post_Release_Offenders,Rural_Regional_Remote_Communities,Unemployed_Person,Veterans_or_their_families,Victims_of_crime,Victims_of_Disasters,Youth,animals,environment,other_gender_identities",
+    "97830467530,The Dale Family Foundation,,Business,L 15 216 St Georges Tce,,,Perth,WA,6000,Australia,,13/11/2024,13/11/2024,Large,2,30-Jun,,,,,,,,,,,,,,,,,,,Y,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    "90175059896,The SJD Homes Foundation,,Business,433 Princes Hwy,,,Officer,VIC,3809,Australia,,27/10/2024,27/10/2024,Small,7,30-Jun,,,,,,,Y,,AUS,,,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,,,,,,,,",
+    "75313755767,NORTH WEST REGIONAL LANDCARERS INC,,Business,Po Box 3122,,,West Tamworth,NSW,2340,Australia,www.nwrl.org.au,11/10/2023,11/10/2023,Medium,5,30-Jun,,Y,,,,,,,AUS,,,,,,,,Y,,,,,,,Y,Y,Y,,,,,,Y,,,Y,Y,,,,,,,,Y,,,,,Y,Y,Y,Y",
+    "54281755117,Catholic Cemeteries & Crematoria Trust,,Business,L 2 11 Murray Rose Ave,,,Sydney Olympic Park,NSW,2127,Australia,https://catholiccemeteries.com.au/,28/06/2024,25/06/2024,Large,5,30-Jun,,Y,,,,,,,AUS,,,,,,Y,,,,Y,,Y,,,,,,,,,,Y,,,,Y,,,,,,,,,,,,,,,,,",
+    "63247433977,HOPE ARABIC CHURCH INCORPORATED,\"Hope Arabic Church - South Australia, \u0643\u0646\u064a\u0633\u0629 \u0627\u0644\u0631\u062c\u0627\u0621 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 - \u062c\u0646\u0648\u0628 \u0623\u0633\u062a\u0631\u0627\u0644\u064a\u0627\",Business,614 Burbridge Rd,,,West Beach,SA,5024,Australia,www.hopearabicchurch.com,18/06/2024,18/06/2024,Small,5,30-Jun,,,,,Y,,,,AUS,,,,,,,,,,,,Y,,,,Y,Y,Y,,Y,Y,Y,,,,,,,,,,,,,,,,,,Y,,,",
+    "61998274313,Frederick Miller Community Garden,,Business,Frederick Miller Reserve,3 Fourth Avenue,,Semaphore Park,SA,5019,Australia,,01/06/2022,21/03/2022,,3,30-Jun,,,,,Y,,,,,,,,,,,,Y,,,,,,,,Y,Y,Y,,Y,,,Y,,,Y,Y,,,,,,,,,,,,,Y,,,Y",
+    "63435376992,DELATITE LANDCARE GROUP INC,,Business,24 Highett St,,,Mansfield,VIC,3722,Australia,www.up2us.org.au,03/12/2013,25/05/1994,Small,7,30-Sep,,,,,,,Y,,AUS,,,,,,,,Y,,,,,,,,,,,,,,,,,,Y,,,,,,,,,,,,,,,,Y,",
+    "71689974409,TECHNION AUSTRALIA PBI LIMITED,,Business,L 9 151 Macquarie St,,,Sydney,NSW,2000,Australia,,20/08/2025,20/08/2025,,4,31-Dec,,Y,,,,,,,,Y,,,,,,,,,,,,,,,,,,,,,,Y,Y,,,Y,,,,Y,,,,,Y,,,Y,,,,Y",
+    "75114361739,CAIRNS MAR THOMA CHURCH INCORPORATED,,Business,19 Tierney St,,,Innisfail Estate,QLD,4860,Australia,,17/06/2025,17/06/2025,,6,30-Jun,,,,Y,,,,,,,,,,,,,,,,,Y,,,,Y,Y,Y,,Y,Y,Y,Y,,,Y,Y,Y,,,,,,,Y,,,,,Y,,,",
+    "34177564894,Kannada Sangha Queensland Inc.,,Business,15 Steelwood St,,,Heathwood,QLD,4110,Australia,www.kannadasanghaqld.org,05/07/2025,15/07/2005,,5,30-Jun,,,,Y,,,,,,,,,Y,,,,,,,,,,,,Y,Y,Y,Y,Y,Y,Y,Y,Y,,Y,Y,,Y,Y,,,Y,,Y,,,,,Y,,,",
+    "48468456143,John Lister Foundation,,Business,12 Frances Ave,,,Kalinga,QLD,4030,Australia,,14/05/2024,13/05/2024,Small,2,30-Jun,,,,,,,,,\"AUS, KHM\",,,,,Y,Y,,Y,,,,,,,,Y,,Y,Y,Y,,Y,Y,Y,,,Y,,,,,,,,Y,,,,,Y,Y,Y,",
+    "24998086842,Narrabri Men's Shed Inc,,Business,11 Reid St,,,Narrabri,NSW,2390,Australia,,03/12/2012,08/03/2010,Small,7,30-Jun,,Y,,,,,,,AUS,,,,,,,,,,,,,Y,,Y,,Y,,,,Y,,,Y,,,Y,Y,,,,Y,Y,,Y,,Y,,,,,Y,",
+    "37882449540,Pucker Farm Animal Sanctuary,,Business,386 Kondinin-hyden Rd,,,Kondinin,WA,6367,Australia,,01/07/2021,29/08/2016,Small,3,30-Jun,,,,,,,,Y,AUS,,,Y,,,,,,,,,,,,,Y,Y,,,,,,Y,,,Y,Y,,,,Y,,,,Y,Y,,,,,Y,,",
+    "89686893612,CLARK COURT LTD,,Business,5 Mackie St,,,Victoria Park,WA,6100,Australia,https://www.connectvictoriapark.org/,08/05/2025,08/05/2025,,4,30-Jun,,,,,,,,Y,,Y,,,,,,,,,,,,Y,,,,Y,,,,,,,,,,,,,,Y,,,,,,,,,,,,"
+  ],
+  "delimiter_counts": {
+    "','": 68,
+    "'\\t'": 0,
+    "';'": 0,
+    "'|'": 0
+  }
+}

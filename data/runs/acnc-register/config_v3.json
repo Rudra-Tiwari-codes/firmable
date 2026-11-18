@@ -1,0 +1,473 @@
+{
+  "record_id": {
+    "strategy": "fields",
+    "fields": [
+      "ABN",
+      "Charity_Legal_Name"
+    ],
+    "rationale": "ABN is the register key (every non-empty value passes the checksum and the top values are all unique), but 1.6% of rows have no ABN and ~2 non-empty ABNs may repeat across 5000 rows. Adding the legal name keeps blank-ABN rows distinct and separates any duplicate ABNs. The cost is that the id changes if a charity renames itself between weekly snapshots. Held-out check: 0 duplicate ids in 500 records."
+  },
+  "mappings": [
+    {
+      "canonical": "entity.abn",
+      "source": "ABN",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "abn"
+        }
+      ],
+      "confidence": 0.97,
+      "rationale": "11-digit values, 100% pass the real ABN checksum; the header and description identify it as the charity's ABN."
+    },
+    {
+      "canonical": "entity.legal_name",
+      "source": "Charity_Legal_Name",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        }
+      ],
+      "confidence": 0.92,
+      "rationale": "Registered charity name as held on the ACNC register; 72% carry company suffixes (Ltd, Inc, Pty Ltd). Case is left as the source gives it."
+    },
+    {
+      "canonical": "entity.entity_type",
+      "source": "Charity_Legal_Name",
+      "transforms": [
+        {
+          "op": "entity_type_from_name"
+        }
+      ],
+      "confidence": 0.7,
+      "rationale": "No entity type column. Derived only from unambiguous legal suffixes in the registered name (Pty Ltd / Limited / Inc); everything else stays unknown. Trusts, Aboriginal Corporations, 'Community Garden' style names etc. are deliberately not guessed."
+    },
+    {
+      "canonical": "entity.website",
+      "source": "Charity_Website",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "url"
+        }
+      ],
+      "confidence": 0.65,
+      "rationale": "Self-reported website; 88% of non-empty values are URL-like. Some are social media pages, and some point to a parent or related organisation's site rather than the charity's own (e.g. BHL Dalyellup Two Apartments Ltd lists bethanie.com.au)."
+    },
+    {
+      "canonical": "address.full",
+      "source": [
+        "Address_Line_1",
+        "Address_Line_2",
+        "Address_Line_3",
+        "Town_City",
+        "State",
+        "Postcode"
+      ],
+      "transforms": [
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "strip"
+        }
+      ],
+      "confidence": 0.75,
+      "rationale": "Concatenation of the structured address parts. Address_Line_1 sometimes holds a C/O or organisation name rather than a street, and Line_3 has stray values like 'via' or 'Australia', so the full string is only moderately reliable."
+    },
+    {
+      "canonical": "address.locality",
+      "source": "Town_City",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        }
+      ],
+      "confidence": 0.9,
+      "rationale": "Suburb or town values (Sydney, Carlton North, Wyoming)."
+    },
+    {
+      "canonical": "address.state",
+      "source": "State",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "state"
+        }
+      ],
+      "confidence": 0.92,
+      "rationale": "100% of non-empty values are state-like abbreviations (NSW, VIC, QLD...). Held-out: 434/434 parsed."
+    },
+    {
+      "canonical": "address.postcode",
+      "source": "Postcode",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "postcode"
+        }
+      ],
+      "confidence": 0.9,
+      "rationale": "Postcode-like values; read as string; the postcode transform restores a dropped leading zero. A rare invalid value (e.g. 6 digits) is dropped (1/435 on held-out)."
+    },
+    {
+      "canonical": "address.country",
+      "source": "Country",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "upper"
+        },
+        {
+          "op": "map_values",
+          "map": {
+            "AUSTRALIA": "AU",
+            "AUS": "AU",
+            "AU": "AU",
+            "AUSTRIA": "AT",
+            "ARUBA": "AW",
+            "SINGAPORE": "SG",
+            "NEW ZEALAND": "NZ",
+            "UNITED KINGDOM": "GB",
+            "UNITED STATES": "US",
+            "UNITED STATES OF AMERICA": "US",
+            "INDIA": "IN",
+            "CANADA": "CA",
+            "CHINA": "CN",
+            "HONG KONG": "HK",
+            "JAPAN": "JP",
+            "MALAYSIA": "MY",
+            "INDONESIA": "ID",
+            "PHILIPPINES": "PH",
+            "SOUTH AFRICA": "ZA",
+            "KENYA": "KE",
+            "GERMANY": "DE",
+            "FRANCE": "FR",
+            "IRELAND": "IE",
+            "PAPUA NEW GUINEA": "PG",
+            "FIJI": "FJ",
+            "THAILAND": "TH",
+            "VIETNAM": "VN",
+            "SWITZERLAND": "CH"
+          },
+          "case_insensitive": true
+        }
+      ],
+      "confidence": 0.8,
+      "rationale": "Mostly 'Australia' / 'AUSTRALIA'. Other literal country names are mapped to ISO codes rather than defaulting to AU, which would be wrong for them. Unmapped values (e.g. the phone number '0419032014') are dropped, not defaulted."
+    }
+  ],
+  "unmapped_source_fields": [
+    {
+      "source": "Other_Organisation_Names",
+      "reason": "Mixed content: other/former names, abbreviations, 'Previously known as' text and non-Latin translations. Commas occur inside single names (e.g. 'ATF ...'), so a comma split would corrupt them, and it is unclear that they are trading names. Mapping it to trading_name would risk wrong claims."
+    },
+    {
+      "source": "Address_Type",
+      "reason": "Constant 'Business' on all 5000 records; no canonical field and no information."
+    },
+    {
+      "source": "Registration_Date",
+      "reason": "Date the charity registered with the ACNC. This is not the company or entity registration date (date_registered), and it is not when the name or address claims became true (valid_from applies to every emitted observation), so it is left unmapped to avoid a misleading mapping. Reviewer may override. Format is dd/mm/yyyy (%d/%m/%Y)."
+    },
+    {
+      "source": "Date_Organisation_Established",
+      "reason": "Establishment date of the organisation. Not clearly the registration date in the ontology sense, and it is often identical to Registration_Date. Format is dd/mm/yyyy."
+    },
+    {
+      "source": "Charity_Size",
+      "reason": "ACNC size classification (Small/Medium/Large) based on revenue; no canonical field. Blank on 14%."
+    },
+    {
+      "source": "Number_of_Responsible_Persons",
+      "reason": "Count of responsible persons; no canonical field."
+    },
+    {
+      "source": "Financial_Year_End",
+      "reason": "Day-month value like '30-Jun', not a date; no canonical field."
+    },
+    {
+      "source": "Operates_in_ACT",
+      "reason": "State-of-operation flag; no canonical field."
+    },
+    {
+      "source": "Operates_in_NSW",
+      "reason": "State-of-operation flag; no canonical field."
+    },
+    {
+      "source": "Operates_in_NT",
+      "reason": "State-of-operation flag; no canonical field."
+    },
+    {
+      "source": "Operates_in_QLD",
+      "reason": "State-of-operation flag; no canonical field."
+    },
+    {
+      "source": "Operates_in_SA",
+      "reason": "State-of-operation flag; no canonical field."
+    },
+    {
+      "source": "Operates_in_TAS",
+      "reason": "State-of-operation flag; no canonical field."
+    },
+    {
+      "source": "Operates_in_VIC",
+      "reason": "State-of-operation flag; no canonical field."
+    },
+    {
+      "source": "Operates_in_WA",
+      "reason": "State-of-operation flag; no canonical field."
+    },
+    {
+      "source": "Operating_Countries",
+      "reason": "ISO3 list of operating countries ('AUS, KEN'); not the address country."
+    },
+    {
+      "source": "PBI",
+      "reason": "Public benevolent institution flag; no canonical field."
+    },
+    {
+      "source": "HPC",
+      "reason": "Health promotion charity flag; no canonical field."
+    },
+    {
+      "source": "Preventing_or_relieving_suffering_of_animals",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Advancing_Culture",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Advancing_Education",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Advancing_Health",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Promote_or_oppose_a_change_to_law__government_poll_or_prac",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Advancing_natual_environment",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Promoting_or_protecting_human_rights",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Purposes_beneficial_to_ther_general_public_and_other_analogous",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Promoting_reconciliation__mutual_respect_and_tolerance",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Advancing_Religion",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Advancing_social_or_public_welfare",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Advancing_security_or_safety_of_Australia_or_Australian_public",
+      "reason": "Charitable purpose Y-flag; no canonical field."
+    },
+    {
+      "source": "Aboriginal_or_TSI",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Adults",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Aged_Persons",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Children",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Communities_Overseas",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Early_Childhood",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Ethnic_Groups",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Families",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Females",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Financially_Disadvantaged",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "LGBTIQA+",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "General_Community_in_Australia",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Males",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Migrants_Refugees_or_Asylum_Seekers",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Other_Beneficiaries",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Other_Charities",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "People_at_risk_of_homelessness",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "People_with_Chronic_Illness",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "People_with_Disabilities",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Pre_Post_Release_Offenders",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Rural_Regional_Remote_Communities",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Unemployed_Person",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Veterans_or_their_families",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Victims_of_crime",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Victims_of_Disasters",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "Youth",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    },
+    {
+      "source": "animals",
+      "reason": "Y-flag (apparently an additional purpose/activity tag); meaning unclear and no canonical field."
+    },
+    {
+      "source": "environment",
+      "reason": "Y-flag (apparently an additional purpose/activity tag); meaning unclear and no canonical field."
+    },
+    {
+      "source": "other_gender_identities",
+      "reason": "Beneficiary Y-flag; no canonical field."
+    }
+  ],
+  "unmapped_canonical_fields": [
+    {
+      "canonical": "entity.trading_name",
+      "reason": "Only candidate is Other_Organisation_Names, which mixes former names, abbreviations and free text and cannot be split safely."
+    },
+    {
+      "canonical": "entity.acn",
+      "reason": "No ACN column. Deriving it from the ABN would give wrong values for the many non-company charities (incorporated associations, trusts, etc.), where the last 9 digits are not an ACN."
+    },
+    {
+      "canonical": "entity.nzbn",
+      "reason": "Not present; Australian source."
+    },
+    {
+      "canonical": "entity.status",
+      "reason": "No status column. The register lists currently registered charities, but that is not stated per record, so status is left as unknown rather than inferred as active."
+    },
+    {
+      "canonical": "entity.industry_code",
+      "reason": "No ANZSIC or industry column; the purpose flags are not an industry classification."
+    },
+    {
+      "canonical": "entity.date_registered",
+      "reason": "Registration_Date is ACNC registration, not entity registration; left unmapped (see unmapped_source_fields)."
+    },
+    {
+      "canonical": "observation.observed_at",
+      "reason": "No per-record statement date; the engine will use the resource's last-modified date."
+    },
+    {
+      "canonical": "observation.valid_from",
+      "reason": "No column giving when the emitted name/address claims became true."
+    },
+    {
+      "canonical": "observation.valid_to",
+      "reason": "No end date column; deregistered or revoked charities are not represented."
+    }
+  ],
+  "relationships": [],
+  "source_reliability": {
+    "value": 0.9,
+    "rationale": "National regulator and authoritative for charity registration, names and ABNs. Addresses, websites and size flags are charity self-reported and can be stale or sloppy. Withheld records are absent by design."
+  },
+  "notes": [
+    "Licence: Creative Commons Attribution 3.0 Australia. Attribution to ACNC is required; carry it in the envelope.",
+    "Parse as UTF-8 CSV with quoting honoured. Other_Organisation_Names contains Arabic text and embedded commas. Read every column as string so ABN and postcode leading zeros survive.",
+    "Dates are day-first dd/mm/yyyy (%d/%m/%Y) if a reviewer later maps Registration_Date or Date_Organisation_Established. Financial_Year_End is a day-month value, not a date.",
+    "About 1.6% of rows have no ABN, and about 12% have no address. These emit fewer observations; the abn transform drops values that fail the checksum, but all sampled ABNs were valid.",
+    "entity_type_from_name is a suffix heuristic on the legal name. Many charities (churches, community groups, Aboriginal Corporations, trusts) will come out as unknown. That is intended.",
+    "Country map (round 2 revision): v1 and v2 both failed on 100% of values with \"value not in map\", even for 'Australia' after upper-casing. The likely cause is that the map arguments were nested under an \"args\" key instead of sitting beside \"op\". They are now top-level. Countries not in the map are dropped, not defaulted to AU. The map is a finite list, so a small share of overseas countries may be dropped. A reviewer should confirm the engine does not apply the ontology default AU to dropped values, since that would mislabel overseas addresses.",
+    "Some legal names look anonymised or withheld (e.g. '847219-X8N0N9- PAF', with no ABN or address). They are passed through as the source states them; consider a downstream filter.",
+    "Address_Line_1 sometimes holds a C/O or organisation name (e.g. a school P&C), so address.full may not be a clean street address for those rows.",
+    "Charity_Website sometimes holds social media pages or a parent organisation's site rather than the charity's own site (seen in the held-out preview: a subsidiary listing its parent's site).",
+    "The dataset description was truncated, so a caveat about future withdrawal of information may be missing. The file is a weekly snapshot, so the last-modified date is a coarse proxy for observed_at.",
+    "5000-row profile only: ABN uniqueness across the full file is not verified (4918 distinct over ~4920 non-empty). Held-out 500 records had no duplicate record ids."
+  ]
+}

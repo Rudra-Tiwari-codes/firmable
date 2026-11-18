@@ -1,0 +1,24 @@
+{
+  "reader": {
+    "format": "csv",
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "header_row": 0
+  },
+  "records_loaded": 5000,
+  "columns": [
+    "id",
+    "Licence Number",
+    "Licensee Name",
+    "ACN",
+    "ABN",
+    "Licensee Business Address",
+    "Licence Type DESC",
+    "Licence Type CODE",
+    "Financial Category DESC",
+    "Financial Category CODE",
+    "Licence Grade",
+    "Licence Class Type"
+  ],
+  "attempts": []
+}

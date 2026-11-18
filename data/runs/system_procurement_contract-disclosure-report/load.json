@@ -1,0 +1,47 @@
+{
+  "reader": {
+    "format": "csv",
+    "encoding": "cp1252",
+    "delimiter": ",",
+    "header_row": 0
+  },
+  "records_loaded": 126,
+  "columns": [
+    "Description",
+    "Agency (Dept or Stat Body)",
+    "Agency address",
+    "Contract description/name",
+    "Award contract date",
+    "Contract value",
+    "Supplier name",
+    "Supplier address",
+    "Variation to contract (Yes/No)",
+    "Specific confidentiality provision used",
+    "Procurement method",
+    "Reason for use of limited tendering",
+    "Form of contract",
+    "Number of offers sought",
+    "Evaluation criteria and weightings",
+    "Deliverables",
+    "Contract milestones",
+    "Contract performance management",
+    "Contract reference number",
+    "Contract category group",
+    "Parent contract number/SOA",
+    "Variation comments",
+    "Commence date",
+    "Supplier ABN",
+    "Finish date"
+  ],
+  "attempts": [
+    {
+      "reader": {
+        "format": "csv",
+        "encoding": "utf-8",
+        "delimiter": ",",
+        "header_row": 0
+      },
+      "problem": "ReaderError: could not decode text"
+    }
+  ]
+}

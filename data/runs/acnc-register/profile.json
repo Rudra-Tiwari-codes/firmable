@@ -1,0 +1,2115 @@
+{
+  "records_profiled": 5000,
+  "columns": [
+    {
+      "column": "ABN",
+      "non_empty_rate": 0.984,
+      "distinct": 4918,
+      "top_values": [
+        [
+          "97830467530",
+          1
+        ],
+        [
+          "90175059896",
+          1
+        ],
+        [
+          "75313755767",
+          1
+        ],
+        [
+          "54281755117",
+          1
+        ],
+        [
+          "63247433977",
+          1
+        ]
+      ],
+      "examples": [
+        "16887295206",
+        "92149068642",
+        "77184151969",
+        "72715871906",
+        "90829061231"
+      ],
+      "pattern_rates": {
+        "abn_checksum_valid": 1.0
+      }
+    },
+    {
+      "column": "Charity_Legal_Name",
+      "non_empty_rate": 0.998,
+      "distinct": 4991,
+      "top_values": [
+        [
+          "The Dale Family Foundation",
+          1
+        ],
+        [
+          "The SJD Homes Foundation",
+          1
+        ],
+        [
+          "NORTH WEST REGIONAL LANDCARERS INC",
+          1
+        ],
+        [
+          "Catholic Cemeteries & Crematoria Trust",
+          1
+        ],
+        [
+          "HOPE ARABIC CHURCH INCORPORATED",
+          1
+        ]
+      ],
+      "examples": [
+        "HINDU SATSANG MANDAL OF VICTORIA",
+        "DIVINITY FOUNDATION LTD",
+        "Pine Rivers Men's Shed Inc.",
+        "Hobart City Mission Foundation Limited",
+        "Country Education Foundation of Warracknabeal and District Inc"
+      ],
+      "pattern_rates": {
+        "acn_checksum_valid": 0.002,
+        "company_suffix": 0.721
+      }
+    },
+    {
+      "column": "Other_Organisation_Names",
+      "non_empty_rate": 0.108,
+      "distinct": 542,
+      "top_values": [
+        [
+          "Hope Arabic Church - South Australia, \u0643\u0646\u064a\u0633\u0629 \u0627\u0644\u0631\u062c\u0627\u0621 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 -",
+          1
+        ],
+        [
+          "Shiv Temple Geelong, Shiva Art Centre, The Geelong Hindu Soc",
+          1
+        ],
+        [
+          "Georges Riverkeeper",
+          1
+        ],
+        [
+          "Donnybrook Men's Shed Inc.",
+          1
+        ],
+        [
+          "Girgarre Salinity Study Group Inc",
+          1
+        ]
+      ],
+      "examples": [
+        "Australian4Points Inc",
+        "Baptist Financial Services Australia Ltd ATF Baptist Ministry Fund, Previously k",
+        "Manangatang Landcare Group",
+        "Ember Commons",
+        "APESA, Australian Political Economy Students' Association"
+      ],
+      "pattern_rates": {
+        "abn_checksum_valid": 0.011,
+        "acn_checksum_valid": 0.002,
+        "email_like": 0.002,
+        "company_suffix": 0.175
+      }
+    },
+    {
+      "column": "Address_Type",
+      "non_empty_rate": 1.0,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Business",
+          5000
+        ]
+      ],
+      "examples": [
+        "Business",
+        "Business",
+        "Business",
+        "Business",
+        "Business"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Address_Line_1",
+      "non_empty_rate": 0.879,
+      "distinct": 4189,
+      "top_values": [
+        [
+          "Level 1",
+          12
+        ],
+        [
+          "Level 4",
+          10
+        ],
+        [
+          "C/O Australian Philanthropic Services",
+          9
+        ],
+        [
+          "Level 3",
+          7
+        ],
+        [
+          "19 Thompson Street",
+          6
+        ]
+      ],
+      "examples": [
+        "76 St George Cres",
+        "24 Fleet Ave",
+        "4 The Esplanade",
+        "Shop 22",
+        "Sylvania Heights Public School P&C"
+      ],
+      "pattern_rates": {
+        "postcode_like": 0.001,
+        "date_like": 0.002,
+        "company_suffix": 0.001
+      }
+    },
+    {
+      "column": "Address_Line_2",
+      "non_empty_rate": 0.09,
+      "distinct": 435,
+      "top_values": [
+        [
+          "Level 7, 130 Pitt Street",
+          9
+        ],
+        [
+          "1 Eagle Street",
+          2
+        ],
+        [
+          "180 George Street",
+          2
+        ],
+        [
+          "University of Melbourne",
+          2
+        ],
+        [
+          "Avon Road",
+          2
+        ]
+      ],
+      "examples": [
+        "Lot 20, JRM Braes Rd",
+        "93 George Street",
+        "1367 Lake Road",
+        "23 Cleeland Street",
+        "3 Holbeche Rd"
+      ],
+      "pattern_rates": {
+        "postcode_like": 0.002,
+        "state_like": 0.004
+      }
+    },
+    {
+      "column": "Address_Line_3",
+      "non_empty_rate": 0.011,
+      "distinct": 55,
+      "top_values": [
+        [
+          "via",
+          2
+        ],
+        [
+          "Australia",
+          2
+        ],
+        [
+          "405 Liverpool St",
+          1
+        ],
+        [
+          "NT Portion 7278",
+          1
+        ],
+        [
+          "1 -59 Quay Street",
+          1
+        ]
+      ],
+      "examples": [
+        "30 Englsih Street",
+        "400 George Street",
+        "PMB 15",
+        "20 Sharpe Ave",
+        "Stanley Place"
+      ],
+      "pattern_rates": {
+        "postcode_like": 0.018
+      }
+    },
+    {
+      "column": "Town_City",
+      "non_empty_rate": 0.881,
+      "distinct": 2241,
+      "top_values": [
+        [
+          "Sydney",
+          144
+        ],
+        [
+          "Melbourne",
+          119
+        ],
+        [
+          "Adelaide",
+          49
+        ],
+        [
+          "Parramatta",
+          23
+        ],
+        [
+          "Perth",
+          20
+        ]
+      ],
+      "examples": [
+        "Carlton North",
+        "Northbridge",
+        "Caulfield",
+        "Newtown",
+        "Wyoming"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "State",
+      "non_empty_rate": 0.882,
+      "distinct": 12,
+      "top_values": [
+        [
+          "NSW",
+          1445
+        ],
+        [
+          "VIC",
+          1274
+        ],
+        [
+          "QLD",
+          716
+        ],
+        [
+          "WA",
+          445
+        ],
+        [
+          "SA",
+          263
+        ]
+      ],
+      "examples": [
+        "NSW",
+        "VIC",
+        "QLD",
+        "QLD",
+        "QLD"
+      ],
+      "pattern_rates": {
+        "state_like": 1.0
+      }
+    },
+    {
+      "column": "Postcode",
+      "non_empty_rate": 0.883,
+      "distinct": 1366,
+      "top_values": [
+        [
+          "2000",
+          144
+        ],
+        [
+          "3000",
+          90
+        ],
+        [
+          "5000",
+          51
+        ],
+        [
+          "4870",
+          29
+        ],
+        [
+          "4000",
+          27
+        ]
+      ],
+      "examples": [
+        "7300",
+        "2518",
+        "6000",
+        "3496",
+        "5006"
+      ],
+      "pattern_rates": {
+        "postcode_like": 1.0
+      }
+    },
+    {
+      "column": "Country",
+      "non_empty_rate": 0.884,
+      "distinct": 6,
+      "top_values": [
+        [
+          "Australia",
+          4391
+        ],
+        [
+          "AUSTRALIA",
+          26
+        ],
+        [
+          "Austria",
+          2
+        ],
+        [
+          "Aruba",
+          1
+        ],
+        [
+          "0419032014",
+          1
+        ]
+      ],
+      "examples": [
+        "Australia",
+        "Australia",
+        "Australia",
+        "Australia",
+        "Australia"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Charity_Website",
+      "non_empty_rate": 0.706,
+      "distinct": 3487,
+      "top_values": [
+        [
+          "https://www.housingchoices.org.au",
+          5
+        ],
+        [
+          "www.facebook.com",
+          5
+        ],
+        [
+          "https://www.linkwentworth.org.au/",
+          3
+        ],
+        [
+          "http://www.assemble.com.au",
+          3
+        ],
+        [
+          "www.cef.org.au",
+          3
+        ]
+      ],
+      "examples": [
+        "www.boystothebush.org.au",
+        "bunburybc.wa.edu.au",
+        "https://woltownsville.org/",
+        "www.womeninwildlife.com.au",
+        "www.cozystage.com"
+      ],
+      "pattern_rates": {
+        "abn_checksum_valid": 0.001,
+        "url_like": 0.881,
+        "email_like": 0.001,
+        "company_suffix": 0.003
+      }
+    },
+    {
+      "column": "Registration_Date",
+      "non_empty_rate": 0.997,
+      "distinct": 1766,
+      "top_values": [
+        [
+          "03/12/2012",
+          213
+        ],
+        [
+          "01/07/2023",
+          105
+        ],
+        [
+          "01/07/2019",
+          85
+        ],
+        [
+          "01/01/2021",
+          57
+        ],
+        [
+          "01/07/2020",
+          54
+        ]
+      ],
+      "examples": [
+        "08/02/2020",
+        "03/06/2019",
+        "03/12/2012",
+        "01/01/2019",
+        "06/02/2019"
+      ],
+      "pattern_rates": {
+        "date_like": 1.0
+      }
+    },
+    {
+      "column": "Date_Organisation_Established",
+      "non_empty_rate": 0.997,
+      "distinct": 2622,
+      "top_values": [
+        [
+          "03/12/2012",
+          33
+        ],
+        [
+          "01/11/1999",
+          26
+        ],
+        [
+          "01/07/2024",
+          16
+        ],
+        [
+          "01/07/2019",
+          15
+        ],
+        [
+          "06/04/2021",
+          11
+        ]
+      ],
+      "examples": [
+        "18/07/2014",
+        "01/07/1987",
+        "10/03/2012",
+        "15/01/2016",
+        "20/07/1938"
+      ],
+      "pattern_rates": {
+        "date_like": 1.0
+      }
+    },
+    {
+      "column": "Charity_Size",
+      "non_empty_rate": 0.858,
+      "distinct": 3,
+      "top_values": [
+        [
+          "Small",
+          3527
+        ],
+        [
+          "Medium",
+          539
+        ],
+        [
+          "Large",
+          222
+        ]
+      ],
+      "examples": [
+        "Medium",
+        "Small",
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Number_of_Responsible_Persons",
+      "non_empty_rate": 1.0,
+      "distinct": 24,
+      "top_values": [
+        [
+          "3",
+          1080
+        ],
+        [
+          "4",
+          914
+        ],
+        [
+          "5",
+          724
+        ],
+        [
+          "6",
+          548
+        ],
+        [
+          "7",
+          478
+        ]
+      ],
+      "examples": [
+        "4",
+        "10",
+        "3",
+        "6",
+        "7"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Financial_Year_End",
+      "non_empty_rate": 1.0,
+      "distinct": 20,
+      "top_values": [
+        [
+          "30-Jun",
+          4144
+        ],
+        [
+          "31-Dec",
+          678
+        ],
+        [
+          "30-Sep",
+          39
+        ],
+        [
+          "31-Mar",
+          25
+        ],
+        [
+          "31-Oct",
+          24
+        ]
+      ],
+      "examples": [
+        "30-Jun",
+        "30-Jun",
+        "30-Jun",
+        "30-Jun",
+        "30-Jun"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Operates_in_ACT",
+      "non_empty_rate": 0.057,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          285
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Operates_in_NSW",
+      "non_empty_rate": 0.282,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1409
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Operates_in_NT",
+      "non_empty_rate": 0.047,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          235
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Operates_in_QLD",
+      "non_empty_rate": 0.172,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          858
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Operates_in_SA",
+      "non_empty_rate": 0.085,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          427
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Operates_in_TAS",
+      "non_empty_rate": 0.047,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          233
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Operates_in_VIC",
+      "non_empty_rate": 0.258,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1290
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Operates_in_WA",
+      "non_empty_rate": 0.127,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          634
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Operating_Countries",
+      "non_empty_rate": 0.712,
+      "distinct": 172,
+      "top_values": [
+        [
+          "AUS",
+          3289
+        ],
+        [
+          "IND",
+          12
+        ],
+        [
+          "AUS, NZL",
+          7
+        ],
+        [
+          "KEN",
+          7
+        ],
+        [
+          "AUS, KEN",
+          6
+        ]
+      ],
+      "examples": [
+        "AUS",
+        "AUS",
+        "AUS",
+        "AUS",
+        "AUS"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "PBI",
+      "non_empty_rate": 0.205,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1023
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "HPC",
+      "non_empty_rate": 0.061,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          305
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Preventing_or_relieving_suffering_of_animals",
+      "non_empty_rate": 0.031,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          155
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Advancing_Culture",
+      "non_empty_rate": 0.139,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          693
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Advancing_Education",
+      "non_empty_rate": 0.22,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1102
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Advancing_Health",
+      "non_empty_rate": 0.136,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          679
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Promote_or_oppose_a_change_to_law__government_poll_or_prac",
+      "non_empty_rate": 0.013,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          66
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Advancing_natual_environment",
+      "non_empty_rate": 0.079,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          397
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Promoting_or_protecting_human_rights",
+      "non_empty_rate": 0.011,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          53
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Purposes_beneficial_to_ther_general_public_and_other_analogous",
+      "non_empty_rate": 0.114,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          572
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Promoting_reconciliation__mutual_respect_and_tolerance",
+      "non_empty_rate": 0.035,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          173
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Advancing_Religion",
+      "non_empty_rate": 0.19,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          949
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Advancing_social_or_public_welfare",
+      "non_empty_rate": 0.317,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1583
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Advancing_security_or_safety_of_Australia_or_Australian_public",
+      "non_empty_rate": 0.016,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          82
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Aboriginal_or_TSI",
+      "non_empty_rate": 0.261,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1303
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Adults",
+      "non_empty_rate": 0.496,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          2481
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Aged_Persons",
+      "non_empty_rate": 0.421,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          2104
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Children",
+      "non_empty_rate": 0.398,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1991
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Communities_Overseas",
+      "non_empty_rate": 0.1,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          500
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Early_Childhood",
+      "non_empty_rate": 0.261,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1305
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Ethnic_Groups",
+      "non_empty_rate": 0.299,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1496
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Families",
+      "non_empty_rate": 0.447,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          2234
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Females",
+      "non_empty_rate": 0.36,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1799
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Financially_Disadvantaged",
+      "non_empty_rate": 0.336,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1681
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "LGBTIQA+",
+      "non_empty_rate": 0.03,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          151
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "General_Community_in_Australia",
+      "non_empty_rate": 0.349,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1747
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Males",
+      "non_empty_rate": 0.335,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1675
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Migrants_Refugees_or_Asylum_Seekers",
+      "non_empty_rate": 0.089,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          446
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Other_Beneficiaries",
+      "non_empty_rate": 0.061,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          307
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Other_Charities",
+      "non_empty_rate": 0.137,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          683
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "People_at_risk_of_homelessness",
+      "non_empty_rate": 0.201,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1004
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "People_with_Chronic_Illness",
+      "non_empty_rate": 0.163,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          815
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "People_with_Disabilities",
+      "non_empty_rate": 0.25,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1249
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Pre_Post_Release_Offenders",
+      "non_empty_rate": 0.074,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          372
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Rural_Regional_Remote_Communities",
+      "non_empty_rate": 0.317,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          1585
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Unemployed_Person",
+      "non_empty_rate": 0.193,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          966
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Veterans_or_their_families",
+      "non_empty_rate": 0.097,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          487
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Victims_of_crime",
+      "non_empty_rate": 0.118,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          588
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Victims_of_Disasters",
+      "non_empty_rate": 0.106,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          531
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Youth",
+      "non_empty_rate": 0.492,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          2462
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "animals",
+      "non_empty_rate": 0.074,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          370
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "environment",
+      "non_empty_rate": 0.097,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          487
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "other_gender_identities",
+      "non_empty_rate": 0.086,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Y",
+          431
+        ]
+      ],
+      "examples": [
+        "Y",
+        "Y",
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "pattern_rates": {}
+    }
+  ],
+  "sample_idx_note": "sample = first 25 of a seed-1 shuffle; holdout = next 500",
+  "holdout_idx": [
+    2149,
+    25,
+    2160,
+    1532,
+    634,
+    3383,
+    369,
+    1752,
+    1361,
+    147,
+    3489,
+    1217,
+    4081,
+    999,
+    1525,
+    559,
+    3084,
+    135,
+    4568,
+    3104,
+    1003,
+    4824,
+    2690,
+    3010,
+    4017,
+    4864,
+    4510,
+    4075,
+    2954,
+    4196,
+    2419,
+    3006,
+    3613,
+    3470,
+    2157,
+    4829,
+    1438,
+    1620,
+    2900,
+    2644,
+    1588,
+    3612,
+    2364,
+    428,
+    3064,
+    4292,
+    4692,
+    1834,
+    1288,
+    3764,
+    1168,
+    2885,
+    492,
+    1122,
+    3782,
+    2581,
+    3081,
+    3970,
+    4634,
+    417,
+    3597,
+    1618,
+    4807,
+    3200,
+    957,
+    1105,
+    2154,
+    4914,
+    3493,
+    2976,
+    1426,
+    131,
+    4688,
+    2728,
+    4254,
+    1514,
+    4639,
+    1051,
+    788,
+    11,
+    3335,
+    2694,
+    278,
+    3281,
+    4314,
+    1839,
+    4640,
+    3638,
+    3405,
+    2647,
+    3702,
+    3971,
+    4282,
+    4246,
+    2878,
+    2343,
+    4427,
+    2887,
+    1764,
+    4204,
+    1267,
+    4560,
+    3312,
+    3779,
+    3430,
+    993,
+    2435,
+    996,
+    1008,
+    3279,
+    2388,
+    3596,
+    522,
+    3001,
+    567,
+    372,
+    4261,
+    1497,
+    4086,
+    4250,
+    1798,
+    583,
+    1505,
+    489,
+    1201,
+    206,
+    662,
+    430,
+    3048,
+    2749,
+    3231,
+    1126,
+    2743,
+    2558,
+    435,
+    2053,
+    1363,
+    167,
+    2050,
+    2084,
+    3856,
+    3975,
+    1467,
+    1979,
+    774,
+    4169,
+    473,
+    2051,
+    4751,
+    189,
+    940,
+    1873,
+    4398,
+    4369,
+    319,
+    4679,
+    2011,
+    291,
+    4386,
+    2736,
+    2995,
+    276,
+    3125,
+    3534,
+    236,
+    4789,
+    3449,
+    4987,
+    4397,
+    1319,
+    2415,
+    2313,
+    207,
+    895,
+    3009,
+    1785,
+    1968,
+    1760,
+    4232,
+    3089,
+    4079,
+    4084,
+    2833,
+    134,
+    4735,
+    2217,
+    500,
+    2590,
+    3011,
+    4793,
+    254,
+    1887,
+    3821,
+    1594,
+    3053,
+    2993,
+    3131,
+    1549,
+    1028,
+    4690,
+    2058,
+    1332,
+    4587,
+    3632,
+    1950,
+    1912,
+    1765,
+    1266,
+    103,
+    3013,
+    1040,
+    2174,
+    1054,
+    3451,
+    653,
+    4150,
+    1884,
+    95,
+    1688,
+    1755,
+    3832,
+    1696,
+    4283,
+    2648,
+    2362,
+    1155,
+    4072,
+    1936,
+    4691,
+    1194,
+    1012,
+    3629,
+    2959,
+    1895,
+    4635,
+    295,
+    2669,
+    1070,
+    4785,
+    1829,
+    3270,
+    1787,
+    866,
+    1835,
+    402,
+    3828,
+    1425,
+    2240,
+    889,
+    3429,
+    4041,
+    3427,
+    737,
+    3772,
+    4798,
+    4908,
+    4574,
+    2901,
+    4506,
+    1099,
+    1081,
+    209,
+    4277,
+    4802,
+    3212,
+    4482,
+    3705,
+    4834,
+    2677,
+    63,
+    1858,
+    47,
+    911,
+    2965,
+    4335,
+    4038,
+    3938,
+    4315,
+    4226,
+    568,
+    786,
+    4451,
+    1423,
+    4946,
+    4860,
+    603,
+    4737,
+    4278,
+    1504,
+    4298,
+    575,
+    1223,
+    3128,
+    1045,
+    1883,
+    380,
+    2660,
+    746,
+    565,
+    8,
+    1079,
+    2824,
+    2703,
+    3362,
+    3360,
+    3992,
+    3905,
+    3942,
+    4348,
+    766,
+    4554,
+    1960,
+    4200,
+    4786,
+    4602,
+    478,
+    158,
+    1757,
+    325,
+    2272,
+    2946,
+    1369,
+    4783,
+    3487,
+    3438,
+    1493,
+    3950,
+    694,
+    2707,
+    335,
+    45,
+    1074,
+    4660,
+    4172,
+    499,
+    2057,
+    4262,
+    106,
+    3309,
+    4214,
+    274,
+    4978,
+    4583,
+    2318,
+    2369,
+    1568,
+    3055,
+    2539,
+    3955,
+    4840,
+    2399,
+    339,
+    679,
+    3381,
+    3870,
+    729,
+    4481,
+    4849,
+    3022,
+    3251,
+    4544,
+    4029,
+    1871,
+    4513,
+    897,
+    2639,
+    3860,
+    2038,
+    2753,
+    838,
+    3683,
+    2815,
+    2797,
+    1673,
+    64,
+    4536,
+    1953,
+    363,
+    2199,
+    1550,
+    1547,
+    874,
+    1844,
+    4238,
+    2248,
+    1684,
+    4356,
+    2980,
+    4975,
+    1188,
+    971,
+    2460,
+    2570,
+    2145,
+    560,
+    1013,
+    4724,
+    3446,
+    4685,
+    3974,
+    643,
+    951,
+    125,
+    2986,
+    1316,
+    2245,
+    2678,
+    1358,
+    1383,
+    3498,
+    4064,
+    3561,
+    502,
+    4325,
+    434,
+    4048,
+    1726,
+    992,
+    110,
+    538,
+    3540,
+    3914,
+    3331,
+    1756,
+    2543,
+    66,
+    4009,
+    4603,
+    1165,
+    1185,
+    2872,
+    80,
+    2977,
+    2926,
+    2653,
+    1408,
+    830,
+    4712,
+    947,
+    2511,
+    3500,
+    2534,
+    1733,
+    4821,
+    4808,
+    1597,
+    4425,
+    1127,
+    1552,
+    3737,
+    67,
+    625,
+    3208,
+    3165,
+    4906,
+    2193,
+    701,
+    1609,
+    1184,
+    2208,
+    3524,
+    322,
+    1406,
+    4056,
+    443,
+    4526,
+    1323,
+    3030,
+    2550,
+    4228,
+    177,
+    4010,
+    3107,
+    2849,
+    1128,
+    4863,
+    3000,
+    4394,
+    3923,
+    2817,
+    712,
+    2575,
+    3603,
+    4454,
+    642,
+    4605,
+    821,
+    53,
+    1957,
+    1640,
+    391,
+    3392,
+    870,
+    3989,
+    4016,
+    3676,
+    98,
+    691,
+    3715,
+    4258
+  ]
+}

@@ -1,0 +1,946 @@
+{
+  "records_profiled": 126,
+  "columns": [
+    {
+      "column": "Description",
+      "non_empty_rate": 1.0,
+      "distinct": 61,
+      "top_values": [
+        [
+          "Compounded Chemotherapy and Biological Therapies SOA (Estima",
+          17
+        ],
+        [
+          "Preferred Supplier Panel for the Provision of Clinical Conti",
+          10
+        ],
+        [
+          "Providing Respiratory Suction Equipment, Accessories and Med",
+          8
+        ],
+        [
+          "Genomic Testing Solutions",
+          6
+        ],
+        [
+          "DENTAL EQUIPMENT  -SOA 638",
+          6
+        ]
+      ],
+      "examples": [
+        "Electrocardiographs",
+        "Pharmaceutical Header Standing Offer Arrangement (PHA SOA) - PBS Price Disclosur",
+        "Mobile Dental Clinics - Dental Drovers",
+        "DENTAL EQUIPMENT  -SOA 638",
+        "Extension of supplier scope to include MDG configuration for Service Master Data"
+      ],
+      "pattern_rates": {
+        "company_suffix": 0.016
+      }
+    },
+    {
+      "column": "Agency (Dept or Stat Body)",
+      "non_empty_rate": 1.0,
+      "distinct": 1,
+      "top_values": [
+        [
+          "Queensland Health",
+          126
+        ]
+      ],
+      "examples": [
+        "Queensland Health",
+        "Queensland Health",
+        "Queensland Health",
+        "Queensland Health",
+        "Queensland Health"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Agency address",
+      "non_empty_rate": 1.0,
+      "distinct": 1,
+      "top_values": [
+        [
+          "41 O'Connell Terrace, Bowen Hills",
+          126
+        ]
+      ],
+      "examples": [
+        "41 O'Connell Terrace, Bowen Hills",
+        "41 O'Connell Terrace, Bowen Hills",
+        "41 O'Connell Terrace, Bowen Hills",
+        "41 O'Connell Terrace, Bowen Hills",
+        "41 O'Connell Terrace, Bowen Hills"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Contract description/name",
+      "non_empty_rate": 1.0,
+      "distinct": 62,
+      "top_values": [
+        [
+          "109843 - Compounded Chemotherapy and Biological Therapies SO",
+          17
+        ],
+        [
+          "PSP111539 Preferred Supplier Panel for the Provision of Clin",
+          10
+        ],
+        [
+          "109936 - PHA SOA for the Provision of General Pharmaceutical",
+          9
+        ],
+        [
+          "HSQ84570 - Respiratory Suction Equipment, Accessories and Me",
+          8
+        ],
+        [
+          "CSD677681 Genomic Testing Solutions",
+          6
+        ]
+      ],
+      "examples": [
+        "PSP111539 Preferred Supplier Panel for the Provision of Clinical Contingent Work",
+        "CSD127762 - Personal Protective Equipment - Separable Portion 7 - Level 3 Masks",
+        "PSP111539 Preferred Supplier Panel for the Provision of Clinical Contingent Work",
+        "109936 - PHA SOA for the Provision of General Pharmaceuticals",
+        "HSQ86397 - Provisions of Cassette Writers-Variation"
+      ],
+      "pattern_rates": {
+        "company_suffix": 0.016
+      }
+    },
+    {
+      "column": "Award contract date",
+      "non_empty_rate": 1.0,
+      "distinct": 81,
+      "top_values": [
+        [
+          "14/11/2025",
+          8
+        ],
+        [
+          "30/11/2025",
+          8
+        ],
+        [
+          "27/10/2025",
+          5
+        ],
+        [
+          "28/02/2026",
+          5
+        ],
+        [
+          "1/05/2021",
+          5
+        ]
+      ],
+      "examples": [
+        "16/06/2026",
+        "8/08/2025",
+        "28/11/2025",
+        "25/06/2025",
+        "28/08/2025"
+      ],
+      "pattern_rates": {
+        "date_like": 1.0
+      }
+    },
+    {
+      "column": "Contract value",
+      "non_empty_rate": 0.976,
+      "distinct": 84,
+      "top_values": [
+        [
+          "$10,000 or more",
+          13
+        ],
+        [
+          "$119,340,476",
+          5
+        ],
+        [
+          "$90,000,000 (8 years)",
+          5
+        ],
+        [
+          "7,560,000",
+          5
+        ],
+        [
+          "$17,600,000",
+          4
+        ]
+      ],
+      "examples": [
+        "$127,600",
+        "$19,400,000",
+        "$55,830,000",
+        "$38,000,000",
+        "$262,964"
+      ],
+      "pattern_rates": {
+        "acn_checksum_valid": 0.041
+      }
+    },
+    {
+      "column": "Supplier name",
+      "non_empty_rate": 1.0,
+      "distinct": 86,
+      "top_values": [
+        [
+          "Refer to Queensland Government Arrangements Directory",
+          13
+        ],
+        [
+          "Slade Health Pty Limited",
+          12
+        ],
+        [
+          "Baxter Healthcare Pty Ltd",
+          5
+        ],
+        [
+          "Becton Dickinson Pty Ltd",
+          4
+        ],
+        [
+          "ROCHE DIAGNOSTICS AUSTRALIA PTY LTD",
+          3
+        ]
+      ],
+      "examples": [
+        "Slade Health Pty Limited",
+        "Slade Health Pty Limited",
+        "ICU Medical Austalia Pty Ltd",
+        "Troocoo Pty Ltd (Trading As Troocoo)",
+        "ROCHE DIAGNOSTICS AUSTRALIA PTY LTD"
+      ],
+      "pattern_rates": {
+        "company_suffix": 0.802
+      }
+    },
+    {
+      "column": "Supplier address",
+      "non_empty_rate": 0.841,
+      "distinct": 76,
+      "top_values": [
+        [
+          "Unit 11, 210 Robinson Road East, Geebung QLD 4034",
+          12
+        ],
+        [
+          "Unit 2/1115 Stanley Street, East Coorparoo QLD 4151",
+          5
+        ],
+        [
+          "Level 5, 60-66 Waterloo Rd, Macquarie Park NSW 2113",
+          4
+        ],
+        [
+          "Refer to Queensland Government Arrangements Directory",
+          4
+        ],
+        [
+          "2 Julius Avenue North Ryde NSW 2113",
+          3
+        ]
+      ],
+      "examples": [
+        "Level 7, 1 Martin Place, Sydney NSW 2000",
+        "PO Box 247, Carole Park, QLD 4300",
+        "4-40 Creek Street, Brisbane, Qld 4000",
+        "48 Koornand rd, Scoresby, Vic 3179",
+        "First Floor, 96 Rickets Road, Mt Waverley Vic 3149"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Variation to contract (Yes/No)",
+      "non_empty_rate": 1.0,
+      "distinct": 5,
+      "top_values": [
+        [
+          "Yes",
+          90
+        ],
+        [
+          "No",
+          29
+        ],
+        [
+          "YES",
+          4
+        ],
+        [
+          "NO",
+          2
+        ],
+        [
+          "yes",
+          1
+        ]
+      ],
+      "examples": [
+        "No",
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Specific confidentiality provision used",
+      "non_empty_rate": 0.802,
+      "distinct": 2,
+      "top_values": [
+        [
+          "No",
+          97
+        ],
+        [
+          "NO",
+          4
+        ]
+      ],
+      "examples": [
+        "No",
+        "No",
+        "No",
+        "No",
+        "No"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Procurement method",
+      "non_empty_rate": 0.802,
+      "distinct": 5,
+      "top_values": [
+        [
+          "Open",
+          87
+        ],
+        [
+          "Limited",
+          6
+        ],
+        [
+          "Selective",
+          5
+        ],
+        [
+          "NA",
+          2
+        ],
+        [
+          "Restricted",
+          1
+        ]
+      ],
+      "examples": [
+        "Open",
+        "Open",
+        "Open",
+        "Open",
+        "Open"
+      ],
+      "pattern_rates": {
+        "company_suffix": 0.059
+      }
+    },
+    {
+      "column": "Reason for use of limited tendering",
+      "non_empty_rate": 0.294,
+      "distinct": 10,
+      "top_values": [
+        [
+          "N/A",
+          15
+        ],
+        [
+          "NA",
+          8
+        ],
+        [
+          "b - (i) The requirement is a work of art which can only be s",
+          4
+        ],
+        [
+          "0",
+          4
+        ],
+        [
+          "a - (i) No tenders were submitted or no suppliers requested ",
+          1
+        ]
+      ],
+      "examples": [
+        "N/A",
+        "N/A",
+        "N/A",
+        "N/A",
+        "NA"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Form of contract",
+      "non_empty_rate": 1.0,
+      "distinct": 8,
+      "top_values": [
+        [
+          "Standing Offer Arrangement (SOA)",
+          103
+        ],
+        [
+          "Preferred Supplier Panel (PSP)",
+          14
+        ],
+        [
+          "One-off Contract",
+          3
+        ],
+        [
+          "WoG Short Form Contract Details - Basic Purchasing Condition",
+          2
+        ],
+        [
+          "Contract using the Comprehensive Contract\nConditions \u2013 ICT P",
+          1
+        ]
+      ],
+      "examples": [
+        "Standing Offer Arrangement (SOA)",
+        "Panel Arrangement",
+        "Standing Offer Arrangement (SOA)",
+        "Standing Offer Arrangement (SOA)",
+        "Standing Offer Arrangement (SOA)"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Number of offers sought",
+      "non_empty_rate": 0.762,
+      "distinct": 17,
+      "top_values": [
+        [
+          "0",
+          65
+        ],
+        [
+          "6 Awarded",
+          6
+        ],
+        [
+          "1",
+          5
+        ],
+        [
+          "15 Received",
+          5
+        ],
+        [
+          "14 received; 3 awarded",
+          3
+        ]
+      ],
+      "examples": [
+        "0",
+        "14 received; 3 awarded",
+        "0",
+        "14 received; 3 awarded",
+        "6 Awarded"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Evaluation criteria and weightings",
+      "non_empty_rate": 0.746,
+      "distinct": 6,
+      "top_values": [
+        [
+          "Qualitative, Quantitative & QPP requirements",
+          78
+        ],
+        [
+          "Qualitative and QPP requirements",
+          11
+        ],
+        [
+          "CPO and Project Director offer evaluation",
+          2
+        ],
+        [
+          "Panel evaluation criteria",
+          1
+        ],
+        [
+          "qualitative, Quantitative & QPP requirements",
+          1
+        ]
+      ],
+      "examples": [
+        "Qualitative and QPP requirements",
+        "Qualitative, Quantitative & QPP requirements",
+        "Qualitative and QPP requirements",
+        "Qualitative, Quantitative & QPP requirements",
+        "Qualitative, Quantitative & QPP requirements"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Deliverables",
+      "non_empty_rate": 0.754,
+      "distinct": 7,
+      "top_values": [
+        [
+          "0",
+          80
+        ],
+        [
+          "NA",
+          8
+        ],
+        [
+          "2",
+          2
+        ],
+        [
+          "5",
+          2
+        ],
+        [
+          "4",
+          1
+        ]
+      ],
+      "examples": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Contract milestones",
+      "non_empty_rate": 0.746,
+      "distinct": 6,
+      "top_values": [
+        [
+          "0",
+          80
+        ],
+        [
+          "NA",
+          7
+        ],
+        [
+          "4",
+          3
+        ],
+        [
+          "6",
+          2
+        ],
+        [
+          "7",
+          1
+        ]
+      ],
+      "examples": [
+        "0",
+        "NA",
+        "0",
+        "0",
+        "4"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Contract performance management",
+      "non_empty_rate": 0.706,
+      "distinct": 1,
+      "top_values": [
+        [
+          "KPI",
+          89
+        ]
+      ],
+      "examples": [
+        "KPI",
+        "KPI",
+        "KPI",
+        "KPI",
+        "KPI"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Contract reference number",
+      "non_empty_rate": 0.992,
+      "distinct": 79,
+      "top_values": [
+        [
+          "109843",
+          17
+        ],
+        [
+          "109936",
+          9
+        ],
+        [
+          "HSQ84570",
+          8
+        ],
+        [
+          "SOA638",
+          5
+        ],
+        [
+          "HSQ102882-1",
+          3
+        ]
+      ],
+      "examples": [
+        "SOA638",
+        "HSQ84570",
+        "CSD124967",
+        "CSD127880",
+        "CSCSD111539"
+      ],
+      "pattern_rates": {
+        "acn_checksum_valid": 0.008
+      }
+    },
+    {
+      "column": "Contract category group",
+      "non_empty_rate": 1.0,
+      "distinct": 9,
+      "top_values": [
+        [
+          "Medical Goods and Services",
+          83
+        ],
+        [
+          "General Goods and Services",
+          9
+        ],
+        [
+          "Medical Equipment, Goods and Services",
+          9
+        ],
+        [
+          "Medical Services",
+          8
+        ],
+        [
+          "Indirects",
+          7
+        ]
+      ],
+      "examples": [
+        "Medical Goods and Services",
+        "Medical Goods and Services",
+        "Medical Goods and Services",
+        "Medical Goods and Services",
+        "Information Communication Technology"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Parent contract number/SOA",
+      "non_empty_rate": 0.984,
+      "distinct": 58,
+      "top_values": [
+        [
+          "109843",
+          17
+        ],
+        [
+          "CSCSD111539",
+          10
+        ],
+        [
+          "109936",
+          9
+        ],
+        [
+          "HSQ84570 (SOA163)",
+          8
+        ],
+        [
+          "CSD677581",
+          5
+        ]
+      ],
+      "examples": [
+        "HSQ84570 (SOA163)",
+        "CSD128702",
+        "SOA 638",
+        "CSD124967",
+        "HSQ84570 (SOA163)"
+      ],
+      "pattern_rates": {}
+    },
+    {
+      "column": "Variation comments",
+      "non_empty_rate": 0.944,
+      "distinct": 46,
+      "top_values": [
+        [
+          "Price Decrease",
+          14
+        ],
+        [
+          "Price Increase",
+          11
+        ],
+        [
+          "Execution of SOA",
+          9
+        ],
+        [
+          "3 year extension and pricing changes",
+          8
+        ],
+        [
+          "N/A",
+          7
+        ]
+      ],
+      "examples": [
+        "Price Decrease",
+        "Extension of SOA in preparation of New SOA",
+        "Price Increase",
+        "Variation for CPI Increase",
+        "Price increase and add four new material no's"
+      ],
+      "pattern_rates": {
+        "date_like": 0.017
+      }
+    },
+    {
+      "column": "Commence date",
+      "non_empty_rate": 1.0,
+      "distinct": 54,
+      "top_values": [
+        [
+          "1/12/2025",
+          16
+        ],
+        [
+          "1/04/2026",
+          8
+        ],
+        [
+          "14/11/2025",
+          7
+        ],
+        [
+          "1/05/2026",
+          7
+        ],
+        [
+          "1/11/2025",
+          6
+        ]
+      ],
+      "examples": [
+        "1/11/2025",
+        "14/11/2025",
+        "1/09/2025",
+        "1/11/2025",
+        "1/04/2026"
+      ],
+      "pattern_rates": {
+        "date_like": 1.0
+      }
+    },
+    {
+      "column": "Supplier ABN",
+      "non_empty_rate": 0.865,
+      "distinct": 80,
+      "top_values": [
+        [
+          "59 151 218 978",
+          12
+        ],
+        [
+          "43 000 392 781",
+          5
+        ],
+        [
+          "82 005 914 796",
+          4
+        ],
+        [
+          "52 096 916 148",
+          3
+        ],
+        [
+          "97 083 515 235",
+          2
+        ]
+      ],
+      "examples": [
+        "20 070 292 465",
+        "95 000 029 729",
+        "31 051 057 428",
+        "79 007 196 581",
+        "32 001 255 312"
+      ],
+      "pattern_rates": {
+        "abn_checksum_valid": 0.917
+      }
+    },
+    {
+      "column": "Finish date",
+      "non_empty_rate": 1.0,
+      "distinct": 44,
+      "top_values": [
+        [
+          "31/05/2027",
+          17
+        ],
+        [
+          "30/11/2027",
+          16
+        ],
+        [
+          "30/04/2027",
+          9
+        ],
+        [
+          "30/11/2028",
+          8
+        ],
+        [
+          "14/11/2028",
+          7
+        ]
+      ],
+      "examples": [
+        "31/07/2035",
+        "31/10/2025",
+        "31/12/2029",
+        "31/10/2027",
+        "31/12/2029"
+      ],
+      "pattern_rates": {
+        "date_like": 1.0
+      }
+    }
+  ],
+  "sample_idx_note": "sample = first 25 of a seed-1 shuffle; holdout = next 500",
+  "holdout_idx": [
+    22,
+    9,
+    86,
+    85,
+    111,
+    51,
+    78,
+    96,
+    46,
+    33,
+    10,
+    6,
+    61,
+    73,
+    5,
+    94,
+    35,
+    81,
+    11,
+    59,
+    110,
+    52,
+    47,
+    65,
+    30,
+    103,
+    104,
+    25,
+    123,
+    31,
+    66,
+    18,
+    19,
+    68,
+    64,
+    124,
+    87,
+    119,
+    88,
+    42,
+    118,
+    71,
+    23,
+    109,
+    53,
+    90,
+    37,
+    58,
+    80,
+    76,
+    44,
+    95,
+    70,
+    117,
+    56,
+    28,
+    67,
+    99,
+    54,
+    27,
+    112,
+    1,
+    69,
+    113,
+    91,
+    2,
+    107,
+    40,
+    13,
+    75,
+    29,
+    92,
+    34,
+    115,
+    89,
+    0,
+    98,
+    116,
+    77,
+    55,
+    49,
+    106,
+    3,
+    62,
+    12,
+    26,
+    100,
+    48,
+    83,
+    60,
+    57,
+    121,
+    63,
+    15,
+    32,
+    8,
+    97,
+    102,
+    108,
+    72,
+    17
+  ]
+}

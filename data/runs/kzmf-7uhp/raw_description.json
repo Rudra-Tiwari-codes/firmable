@@ -1,0 +1,21 @@
+{
+  "bytes": 55132654,
+  "extension": ".json",
+  "sniffed": "json",
+  "skeleton": [
+    "list[127437]",
+    {
+      ":id": "str e.g. 'row-ym6w~bnk9-yypb'",
+      ":version": "str e.g. 'rv-maa4-2xjk.h4pk'",
+      ":created_at": "str e.g. '2026-04-24T03:25:02.713Z'",
+      ":updated_at": "str e.g. '2026-04-24T03:25:02.713Z'",
+      "supplier_name": "str e.g. 'MARSH PTY LTD'",
+      "supplier_abn": "str e.g. '86 004 651 512'",
+      "reporting_entity": "str e.g. 'ACTIA'",
+      "publish_description": "str e.g. 'INSURANCE BROKERAGE SERVICES'",
+      "date_invoice_received": "str e.g. '2019-06-25T00:00:00.000'",
+      "payment_date": "str e.g. '2019-07-19T00:00:00.000'",
+      "payment_amount": "str e.g. '88000.00'"
+    }
+  ]
+}

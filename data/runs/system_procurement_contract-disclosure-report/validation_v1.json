@@ -1,0 +1,439 @@
+{
+  "passed": false,
+  "structural_issues": [],
+  "failing": [
+    {
+      "index": 0,
+      "canonical": "entity.legal_name",
+      "source": "Supplier name",
+      "raw_non_empty": 101,
+      "records_with_value": 0,
+      "errors": 101,
+      "error_rate": 1.0,
+      "error_examples": [
+        {
+          "raw": "Eppendorf South Pacific Pty Ltd",
+          "error": "KeyError: 'pattern'"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "canonical": "entity.trading_name",
+      "source": "Supplier name",
+      "raw_non_empty": 101,
+      "records_with_value": 0,
+      "errors": 101,
+      "error_rate": 1.0,
+      "error_examples": [
+        {
+          "raw": "Eppendorf South Pacific Pty Ltd",
+          "error": "KeyError: 'pattern'"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "canonical": "entity.abn",
+      "source": "Supplier ABN",
+      "raw_non_empty": 86,
+      "records_with_value": 80,
+      "errors": 6,
+      "error_rate": 0.07,
+      "error_examples": [
+        {
+          "raw": "86 087 097 717",
+          "error": "ABN '86 087 097 717' fails checksum"
+        },
+        {
+          "raw": "96 126 888 259",
+          "error": "ABN '96 126 888 259' fails checksum"
+        },
+        {
+          "raw": "520 583 909 917",
+          "error": "ABN '520 583 909 917' fails checksum"
+        },
+        {
+          "raw": "34 161 464 441",
+          "error": "ABN '34 161 464 441' fails checksum"
+        },
+        {
+          "raw": "93 002 359 739; 52 096 916 148; 25 000 875 034",
+          "error": "ABN '93 002 359 739; 52 096 916 148; 25 000 875 034' fails checksum"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "canonical": "address.state",
+      "source": "Supplier address",
+      "raw_non_empty": 85,
+      "records_with_value": 0,
+      "errors": 85,
+      "error_rate": 1.0,
+      "error_examples": [
+        {
+          "raw": "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113",
+          "error": "KeyError: 'pattern'"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "canonical": "address.postcode",
+      "source": "Supplier address",
+      "raw_non_empty": 85,
+      "records_with_value": 0,
+      "errors": 85,
+      "error_rate": 1.0,
+      "error_examples": [
+        {
+          "raw": "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113",
+          "error": "KeyError: 'pattern'"
+        }
+      ]
+    }
+  ],
+  "empirical": {
+    "holdout_records": 101,
+    "per_mapping": [
+      {
+        "index": 0,
+        "canonical": "entity.legal_name",
+        "source": "Supplier name",
+        "raw_non_empty": 101,
+        "records_with_value": 0,
+        "errors": 101,
+        "error_rate": 1.0,
+        "error_examples": [
+          {
+            "raw": "Eppendorf South Pacific Pty Ltd",
+            "error": "KeyError: 'pattern'"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "canonical": "entity.trading_name",
+        "source": "Supplier name",
+        "raw_non_empty": 101,
+        "records_with_value": 0,
+        "errors": 101,
+        "error_rate": 1.0,
+        "error_examples": [
+          {
+            "raw": "Eppendorf South Pacific Pty Ltd",
+            "error": "KeyError: 'pattern'"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "canonical": "entity.abn",
+        "source": "Supplier ABN",
+        "raw_non_empty": 86,
+        "records_with_value": 80,
+        "errors": 6,
+        "error_rate": 0.07,
+        "error_examples": [
+          {
+            "raw": "86 087 097 717",
+            "error": "ABN '86 087 097 717' fails checksum"
+          },
+          {
+            "raw": "96 126 888 259",
+            "error": "ABN '96 126 888 259' fails checksum"
+          },
+          {
+            "raw": "520 583 909 917",
+            "error": "ABN '520 583 909 917' fails checksum"
+          },
+          {
+            "raw": "34 161 464 441",
+            "error": "ABN '34 161 464 441' fails checksum"
+          },
+          {
+            "raw": "93 002 359 739; 52 096 916 148; 25 000 875 034",
+            "error": "ABN '93 002 359 739; 52 096 916 148; 25 000 875 034' fails checksum"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "canonical": "address.full",
+        "source": "Supplier address",
+        "raw_non_empty": 85,
+        "records_with_value": 85,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 4,
+        "canonical": "address.state",
+        "source": "Supplier address",
+        "raw_non_empty": 85,
+        "records_with_value": 0,
+        "errors": 85,
+        "error_rate": 1.0,
+        "error_examples": [
+          {
+            "raw": "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113",
+            "error": "KeyError: 'pattern'"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "canonical": "address.postcode",
+        "source": "Supplier address",
+        "raw_non_empty": 85,
+        "records_with_value": 0,
+        "errors": 85,
+        "error_rate": 1.0,
+        "error_examples": [
+          {
+            "raw": "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113",
+            "error": "KeyError: 'pattern'"
+          }
+        ]
+      }
+    ],
+    "record_id_duplicates": 0,
+    "preview": [
+      {
+        "entity.legal_name": {
+          "raw": "Eppendorf South Pacific Pty Ltd",
+          "error": "'pattern'"
+        },
+        "entity.trading_name": {
+          "raw": "Eppendorf South Pacific Pty Ltd",
+          "error": "'pattern'"
+        },
+        "entity.abn": {
+          "raw": "",
+          "values": []
+        },
+        "address.full": {
+          "raw": "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113",
+          "values": [
+            "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113"
+          ]
+        },
+        "address.state": {
+          "raw": "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113",
+          "error": "'pattern'"
+        },
+        "address.postcode": {
+          "raw": "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113",
+          "error": "'pattern'"
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'pattern'"
+        },
+        "entity.trading_name": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'pattern'"
+        },
+        "entity.abn": {
+          "raw": "",
+          "values": []
+        },
+        "address.full": {
+          "raw": "",
+          "values": []
+        },
+        "address.state": {
+          "raw": "",
+          "values": []
+        },
+        "address.postcode": {
+          "raw": "",
+          "values": []
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Amgen Australia Pty Ltd",
+          "error": "'pattern'"
+        },
+        "entity.trading_name": {
+          "raw": "Amgen Australia Pty Ltd",
+          "error": "'pattern'"
+        },
+        "entity.abn": {
+          "raw": "31 051 057 428",
+          "values": [
+            "31051057428"
+          ]
+        },
+        "address.full": {
+          "raw": "Level 11, 10 Carrington Street, Sydney NSW 2000",
+          "values": [
+            "Level 11, 10 Carrington Street, Sydney NSW 2000"
+          ]
+        },
+        "address.state": {
+          "raw": "Level 11, 10 Carrington Street, Sydney NSW 2000",
+          "error": "'pattern'"
+        },
+        "address.postcode": {
+          "raw": "Level 11, 10 Carrington Street, Sydney NSW 2000",
+          "error": "'pattern'"
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Baxter Healthcare Pty Ltd",
+          "error": "'pattern'"
+        },
+        "entity.trading_name": {
+          "raw": "Baxter Healthcare Pty Ltd",
+          "error": "'pattern'"
+        },
+        "entity.abn": {
+          "raw": "43 000 392 781",
+          "values": [
+            "43000392781"
+          ]
+        },
+        "address.full": {
+          "raw": "Unit 2/1115 Stanley Street, East Coorparoo QLD 4151",
+          "values": [
+            "Unit 2/1115 Stanley Street, East Coorparoo QLD 4151"
+          ]
+        },
+        "address.state": {
+          "raw": "Unit 2/1115 Stanley Street, East Coorparoo QLD 4151",
+          "error": "'pattern'"
+        },
+        "address.postcode": {
+          "raw": "Unit 2/1115 Stanley Street, East Coorparoo QLD 4151",
+          "error": "'pattern'"
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Kerr Australia",
+          "error": "'pattern'"
+        },
+        "entity.trading_name": {
+          "raw": "Kerr Australia",
+          "error": "'pattern'"
+        },
+        "entity.abn": {
+          "raw": "21 003 929 100",
+          "values": [
+            "21003929100"
+          ]
+        },
+        "address.full": {
+          "raw": "Unit 6/12 Mars rad Lane Cove West, NSW 2066",
+          "values": [
+            "Unit 6/12 Mars rad Lane Cove West, NSW 2066"
+          ]
+        },
+        "address.state": {
+          "raw": "Unit 6/12 Mars rad Lane Cove West, NSW 2066",
+          "error": "'pattern'"
+        },
+        "address.postcode": {
+          "raw": "Unit 6/12 Mars rad Lane Cove West, NSW 2066",
+          "error": "'pattern'"
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "BOC Limited",
+          "error": "'pattern'"
+        },
+        "entity.trading_name": {
+          "raw": "BOC Limited",
+          "error": "'pattern'"
+        },
+        "entity.abn": {
+          "raw": "95 000 029 729",
+          "values": [
+            "95000029729"
+          ]
+        },
+        "address.full": {
+          "raw": "10 Julius Avenue North Ryde NSW 2113",
+          "values": [
+            "10 Julius Avenue North Ryde NSW 2113"
+          ]
+        },
+        "address.state": {
+          "raw": "10 Julius Avenue North Ryde NSW 2113",
+          "error": "'pattern'"
+        },
+        "address.postcode": {
+          "raw": "10 Julius Avenue North Ryde NSW 2113",
+          "error": "'pattern'"
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Qiagen Pty Ltd",
+          "error": "'pattern'"
+        },
+        "entity.trading_name": {
+          "raw": "Qiagen Pty Ltd",
+          "error": "'pattern'"
+        },
+        "entity.abn": {
+          "raw": "75 072 382 944",
+          "values": [
+            "75072382944"
+          ]
+        },
+        "address.full": {
+          "raw": "1894 Dandenong Road, Clayton, VIC, 3168",
+          "values": [
+            "1894 Dandenong Road, Clayton, VIC, 3168"
+          ]
+        },
+        "address.state": {
+          "raw": "1894 Dandenong Road, Clayton, VIC, 3168",
+          "error": "'pattern'"
+        },
+        "address.postcode": {
+          "raw": "1894 Dandenong Road, Clayton, VIC, 3168",
+          "error": "'pattern'"
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'pattern'"
+        },
+        "entity.trading_name": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'pattern'"
+        },
+        "entity.abn": {
+          "raw": "",
+          "values": []
+        },
+        "address.full": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "values": [
+            "Refer to Queensland Government Arrangements Directory"
+          ]
+        },
+        "address.state": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'pattern'"
+        },
+        "address.postcode": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'pattern'"
+        }
+      }
+    ]
+  },
+  "max_error_rate": 0.05
+}

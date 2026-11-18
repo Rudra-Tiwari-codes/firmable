@@ -1,0 +1,146 @@
+{
+  "slug": "acnc-register",
+  "created_at": "2026-10-31T09:17:43+00:00",
+  "steps": {
+    "select_resource": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:43+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:17:47+00:00",
+      "seconds": 3.3
+    },
+    "download": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:47+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:17:48+00:00",
+      "seconds": 1.6
+    },
+    "inspect": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:48+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:17:56+00:00",
+      "seconds": 7.5
+    },
+    "load": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:56+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:17:56+00:00",
+      "seconds": 0.2
+    },
+    "profile": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:56+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:17:57+00:00",
+      "seconds": 0.8
+    },
+    "propose": {
+      "status": "done",
+      "started_at": "2026-10-31T09:17:57+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:19:03+00:00",
+      "seconds": 66.0
+    },
+    "validate_revise": {
+      "status": "done",
+      "started_at": "2026-10-31T09:19:03+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:21:10+00:00",
+      "seconds": 127.1
+    },
+    "finalize": {
+      "status": "done",
+      "started_at": "2026-10-31T09:21:10+00:00",
+      "attempts": 1,
+      "ended_at": "2026-10-31T09:21:10+00:00",
+      "seconds": 0.0
+    }
+  },
+  "llm_calls": [
+    {
+      "input_tokens": 1481,
+      "output_tokens": 191,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3046,
+      "calls": 1,
+      "model": "claude-sonnet-5-5",
+      "seconds": 3.3,
+      "usd": 0.00548,
+      "step": "select_resource",
+      "at": "2026-10-31T09:17:47+00:00"
+    },
+    {
+      "input_tokens": 4630,
+      "output_tokens": 936,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3046,
+      "calls": 1,
+      "model": "claude-sonnet-5-5",
+      "seconds": 7.5,
+      "usd": 0.01923,
+      "step": "inspect",
+      "at": "2026-10-31T09:17:56+00:00"
+    },
+    {
+      "input_tokens": 28294,
+      "output_tokens": 9812,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3046,
+      "calls": 1,
+      "model": "claude-sonnet-5-5",
+      "seconds": 66.0,
+      "usd": 0.15532,
+      "step": "propose",
+      "at": "2026-10-31T09:19:03+00:00"
+    },
+    {
+      "input_tokens": 10550,
+      "output_tokens": 7951,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3046,
+      "calls": 1,
+      "model": "claude-sonnet-5-5",
+      "seconds": 43.5,
+      "usd": 0.10122,
+      "step": "revise",
+      "at": "2026-10-31T09:19:46+00:00"
+    },
+    {
+      "input_tokens": 11100,
+      "output_tokens": 7943,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3046,
+      "calls": 1,
+      "model": "claude-sonnet-5-5",
+      "seconds": 40.4,
+      "usd": 0.10224,
+      "step": "revise",
+      "at": "2026-10-31T09:20:27+00:00"
+    },
+    {
+      "input_tokens": 10790,
+      "output_tokens": 8092,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 3046,
+      "calls": 1,
+      "model": "claude-sonnet-5-5",
+      "seconds": 42.9,
+      "usd": 0.10311,
+      "step": "revise",
+      "at": "2026-10-31T09:21:10+00:00"
+    }
+  ],
+  "dataset": {
+    "id": "b050b242-4487-4306-abf5-07ca073e5594",
+    "name": "acnc-register",
+    "title": "ACNC Registered Charities",
+    "publisher": "Australian Charities and Not-for-profits Commission (ACNC)",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "metadata_modified": "2026-10-25T18:57:02.002254",
+    "description": "###_NOTE: This dataset is updated weekly. Please ensure that you use the most up-to-date version._###\r\n\r\nThe Australian Charities and Not-for-profits Commission (ACNC) is the national regulator of charities in Australia. \r\n\r\nSince 3 December 2012, charities wanting to access Commonwealth charity tax concessions (and other benefits), need to register with the ACNC. Although many charities choose to register, registration with the ACNC is voluntary. \r\n\r\nThe ACNC maintains a register (known as the Charity Register), which contains information about charities. This dataset is a subset of the information available on the Charity Register.\r\n\r\nAdditional information for each charity (including governing documents and names of any Responsible Persons) can be found by searching the Charity Register at [acnc.gov.au/charity](https://www.acnc.gov.au/charity).\r\n\r\nIn some situations, charities can apply to have some or all of their information withheld from the Charity Register.  If the ACNC has approved for the information to be withheld, it won\u2019t appear on the Charity Register, or in this dataset. \r\n\r\nEach year, charities also lodge Annual Information Statements with the ACNC. These record further information about charities\u2019 purposes, activities and operations for the year - the ACNC publishes datasets for each Annual Information Statement. \r\n\r\nPLEASE NOTE: It is possible that some information in this dataset might be subject to a future request by the charity to have their information "
+  },
+  "config_versions": 3
+}

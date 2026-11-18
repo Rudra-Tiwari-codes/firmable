@@ -1,0 +1,510 @@
+{
+  "passed": false,
+  "structural_issues": [],
+  "failing": [
+    {
+      "index": 1,
+      "canonical": "entity.trading_name",
+      "source": "Supplier name",
+      "raw_non_empty": 101,
+      "records_with_value": 1,
+      "errors": 100,
+      "error_rate": 0.99,
+      "error_examples": [
+        {
+          "raw": "Eppendorf South Pacific Pty Ltd",
+          "error": "'Eppendorf South Pacific Pty Ltd' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'Refer to Queensland Government Arrangements Directory' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        {
+          "raw": "Amgen Australia Pty Ltd",
+          "error": "'Amgen Australia Pty Ltd' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        {
+          "raw": "Baxter Healthcare Pty Ltd",
+          "error": "'Baxter Healthcare Pty Ltd' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        {
+          "raw": "Kerr Australia",
+          "error": "'Kerr Australia' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "canonical": "address.state",
+      "source": "Supplier address",
+      "raw_non_empty": 85,
+      "records_with_value": 73,
+      "errors": 12,
+      "error_rate": 0.141,
+      "error_examples": [
+        {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'Refer to Queensland Government Arrangements Directory' does not match '(?is)^(?!.*;).*\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|N"
+        },
+        {
+          "raw": "Unit 3530 National Storage Facility 114 Montpelier Rd, Bowen Hills 4006",
+          "error": "'Unit 3530 National Storage Facility 114 Montpelier Rd, Bowen Hills 4006' does not match '(?is)^(?!.*;).*\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Au"
+        },
+        {
+          "raw": "805/220 Collins Street, Melbourne",
+          "error": "'805/220 Collins Street, Melbourne' does not match '(?is)^(?!.*;).*\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)\\\\"
+        },
+        {
+          "raw": "77-79 Ricketts Rd Mt Waverley",
+          "error": "'77-79 Ricketts Rd Mt Waverley' does not match '(?is)^(?!.*;).*\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)\\\\b\\\\W"
+        },
+        {
+          "raw": "30-34 Hickson Road, Millers Point NSW 2000; Level 3, 459 Church Street, Richmond VIC 3121; 5 Bellevu",
+          "error": "'30-34 Hickson Road, Millers Point NSW 2000; Level 3, 459 Church Street, Richmond VIC 3121; 5 Bellevue Circuit, Greystanes NSW 2145' does not match '(?is)^(?!.*;).*\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "canonical": "address.postcode",
+      "source": "Supplier address",
+      "raw_non_empty": 85,
+      "records_with_value": 73,
+      "errors": 12,
+      "error_rate": 0.141,
+      "error_examples": [
+        {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'Refer to Queensland Government Arrangements Directory' does not match '(?is)^(?!.*;).*\\\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania"
+        },
+        {
+          "raw": "Unit 3530 National Storage Facility 114 Montpelier Rd, Bowen Hills 4006",
+          "error": "'Unit 3530 National Storage Facility 114 Montpelier Rd, Bowen Hills 4006' does not match '(?is)^(?!.*;).*\\\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South "
+        },
+        {
+          "raw": "805/220 Collins Street, Melbourne",
+          "error": "'805/220 Collins Street, Melbourne' does not match '(?is)^(?!.*;).*\\\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)"
+        },
+        {
+          "raw": "77-79 Ricketts Rd Mt Waverley",
+          "error": "'77-79 Ricketts Rd Mt Waverley' does not match '(?is)^(?!.*;).*\\\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)\\\\b\\"
+        },
+        {
+          "raw": "30-34 Hickson Road, Millers Point NSW 2000; Level 3, 459 Church Street, Richmond VIC 3121; 5 Bellevu",
+          "error": "'30-34 Hickson Road, Millers Point NSW 2000; Level 3, 459 Church Street, Richmond VIC 3121; 5 Bellevue Circuit, Greystanes NSW 2145' does not match '(?is)^(?!.*;).*\\\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|N"
+        }
+      ]
+    }
+  ],
+  "empirical": {
+    "holdout_records": 101,
+    "per_mapping": [
+      {
+        "index": 0,
+        "canonical": "entity.legal_name",
+        "source": "Supplier name",
+        "raw_non_empty": 101,
+        "records_with_value": 90,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 1,
+        "canonical": "entity.trading_name",
+        "source": "Supplier name",
+        "raw_non_empty": 101,
+        "records_with_value": 1,
+        "errors": 100,
+        "error_rate": 0.99,
+        "error_examples": [
+          {
+            "raw": "Eppendorf South Pacific Pty Ltd",
+            "error": "'Eppendorf South Pacific Pty Ltd' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+          },
+          {
+            "raw": "Refer to Queensland Government Arrangements Directory",
+            "error": "'Refer to Queensland Government Arrangements Directory' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+          },
+          {
+            "raw": "Amgen Australia Pty Ltd",
+            "error": "'Amgen Australia Pty Ltd' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+          },
+          {
+            "raw": "Baxter Healthcare Pty Ltd",
+            "error": "'Baxter Healthcare Pty Ltd' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+          },
+          {
+            "raw": "Kerr Australia",
+            "error": "'Kerr Australia' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "canonical": "entity.abn",
+        "source": "Supplier ABN",
+        "raw_non_empty": 86,
+        "records_with_value": 80,
+        "errors": 3,
+        "error_rate": 0.035,
+        "error_examples": [
+          {
+            "raw": "86 087 097 717",
+            "error": "ABN '86087097717' fails checksum"
+          },
+          {
+            "raw": "96 126 888 259",
+            "error": "ABN '96126888259' fails checksum"
+          },
+          {
+            "raw": "34 161 464 441",
+            "error": "ABN '34161464441' fails checksum"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "canonical": "address.full",
+        "source": "Supplier address",
+        "raw_non_empty": 85,
+        "records_with_value": 81,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 4,
+        "canonical": "address.state",
+        "source": "Supplier address",
+        "raw_non_empty": 85,
+        "records_with_value": 73,
+        "errors": 12,
+        "error_rate": 0.141,
+        "error_examples": [
+          {
+            "raw": "Refer to Queensland Government Arrangements Directory",
+            "error": "'Refer to Queensland Government Arrangements Directory' does not match '(?is)^(?!.*;).*\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|N"
+          },
+          {
+            "raw": "Unit 3530 National Storage Facility 114 Montpelier Rd, Bowen Hills 4006",
+            "error": "'Unit 3530 National Storage Facility 114 Montpelier Rd, Bowen Hills 4006' does not match '(?is)^(?!.*;).*\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Au"
+          },
+          {
+            "raw": "805/220 Collins Street, Melbourne",
+            "error": "'805/220 Collins Street, Melbourne' does not match '(?is)^(?!.*;).*\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)\\\\"
+          },
+          {
+            "raw": "77-79 Ricketts Rd Mt Waverley",
+            "error": "'77-79 Ricketts Rd Mt Waverley' does not match '(?is)^(?!.*;).*\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)\\\\b\\\\W"
+          },
+          {
+            "raw": "30-34 Hickson Road, Millers Point NSW 2000; Level 3, 459 Church Street, Richmond VIC 3121; 5 Bellevu",
+            "error": "'30-34 Hickson Road, Millers Point NSW 2000; Level 3, 459 Church Street, Richmond VIC 3121; 5 Bellevue Circuit, Greystanes NSW 2145' does not match '(?is)^(?!.*;).*\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "canonical": "address.postcode",
+        "source": "Supplier address",
+        "raw_non_empty": 85,
+        "records_with_value": 73,
+        "errors": 12,
+        "error_rate": 0.141,
+        "error_examples": [
+          {
+            "raw": "Refer to Queensland Government Arrangements Directory",
+            "error": "'Refer to Queensland Government Arrangements Directory' does not match '(?is)^(?!.*;).*\\\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania"
+          },
+          {
+            "raw": "Unit 3530 National Storage Facility 114 Montpelier Rd, Bowen Hills 4006",
+            "error": "'Unit 3530 National Storage Facility 114 Montpelier Rd, Bowen Hills 4006' does not match '(?is)^(?!.*;).*\\\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South "
+          },
+          {
+            "raw": "805/220 Collins Street, Melbourne",
+            "error": "'805/220 Collins Street, Melbourne' does not match '(?is)^(?!.*;).*\\\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)"
+          },
+          {
+            "raw": "77-79 Ricketts Rd Mt Waverley",
+            "error": "'77-79 Ricketts Rd Mt Waverley' does not match '(?is)^(?!.*;).*\\\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)\\\\b\\"
+          },
+          {
+            "raw": "30-34 Hickson Road, Millers Point NSW 2000; Level 3, 459 Church Street, Richmond VIC 3121; 5 Bellevu",
+            "error": "'30-34 Hickson Road, Millers Point NSW 2000; Level 3, 459 Church Street, Richmond VIC 3121; 5 Bellevue Circuit, Greystanes NSW 2145' does not match '(?is)^(?!.*;).*\\\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|N"
+          }
+        ]
+      }
+    ],
+    "record_id_duplicates": 0,
+    "preview": [
+      {
+        "entity.legal_name": {
+          "raw": "Eppendorf South Pacific Pty Ltd",
+          "values": [
+            "Eppendorf South Pacific Pty Ltd"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "Eppendorf South Pacific Pty Ltd",
+          "error": "'Eppendorf South Pacific Pty Ltd' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        "entity.abn": {
+          "raw": "",
+          "values": []
+        },
+        "address.full": {
+          "raw": "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113",
+          "values": [
+            "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113"
+          ]
+        },
+        "address.state": {
+          "raw": "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "Level 1, 97 Waterloo Road, Macquarie Park, NSW 2113",
+          "values": [
+            "2113"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "values": []
+        },
+        "entity.trading_name": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'Refer to Queensland Government Arrangements Directory' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        "entity.abn": {
+          "raw": "",
+          "values": []
+        },
+        "address.full": {
+          "raw": "",
+          "values": []
+        },
+        "address.state": {
+          "raw": "",
+          "values": []
+        },
+        "address.postcode": {
+          "raw": "",
+          "values": []
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Amgen Australia Pty Ltd",
+          "values": [
+            "Amgen Australia Pty Ltd"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "Amgen Australia Pty Ltd",
+          "error": "'Amgen Australia Pty Ltd' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        "entity.abn": {
+          "raw": "31 051 057 428",
+          "values": [
+            "31051057428"
+          ]
+        },
+        "address.full": {
+          "raw": "Level 11, 10 Carrington Street, Sydney NSW 2000",
+          "values": [
+            "Level 11, 10 Carrington Street, Sydney NSW 2000"
+          ]
+        },
+        "address.state": {
+          "raw": "Level 11, 10 Carrington Street, Sydney NSW 2000",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "Level 11, 10 Carrington Street, Sydney NSW 2000",
+          "values": [
+            "2000"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Baxter Healthcare Pty Ltd",
+          "values": [
+            "Baxter Healthcare Pty Ltd"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "Baxter Healthcare Pty Ltd",
+          "error": "'Baxter Healthcare Pty Ltd' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        "entity.abn": {
+          "raw": "43 000 392 781",
+          "values": [
+            "43000392781"
+          ]
+        },
+        "address.full": {
+          "raw": "Unit 2/1115 Stanley Street, East Coorparoo QLD 4151",
+          "values": [
+            "Unit 2/1115 Stanley Street, East Coorparoo QLD 4151"
+          ]
+        },
+        "address.state": {
+          "raw": "Unit 2/1115 Stanley Street, East Coorparoo QLD 4151",
+          "values": [
+            "QLD"
+          ]
+        },
+        "address.postcode": {
+          "raw": "Unit 2/1115 Stanley Street, East Coorparoo QLD 4151",
+          "values": [
+            "4151"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Kerr Australia",
+          "values": [
+            "Kerr Australia"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "Kerr Australia",
+          "error": "'Kerr Australia' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        "entity.abn": {
+          "raw": "21 003 929 100",
+          "values": [
+            "21003929100"
+          ]
+        },
+        "address.full": {
+          "raw": "Unit 6/12 Mars rad Lane Cove West, NSW 2066",
+          "values": [
+            "Unit 6/12 Mars rad Lane Cove West, NSW 2066"
+          ]
+        },
+        "address.state": {
+          "raw": "Unit 6/12 Mars rad Lane Cove West, NSW 2066",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "Unit 6/12 Mars rad Lane Cove West, NSW 2066",
+          "values": [
+            "2066"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "BOC Limited",
+          "values": [
+            "BOC Limited"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "BOC Limited",
+          "error": "'BOC Limited' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        "entity.abn": {
+          "raw": "95 000 029 729",
+          "values": [
+            "95000029729"
+          ]
+        },
+        "address.full": {
+          "raw": "10 Julius Avenue North Ryde NSW 2113",
+          "values": [
+            "10 Julius Avenue North Ryde NSW 2113"
+          ]
+        },
+        "address.state": {
+          "raw": "10 Julius Avenue North Ryde NSW 2113",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "10 Julius Avenue North Ryde NSW 2113",
+          "values": [
+            "2113"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Qiagen Pty Ltd",
+          "values": [
+            "Qiagen Pty Ltd"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "Qiagen Pty Ltd",
+          "error": "'Qiagen Pty Ltd' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        "entity.abn": {
+          "raw": "75 072 382 944",
+          "values": [
+            "75072382944"
+          ]
+        },
+        "address.full": {
+          "raw": "1894 Dandenong Road, Clayton, VIC, 3168",
+          "values": [
+            "1894 Dandenong Road, Clayton, VIC, 3168"
+          ]
+        },
+        "address.state": {
+          "raw": "1894 Dandenong Road, Clayton, VIC, 3168",
+          "values": [
+            "VIC"
+          ]
+        },
+        "address.postcode": {
+          "raw": "1894 Dandenong Road, Clayton, VIC, 3168",
+          "values": [
+            "3168"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "values": []
+        },
+        "entity.trading_name": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'Refer to Queensland Government Arrangements Directory' does not match '(?i)\\\\(\\\\s*(?:trading\\\\s+as|t/as)\\\\s+([^)]+)\\\\)?'"
+        },
+        "entity.abn": {
+          "raw": "",
+          "values": []
+        },
+        "address.full": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "values": []
+        },
+        "address.state": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'Refer to Queensland Government Arrangements Directory' does not match '(?is)^(?!.*;).*\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)\\\\b\\\\W*(?<!\\\\d)\\\\d{4}\\\\s*$'"
+        },
+        "address.postcode": {
+          "raw": "Refer to Queensland Government Arrangements Directory",
+          "error": "'Refer to Queensland Government Arrangements Directory' does not match '(?is)^(?!.*;).*\\\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)\\\\b\\\\W*((?<!\\\\d)\\\\d{4})\\\\s*$'"
+        }
+      }
+    ]
+  },
+  "max_error_rate": 0.05
+}

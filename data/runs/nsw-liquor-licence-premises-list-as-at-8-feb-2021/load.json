@@ -1,0 +1,54 @@
+{
+  "reader": {
+    "format": "csv",
+    "encoding": "cp1252",
+    "delimiter": ",",
+    "header_row": 0
+  },
+  "records_loaded": 5000,
+  "columns": [
+    "Licence number",
+    "Licence type",
+    "Status",
+    "Start date",
+    "Trading Status",
+    "Licence name",
+    "Address",
+    "Suburb",
+    "Postcode",
+    "Latitude",
+    "Longitude",
+    "LGA",
+    "Precinct",
+    "Licensee",
+    "Business type",
+    "Authorisation restriction name",
+    "Extended trading",
+    "Reduced trading",
+    "Primary service",
+    "Right to keep gaming",
+    "Unrestricted",
+    "After12am",
+    "After3am",
+    "After5am",
+    "SA2",
+    "Band",
+    "GMEs",
+    "PMPs",
+    "Auth limit",
+    "Unfulfilled Quota",
+    "GMT",
+    "EGMs"
+  ],
+  "attempts": [
+    {
+      "reader": {
+        "format": "csv",
+        "encoding": "utf-8",
+        "delimiter": ",",
+        "header_row": 0
+      },
+      "problem": "ReaderError: could not decode text"
+    }
+  ]
+}

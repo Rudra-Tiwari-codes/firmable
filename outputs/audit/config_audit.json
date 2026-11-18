@@ -1,0 +1,1590 @@
+[
+  {
+    "slug": "acnc-register",
+    "source_id": "datagovau:acnc-register:8fb32972",
+    "approved": true,
+    "reviewer": "Rudra (approved by Claude on user instruction)",
+    "publisher": "Australian Charities and Not-for-profits Commission (ACNC)",
+    "resource_url": "https://data.gov.au/data/dataset/b050b242-4487-4306-abf5-07ca073e5594/resource/8fb32972-24e9-4c95-885e-7140be51be8a/download/datadotgov_main.csv",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "licence_id": "cc-by",
+    "licence_flag": null,
+    "raw_sha256": "1ff76b510e8155d7ab35df4b45b8791315c1f0a15f43f9c3057dff16646f816d",
+    "approved_raw_sha256": "1ff76b510e8155d7ab35df4b45b8791315c1f0a15f43f9c3057dff16646f816d",
+    "source_drifted": false,
+    "truncated_download": false,
+    "records_in_file": 66541,
+    "share_of_file_agent_window_covers": 0.075,
+    "rows_beyond_agent_window": 61541,
+    "whole_file": {
+      "worst_error_rate": 0.002,
+      "per_mapping": [
+        {
+          "canonical": "entity.abn",
+          "source": "ABN",
+          "raw_non_empty": 65932,
+          "records_with_value": 65930,
+          "errors": 2,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "91111111273",
+              "error": "ABN '91111111273' fails checksum"
+            },
+            {
+              "raw": "91111111272",
+              "error": "ABN '91111111272' fails checksum"
+            }
+          ]
+        },
+        {
+          "canonical": "entity.legal_name",
+          "source": "Charity_Legal_Name",
+          "raw_non_empty": 66325,
+          "records_with_value": 66325,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.entity_type",
+          "source": "Charity_Legal_Name",
+          "raw_non_empty": 66325,
+          "records_with_value": 66541,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.website",
+          "source": "Charity_Website",
+          "raw_non_empty": 43886,
+          "records_with_value": 43814,
+          "errors": 72,
+          "error_rate": 0.002,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "Instagram",
+              "error": "'Instagram' is not a URL"
+            },
+            {
+              "raw": "https://https//avocatrust.asn.au",
+              "error": "'https://https//avocatrust.asn.au' is not a URL"
+            },
+            {
+              "raw": "none",
+              "error": "'none' is not a URL"
+            },
+            {
+              "raw": "tbc",
+              "error": "'tbc' is not a URL"
+            },
+            {
+              "raw": "https://ORIC  ICN#7411",
+              "error": "'https://ORIC  ICN#7411' is not a URL"
+            }
+          ]
+        },
+        {
+          "canonical": "address.full",
+          "source": [
+            "Address_Line_1",
+            "Address_Line_2",
+            "Address_Line_3",
+            "Town_City",
+            "State",
+            "Postcode"
+          ],
+          "raw_non_empty": 59903,
+          "records_with_value": 59903,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.locality",
+          "source": "Town_City",
+          "raw_non_empty": 59660,
+          "records_with_value": 59660,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.state",
+          "source": "State",
+          "raw_non_empty": 59628,
+          "records_with_value": 59621,
+          "errors": 6,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "DC Western Australia",
+              "error": "state 'DC Western Australia' not recognised"
+            },
+            {
+              "raw": "VICTORIA & NSW",
+              "error": "state 'VICTORIA & NSW' not recognised"
+            },
+            {
+              "raw": "Bali",
+              "error": "state 'Bali' not recognised"
+            },
+            {
+              "raw": "Mentone",
+              "error": "state 'Mentone' not recognised"
+            },
+            {
+              "raw": "Australia Capital Territory",
+              "error": "state 'Australia Capital Territory' not recognised"
+            }
+          ]
+        },
+        {
+          "canonical": "address.postcode",
+          "source": "Postcode",
+          "raw_non_empty": 59723,
+          "records_with_value": 59713,
+          "errors": 9,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "139658",
+              "error": "postcode '139658' is not 4 digits"
+            },
+            {
+              "raw": "31051",
+              "error": "postcode '31051' is not 4 digits"
+            },
+            {
+              "raw": "33132",
+              "error": "postcode '33132' is not 4 digits"
+            },
+            {
+              "raw": "26081",
+              "error": "postcode '26081' is not 4 digits"
+            },
+            {
+              "raw": "80571",
+              "error": "postcode '80571' is not 4 digits"
+            }
+          ]
+        },
+        {
+          "canonical": "address.country",
+          "source": "Country",
+          "raw_non_empty": 58668,
+          "records_with_value": 58654,
+          "errors": 14,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "0419032014",
+              "error": "value '0419032014' not in map"
+            },
+            {
+              "raw": "Tasmania",
+              "error": "value 'TASMANIA' not in map"
+            },
+            {
+              "raw": "Victoria",
+              "error": "value 'VICTORIA' not in map"
+            },
+            {
+              "raw": "AUSTRALIA + NZ + UK + TSI + DENMARK (DK) + USA",
+              "error": "value 'AUSTRALIA + NZ + UK + TSI + DENMARK (DK) + USA' not in map"
+            },
+            {
+              "raw": "AUSRALIA",
+              "error": "value 'AUSRALIA' not in map"
+            }
+          ]
+        }
+      ],
+      "record_id_duplicates": 215
+    },
+    "beyond_agent_window": {
+      "worst_error_rate": 0.002,
+      "per_mapping": [
+        {
+          "canonical": "entity.abn",
+          "source": "ABN",
+          "raw_non_empty": 61014,
+          "records_with_value": 61012,
+          "errors": 2,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "91111111273",
+              "error": "ABN '91111111273' fails checksum"
+            },
+            {
+              "raw": "91111111272",
+              "error": "ABN '91111111272' fails checksum"
+            }
+          ]
+        },
+        {
+          "canonical": "entity.legal_name",
+          "source": "Charity_Legal_Name",
+          "raw_non_empty": 61334,
+          "records_with_value": 61334,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.entity_type",
+          "source": "Charity_Legal_Name",
+          "raw_non_empty": 61334,
+          "records_with_value": 61541,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.website",
+          "source": "Charity_Website",
+          "raw_non_empty": 40355,
+          "records_with_value": 40290,
+          "errors": 65,
+          "error_rate": 0.002,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "Hyde Park Towers, Ground Floor, S.2, 148A Elizabeth Street, Sydney, NSW 2000",
+              "error": "'Hyde Park Towers, Ground Floor, S.2, 148A Elizabeth Street, Sydney, NSW 2000' is not a URL"
+            },
+            {
+              "raw": "https://#bathurstbuss",
+              "error": "'https://#bathurstbuss' is not a URL"
+            },
+            {
+              "raw": "https://N/A",
+              "error": "'https://N/A' is not a URL"
+            },
+            {
+              "raw": "Facebook",
+              "error": "'Facebook' is not a URL"
+            },
+            {
+              "raw": "1262 Mulgoa Road Mulgoa NSW 2745",
+              "error": "'1262 Mulgoa Road Mulgoa NSW 2745' is not a URL"
+            }
+          ]
+        },
+        {
+          "canonical": "address.full",
+          "source": [
+            "Address_Line_1",
+            "Address_Line_2",
+            "Address_Line_3",
+            "Town_City",
+            "State",
+            "Postcode"
+          ],
+          "raw_non_empty": 55472,
+          "records_with_value": 55472,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.locality",
+          "source": "Town_City",
+          "raw_non_empty": 55256,
+          "records_with_value": 55256,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.state",
+          "source": "State",
+          "raw_non_empty": 55219,
+          "records_with_value": 55212,
+          "errors": 6,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "DC Western Australia",
+              "error": "state 'DC Western Australia' not recognised"
+            },
+            {
+              "raw": "VICTORIA & NSW",
+              "error": "state 'VICTORIA & NSW' not recognised"
+            },
+            {
+              "raw": "Bali",
+              "error": "state 'Bali' not recognised"
+            },
+            {
+              "raw": "Mentone",
+              "error": "state 'Mentone' not recognised"
+            },
+            {
+              "raw": "Australia Capital Territory",
+              "error": "state 'Australia Capital Territory' not recognised"
+            }
+          ]
+        },
+        {
+          "canonical": "address.postcode",
+          "source": "Postcode",
+          "raw_non_empty": 55310,
+          "records_with_value": 55301,
+          "errors": 8,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "31051",
+              "error": "postcode '31051' is not 4 digits"
+            },
+            {
+              "raw": "33132",
+              "error": "postcode '33132' is not 4 digits"
+            },
+            {
+              "raw": "26081",
+              "error": "postcode '26081' is not 4 digits"
+            },
+            {
+              "raw": "80571",
+              "error": "postcode '80571' is not 4 digits"
+            },
+            {
+              "raw": "22017",
+              "error": "postcode '22017' is not 4 digits"
+            }
+          ]
+        },
+        {
+          "canonical": "address.country",
+          "source": "Country",
+          "raw_non_empty": 54246,
+          "records_with_value": 54233,
+          "errors": 13,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "Tasmania",
+              "error": "value 'TASMANIA' not in map"
+            },
+            {
+              "raw": "Victoria",
+              "error": "value 'VICTORIA' not in map"
+            },
+            {
+              "raw": "AUSTRALIA + NZ + UK + TSI + DENMARK (DK) + USA",
+              "error": "value 'AUSTRALIA + NZ + UK + TSI + DENMARK (DK) + USA' not in map"
+            },
+            {
+              "raw": "AUSRALIA",
+              "error": "value 'AUSRALIA' not in map"
+            },
+            {
+              "raw": "Australia.",
+              "error": "value 'AUSTRALIA.' not in map"
+            }
+          ]
+        }
+      ],
+      "mappings_over_error_limit": []
+    },
+    "silent_drop_warnings": [],
+    "semantic": {
+      "checked": true,
+      "records_checked": 66541,
+      "identifiers": 65930,
+      "identifiers_with_several_names": 0,
+      "identifiers_with_unrelated_names": 0,
+      "names": 65136,
+      "names_under_several_identifiers": 402,
+      "examples_unrelated": [],
+      "examples_spread": [
+        {
+          "name": "OF SYNOD OF DIOCESE OF BRISBANE",
+          "identifiers": 145
+        },
+        {
+          "name": "OF DIOCESAN SYNOD OF NORTH QUEENSLAND",
+          "identifiers": 51
+        },
+        {
+          "name": "LUTHERAN CHURCH OF AUSTRALIA QUEENSLAND DISTRICT",
+          "identifiers": 41
+        },
+        {
+          "name": "BENDIGO DIOCESAN TRUSTS",
+          "identifiers": 32
+        },
+        {
+          "name": "ANGLICAN TRUSTS OF DIOCESE OF GIPPSLAND",
+          "identifiers": 30
+        }
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "slug": "asic-credit-licensee",
+    "source_id": "datagovau:asic-credit-licensee:35953a01",
+    "approved": true,
+    "reviewer": "Rudra (approved by Claude on user instruction)",
+    "publisher": "Australian Securities and Investments Commission (ASIC)",
+    "resource_url": "https://data.gov.au/data/dataset/fa0b0d71-b8b8-4af8-bc59-0b000ce0d5e4/resource/35953a01-a9a8-4609-8566-c9fa7de465d3/download/credit_lic_202610.csv",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "licence_id": "cc-by",
+    "licence_flag": null,
+    "raw_sha256": "eb5ff4e62da65bb117ab554d41e6b1ef397111014b60f780ddb776580904301f",
+    "approved_raw_sha256": "eb5ff4e62da65bb117ab554d41e6b1ef397111014b60f780ddb776580904301f",
+    "source_drifted": false,
+    "truncated_download": false,
+    "records_in_file": 4313,
+    "share_of_file_agent_window_covers": 1.0,
+    "rows_beyond_agent_window": 0,
+    "whole_file": {
+      "worst_error_rate": 0.0,
+      "per_mapping": [
+        {
+          "canonical": "entity.legal_name",
+          "source": "CRED_LIC_NAME",
+          "raw_non_empty": 4313,
+          "records_with_value": 4313,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.trading_name",
+          "source": "CRED_LIC_BN",
+          "raw_non_empty": 1471,
+          "records_with_value": 1471,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.abn",
+          "source": "CRED_LIC_ABN_ACN",
+          "raw_non_empty": 4313,
+          "records_with_value": 3851,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.107,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.acn",
+          "source": "CRED_LIC_ABN_ACN",
+          "raw_non_empty": 4313,
+          "records_with_value": 376,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.913,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.entity_type",
+          "source": "CRED_LIC_NAME",
+          "raw_non_empty": 4313,
+          "records_with_value": 4313,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.locality",
+          "source": "CRED_LIC_LOCALITY",
+          "raw_non_empty": 4313,
+          "records_with_value": 4313,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.state",
+          "source": "CRED_LIC_STATE",
+          "raw_non_empty": 4313,
+          "records_with_value": 4313,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.postcode",
+          "source": "CRED_LIC_PCODE",
+          "raw_non_empty": 4313,
+          "records_with_value": 4313,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.country",
+          "source": null,
+          "raw_non_empty": 4313,
+          "records_with_value": 4313,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "observation.valid_from",
+          "source": "CRED_LIC_START_DT",
+          "raw_non_empty": 4313,
+          "records_with_value": 4313,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "observation.valid_to",
+          "source": "CRED_LIC_END_DT",
+          "raw_non_empty": 0,
+          "records_with_value": 0,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        }
+      ],
+      "record_id_duplicates": 0
+    },
+    "beyond_agent_window": null,
+    "silent_drop_warnings": [
+      "entity.acn (from CRED_LIC_ABN_ACN): 91% of non-empty cells produce no value and no error. Confirm that is intended filtering."
+    ],
+    "semantic": {
+      "checked": true,
+      "records_checked": 4313,
+      "identifiers": 3851,
+      "identifiers_with_several_names": 0,
+      "identifiers_with_unrelated_names": 0,
+      "names": 3850,
+      "names_under_several_identifiers": 1,
+      "examples_unrelated": [],
+      "examples_spread": [
+        {
+          "name": "WT FINANCE",
+          "identifiers": 2
+        }
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "slug": "kzmf-7uhp",
+    "source_id": "datagovau:kzmf-7uhp:5cf1e4ea",
+    "approved": true,
+    "reviewer": "Rudra (approved by Claude on user instruction)",
+    "publisher": "ACT Government Open Data",
+    "resource_url": "https://www.data.act.gov.au/api/v3/views/kzmf-7uhp/query.json?accessType=DOWNLOAD",
+    "licence": "Other",
+    "licence_id": "other",
+    "licence_flag": "licence id 'other' is not a recognised open licence; read the terms before using this source",
+    "raw_sha256": "5f1ef1fd815f0817ff2b1e12403707566a13a6b7e09b985f592bd97a35f5f1ca",
+    "approved_raw_sha256": "5f1ef1fd815f0817ff2b1e12403707566a13a6b7e09b985f592bd97a35f5f1ca",
+    "source_drifted": false,
+    "truncated_download": false,
+    "records_in_file": 127437,
+    "share_of_file_agent_window_covers": 0.039,
+    "rows_beyond_agent_window": 122437,
+    "whole_file": {
+      "worst_error_rate": 0.001,
+      "per_mapping": [
+        {
+          "canonical": "entity.legal_name",
+          "source": "supplier_name",
+          "raw_non_empty": 127436,
+          "records_with_value": 127436,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.abn",
+          "source": "supplier_abn",
+          "raw_non_empty": 127421,
+          "records_with_value": 126787,
+          "errors": 99,
+          "error_rate": 0.001,
+          "silent_drop_rate": 0.004,
+          "error_examples": [
+            {
+              "raw": "20 607 773 205",
+              "error": "ABN '20607773205' fails checksum"
+            },
+            {
+              "raw": "91 555 716 819",
+              "error": "ABN '91555716819' fails checksum"
+            },
+            {
+              "raw": "75 490 121 060",
+              "error": "ABN '75490121060' fails checksum"
+            },
+            {
+              "raw": "76 288 172 749",
+              "error": "ABN '76288172749' fails checksum"
+            },
+            {
+              "raw": "00 932 137 7",
+              "error": "ABN '009321377' fails checksum"
+            }
+          ]
+        },
+        {
+          "canonical": "entity.entity_type",
+          "source": "supplier_name",
+          "raw_non_empty": 127436,
+          "records_with_value": 127436,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        }
+      ],
+      "record_id_duplicates": 0
+    },
+    "beyond_agent_window": {
+      "worst_error_rate": 0.001,
+      "per_mapping": [
+        {
+          "canonical": "entity.legal_name",
+          "source": "supplier_name",
+          "raw_non_empty": 122436,
+          "records_with_value": 122436,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.abn",
+          "source": "supplier_abn",
+          "raw_non_empty": 122423,
+          "records_with_value": 121814,
+          "errors": 92,
+          "error_rate": 0.001,
+          "silent_drop_rate": 0.004,
+          "error_examples": [
+            {
+              "raw": "47 085 967 204",
+              "error": "ABN '47085967204' fails checksum"
+            },
+            {
+              "raw": "29 155 900 597",
+              "error": "ABN '29155900597' fails checksum"
+            },
+            {
+              "raw": "29 155 990 59",
+              "error": "ABN '2915599059' fails checksum"
+            },
+            {
+              "raw": "29 074 287 406",
+              "error": "ABN '29074287406' fails checksum"
+            },
+            {
+              "raw": "91 086 159 060",
+              "error": "ABN '91086159060' fails checksum"
+            }
+          ]
+        },
+        {
+          "canonical": "entity.entity_type",
+          "source": "supplier_name",
+          "raw_non_empty": 122436,
+          "records_with_value": 122436,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        }
+      ],
+      "mappings_over_error_limit": []
+    },
+    "silent_drop_warnings": [],
+    "semantic": {
+      "checked": true,
+      "records_checked": 127437,
+      "identifiers": 5142,
+      "identifiers_with_several_names": 816,
+      "identifiers_with_unrelated_names": 609,
+      "names": 5735,
+      "names_under_several_identifiers": 535,
+      "examples_unrelated": [
+        {
+          "abn": "23001382010",
+          "names": [
+            "HEALTHCARE SUPPLY PARTNERS",
+            "HEALTHLINK GROUP",
+            "HEALTHSCOPE OPERATIONS",
+            "HERZOG STEEL",
+            "HINDMARSH CONSTRUCTIONS",
+            "HOBAN RECRUITMENT"
+          ]
+        },
+        {
+          "abn": "30120725902",
+          "names": [
+            "ACT BUILDING AND MAINTENANCE",
+            "ACT SCHOOLS SPORTS COUNCIL",
+            "ACTEWAGL RETAIL",
+            "COMENSURA",
+            "COMMUNITY RESOURCES",
+            "COMPASS GROUP HEALTHCARE HOSPITALITY SERVICES"
+          ]
+        },
+        {
+          "abn": "31321190047",
+          "names": [
+            "BORAMBOLA NSW SPORTS AND RECREATION",
+            "BORAMBOLA SPORT AND RECREATION CENTRE",
+            "JINDABYNE NSW OFFICE OF SPORT",
+            "NEW SOUTH WALES GOVERNMENT OFFICE OF SPORT",
+            "NSW GOVERNMENT OFFICE OF SPORT",
+            "NSW GOVERNMENT SPORT AND RECREATION"
+          ]
+        },
+        {
+          "abn": "46221314841",
+          "names": [
+            "ACTEWAGL",
+            "ACTEWAGL RETAIL",
+            "ACTEWAGL RETAIL GAS AND ELECTRICITY",
+            "ACTEWAGL WATER AND SEWERAGE",
+            "ALBA ONE CONSULTING",
+            "ALCON ENGINEERS"
+          ]
+        },
+        {
+          "abn": "17093014129",
+          "names": [
+            "PARK",
+            "VANTIVE",
+            "VENDORPANEL",
+            "VEOLIA RECYCLING AND RECOVERY",
+            "VISABEL",
+            "WAVELENGTH INTERNATIONAL"
+          ]
+        }
+      ],
+      "examples_spread": [
+        {
+          "name": "PROGRAMMED FACILITY MANAGEMENT",
+          "identifiers": 48
+        },
+        {
+          "name": "COMENSURA",
+          "identifiers": 25
+        },
+        {
+          "name": "ACTEWAGL RETAIL",
+          "identifiers": 22
+        },
+        {
+          "name": "PARK",
+          "identifiers": 15
+        },
+        {
+          "name": "MEDRECRUIT",
+          "identifiers": 14
+        }
+      ],
+      "warnings": [
+        "609 of 5142 ABNs carry names that look unrelated. A valid checksum does not prove the ABN belongs to the name in that row. Either the pairing is unreliable, or several parties legitimately share an ABN (e.g. employees licensed under an employer). Check which.",
+        "535 of 5735 names appear under more than one ABN."
+      ]
+    }
+  },
+  {
+    "slug": "nsw-liquor-licence-premises-list-as-at-8-feb-2021",
+    "source_id": "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc",
+    "approved": true,
+    "reviewer": "Rudra (approved by Claude on user instruction)",
+    "publisher": "Department of Customer Service",
+    "resource_url": "https://data.nsw.gov.au/data/dataset/f4e5fd07-eb6a-420c-a857-6eda213ba6a3/resource/530d86bc-cdc3-4e3f-b828-5106cd0e48c3/download/premises-list-as-at-8-february-2021.csv",
+    "licence": "Creative Commons Attribution 3.0 Australia",
+    "licence_id": "cc-by",
+    "licence_flag": null,
+    "raw_sha256": "efc86dc4fb1a6a1070e3c0fc7544bdca4cbff67a068bc56d04d0164d6a17e6e0",
+    "approved_raw_sha256": "efc86dc4fb1a6a1070e3c0fc7544bdca4cbff67a068bc56d04d0164d6a17e6e0",
+    "source_drifted": false,
+    "truncated_download": false,
+    "records_in_file": 18747,
+    "share_of_file_agent_window_covers": 0.267,
+    "rows_beyond_agent_window": 13747,
+    "whole_file": {
+      "worst_error_rate": 0.0,
+      "per_mapping": [
+        {
+          "canonical": "entity.legal_name",
+          "source": "Licensee",
+          "raw_non_empty": 18747,
+          "records_with_value": 6415,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.658,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.entity_type",
+          "source": "Licensee",
+          "raw_non_empty": 18747,
+          "records_with_value": 6415,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.658,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.trading_name",
+          "source": "Licence name",
+          "raw_non_empty": 18747,
+          "records_with_value": 18747,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.full",
+          "source": [
+            "Address",
+            "Suburb",
+            "Postcode"
+          ],
+          "raw_non_empty": 18747,
+          "records_with_value": 18593,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.008,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.locality",
+          "source": "Suburb",
+          "raw_non_empty": 18747,
+          "records_with_value": 18595,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.008,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.postcode",
+          "source": "Postcode",
+          "raw_non_empty": 18747,
+          "records_with_value": 18594,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.008,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.state",
+          "source": null,
+          "raw_non_empty": 18747,
+          "records_with_value": 18747,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.country",
+          "source": null,
+          "raw_non_empty": 18747,
+          "records_with_value": 18747,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        }
+      ],
+      "record_id_duplicates": 3
+    },
+    "beyond_agent_window": {
+      "worst_error_rate": 0.0,
+      "per_mapping": [
+        {
+          "canonical": "entity.legal_name",
+          "source": "Licensee",
+          "raw_non_empty": 13747,
+          "records_with_value": 4648,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.662,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.entity_type",
+          "source": "Licensee",
+          "raw_non_empty": 13747,
+          "records_with_value": 4648,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.662,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.trading_name",
+          "source": "Licence name",
+          "raw_non_empty": 13747,
+          "records_with_value": 13747,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.full",
+          "source": [
+            "Address",
+            "Suburb",
+            "Postcode"
+          ],
+          "raw_non_empty": 13747,
+          "records_with_value": 13745,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.locality",
+          "source": "Suburb",
+          "raw_non_empty": 13747,
+          "records_with_value": 13746,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.postcode",
+          "source": "Postcode",
+          "raw_non_empty": 13747,
+          "records_with_value": 13746,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.state",
+          "source": null,
+          "raw_non_empty": 13747,
+          "records_with_value": 13747,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.country",
+          "source": null,
+          "raw_non_empty": 13747,
+          "records_with_value": 13747,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        }
+      ],
+      "mappings_over_error_limit": []
+    },
+    "silent_drop_warnings": [
+      "entity.legal_name (from Licensee): 66% of non-empty cells produce no value and no error. Confirm that is intended filtering.",
+      "entity.entity_type (from Licensee): 66% of non-empty cells produce no value and no error. Confirm that is intended filtering."
+    ],
+    "semantic": {
+      "checked": false,
+      "reason": "needs both entity.abn and entity.legal_name mapped",
+      "warnings": []
+    }
+  },
+  {
+    "slug": "qbcc-licensed-contractors-register",
+    "source_id": "datagovau:qbcc-licensed-contractors-register:25608781",
+    "approved": true,
+    "reviewer": "Rudra (approved by Claude on user instruction)",
+    "publisher": "Queensland Building and Construction Commission",
+    "resource_url": "https://www.data.qld.gov.au/dataset/980b6499-c0b4-491b-ba9c-1c7506368a50/resource/25608781-b28c-44f8-8545-0ab18d84082f/download/20260923_qbcc_active_licencees_opendatain-2.csv",
+    "licence": "CC-BY-4.0",
+    "licence_id": "CC-BY-4.0",
+    "licence_flag": null,
+    "raw_sha256": "6c1292863088dfc7844faff92b3dfac937d1c9e7f32b21af013c356e8dca7af2",
+    "approved_raw_sha256": "6c1292863088dfc7844faff92b3dfac937d1c9e7f32b21af013c356e8dca7af2",
+    "source_drifted": false,
+    "truncated_download": false,
+    "records_in_file": 206226,
+    "share_of_file_agent_window_covers": 0.024,
+    "rows_beyond_agent_window": 201226,
+    "whole_file": {
+      "worst_error_rate": 0.009,
+      "per_mapping": [
+        {
+          "canonical": "entity.legal_name",
+          "source": "Licensee Name",
+          "raw_non_empty": 206226,
+          "records_with_value": 206226,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.entity_type",
+          "source": "Licensee Name",
+          "raw_non_empty": 206226,
+          "records_with_value": 206226,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.acn",
+          "source": "ACN",
+          "raw_non_empty": 48825,
+          "records_with_value": 48533,
+          "errors": 292,
+          "error_rate": 0.006,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "343 943 793",
+              "error": "ACN '343 943 793' fails checksum"
+            },
+            {
+              "raw": "639 939 892",
+              "error": "ACN '639 939 892' fails checksum"
+            },
+            {
+              "raw": "605 675 317",
+              "error": "ACN '605 675 317' fails checksum"
+            },
+            {
+              "raw": "347 823 989",
+              "error": "ACN '347 823 989' fails checksum"
+            },
+            {
+              "raw": "166 232 282",
+              "error": "ACN '166 232 282' fails checksum"
+            }
+          ]
+        },
+        {
+          "canonical": "entity.abn",
+          "source": "ABN",
+          "raw_non_empty": 113478,
+          "records_with_value": 112495,
+          "errors": 983,
+          "error_rate": 0.009,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "42 277 568 976",
+              "error": "ABN '42 277 568 976' fails checksum"
+            },
+            {
+              "raw": "57 697 443 023",
+              "error": "ABN '57 697 443 023' fails checksum"
+            },
+            {
+              "raw": "18 129 065 094",
+              "error": "ABN '18 129 065 094' fails checksum"
+            },
+            {
+              "raw": "85 610 847 129",
+              "error": "ABN '85 610 847 129' fails checksum"
+            },
+            {
+              "raw": "50 613 024 272",
+              "error": "ABN '50 613 024 272' fails checksum"
+            }
+          ]
+        },
+        {
+          "canonical": "address.full",
+          "source": "Licensee Business Address",
+          "raw_non_empty": 206225,
+          "records_with_value": 206225,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.state",
+          "source": "Licensee Business Address",
+          "raw_non_empty": 206225,
+          "records_with_value": 206015,
+          "errors": 210,
+          "error_rate": 0.001,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "2-8 PERCEVAL COURT NEW BEITH 4124 AUSTRALIA",
+              "error": "'2-8 PERCEVAL COURT NEW BEITH 4124 AUSTRALIA' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Ter"
+            },
+            {
+              "raw": "24 Chappell St Kawana Region 4701",
+              "error": "'24 Chappell St Kawana Region 4701' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Territory|Nor"
+            },
+            {
+              "raw": "159 Torquay Street Kaikoura South Island 7300",
+              "error": "'159 Torquay Street Kaikoura South Island 7300' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital T"
+            },
+            {
+              "raw": "3 Deborah Court Andergrove Mackay 4740",
+              "error": "'3 Deborah Court Andergrove Mackay 4740' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Territor"
+            },
+            {
+              "raw": "60 Ballynde Street Bracken Ridge AUSTRALIA 4017",
+              "error": "'60 Ballynde Street Bracken Ridge AUSTRALIA 4017' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital"
+            }
+          ]
+        },
+        {
+          "canonical": "address.postcode",
+          "source": "Licensee Business Address",
+          "raw_non_empty": 206225,
+          "records_with_value": 206166,
+          "errors": 59,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "2-8 PERCEVAL COURT NEW BEITH 4124 AUSTRALIA",
+              "error": "'2-8 PERCEVAL COURT NEW BEITH 4124 AUSTRALIA' does not match '(\\\\d{4})\\\\s*$'"
+            },
+            {
+              "raw": "104 Chadwell Heath Lane\nChadwell Heath Romford ENG RM6",
+              "error": "'104 Chadwell Heath Lane Chadwell Heath Romford ENG RM6' does not match '(\\\\d{4})\\\\s*$'"
+            },
+            {
+              "raw": "None None QLD None",
+              "error": "'None None QLD None' does not match '(\\\\d{4})\\\\s*$'"
+            },
+            {
+              "raw": "PO BOX 880   QLD YEPPOON QLD QLD",
+              "error": "'PO BOX 880 QLD YEPPOON QLD QLD' does not match '(\\\\d{4})\\\\s*$'"
+            },
+            {
+              "raw": "155 - 179 CORAMANDEL ROAD IRONBANK 4306 QLD",
+              "error": "'155 - 179 CORAMANDEL ROAD IRONBANK 4306 QLD' does not match '(\\\\d{4})\\\\s*$'"
+            }
+          ]
+        },
+        {
+          "canonical": "address.country",
+          "source": null,
+          "raw_non_empty": 206226,
+          "records_with_value": 206226,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        }
+      ],
+      "record_id_duplicates": 1
+    },
+    "beyond_agent_window": {
+      "worst_error_rate": 0.009,
+      "per_mapping": [
+        {
+          "canonical": "entity.legal_name",
+          "source": "Licensee Name",
+          "raw_non_empty": 201226,
+          "records_with_value": 201226,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.entity_type",
+          "source": "Licensee Name",
+          "raw_non_empty": 201226,
+          "records_with_value": 201226,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.acn",
+          "source": "ACN",
+          "raw_non_empty": 47014,
+          "records_with_value": 46727,
+          "errors": 287,
+          "error_rate": 0.006,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "166 232 282",
+              "error": "ACN '166 232 282' fails checksum"
+            },
+            {
+              "raw": "322 446 930",
+              "error": "ACN '322 446 930' fails checksum"
+            },
+            {
+              "raw": "047 335 486",
+              "error": "ACN '047 335 486' fails checksum"
+            },
+            {
+              "raw": "641 018 514",
+              "error": "ACN '641 018 514' fails checksum"
+            },
+            {
+              "raw": "627 877 390",
+              "error": "ACN '627 877 390' fails checksum"
+            }
+          ]
+        },
+        {
+          "canonical": "entity.abn",
+          "source": "ABN",
+          "raw_non_empty": 110286,
+          "records_with_value": 109321,
+          "errors": 965,
+          "error_rate": 0.009,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "38 657 694 338",
+              "error": "ABN '38 657 694 338' fails checksum"
+            },
+            {
+              "raw": "45 353 812 635",
+              "error": "ABN '45 353 812 635' fails checksum"
+            },
+            {
+              "raw": "38 844 223 972",
+              "error": "ABN '38 844 223 972' fails checksum"
+            },
+            {
+              "raw": "79 216 968 894",
+              "error": "ABN '79 216 968 894' fails checksum"
+            },
+            {
+              "raw": "58 464 030 047",
+              "error": "ABN '58 464 030 047' fails checksum"
+            }
+          ]
+        },
+        {
+          "canonical": "address.full",
+          "source": "Licensee Business Address",
+          "raw_non_empty": 201225,
+          "records_with_value": 201225,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.state",
+          "source": "Licensee Business Address",
+          "raw_non_empty": 201225,
+          "records_with_value": 201025,
+          "errors": 200,
+          "error_rate": 0.001,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "370 MOORINA RD Moorina INTERNATIONAL 4506",
+              "error": "'370 MOORINA RD Moorina INTERNATIONAL 4506' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Terri"
+            },
+            {
+              "raw": "7 Osprey Drive, Thornlands, Qld, 4164",
+              "error": "'7 Osprey Drive, Thornlands, Qld, 4164' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Territory"
+            },
+            {
+              "raw": "22 HANNAM ST WESTCOURT Please select a state 4870",
+              "error": "'22 HANNAM ST WESTCOURT Please select a state 4870' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capit"
+            },
+            {
+              "raw": "10 wilmington Court Springwood Logan 4127",
+              "error": "'10 wilmington Court Springwood Logan 4127' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Terri"
+            },
+            {
+              "raw": "10 Tutukau Road Rd2 Reporoa NEW ZEALAND 3083",
+              "error": "'10 Tutukau Road Rd2 Reporoa NEW ZEALAND 3083' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Te"
+            }
+          ]
+        },
+        {
+          "canonical": "address.postcode",
+          "source": "Licensee Business Address",
+          "raw_non_empty": 201225,
+          "records_with_value": 201168,
+          "errors": 57,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": [
+            {
+              "raw": "None None QLD None",
+              "error": "'None None QLD None' does not match '(\\\\d{4})\\\\s*$'"
+            },
+            {
+              "raw": "PO BOX 880   QLD YEPPOON QLD QLD",
+              "error": "'PO BOX 880 QLD YEPPOON QLD QLD' does not match '(\\\\d{4})\\\\s*$'"
+            },
+            {
+              "raw": "155 - 179 CORAMANDEL ROAD IRONBANK 4306 QLD",
+              "error": "'155 - 179 CORAMANDEL ROAD IRONBANK 4306 QLD' does not match '(\\\\d{4})\\\\s*$'"
+            },
+            {
+              "raw": "PO Box 471 Lawnton 4501 QLD",
+              "error": "'PO Box 471 Lawnton 4501 QLD' does not match '(\\\\d{4})\\\\s*$'"
+            },
+            {
+              "raw": "36 Crescent Ave Hope Island QLD 421",
+              "error": "'36 Crescent Ave Hope Island QLD 421' does not match '(\\\\d{4})\\\\s*$'"
+            }
+          ]
+        },
+        {
+          "canonical": "address.country",
+          "source": null,
+          "raw_non_empty": 201226,
+          "records_with_value": 201226,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.0,
+          "error_examples": []
+        }
+      ],
+      "mappings_over_error_limit": []
+    },
+    "silent_drop_warnings": [],
+    "semantic": {
+      "checked": true,
+      "records_checked": 206226,
+      "identifiers": 56832,
+      "identifiers_with_several_names": 2349,
+      "identifiers_with_unrelated_names": 2175,
+      "names": 59085,
+      "names_under_several_identifiers": 130,
+      "examples_unrelated": [
+        {
+          "abn": "52009778330",
+          "names": [
+            "CHRISTOPHER PETER LANIGAN",
+            "ETHAN HARTWIG",
+            "HAMISH FULTON SCOTT",
+            "HAMISH WILLIAM SCHMALKUCHE",
+            "J HUTCHINSON",
+            "JAMES KARCH"
+          ]
+        },
+        {
+          "abn": "47000067541",
+          "names": [
+            "CHRISTOPHER JOHN BARFIELD",
+            "CHUBB FIRE AND SECURITY",
+            "CRAIG ALAN WHITAKER",
+            "GLEN DESMOND HALL",
+            "KIERON MONTGOMERY",
+            "MATTHEW JOHN MACHEN"
+          ]
+        },
+        {
+          "abn": "15149359437",
+          "names": [
+            "JOSHUA SHANE MIDDLETON",
+            "MARK RAYMOND BRAIN",
+            "NICHOLAS JOHN MOORE",
+            "TOTAL VENTILATION HYGIENE"
+          ]
+        },
+        {
+          "abn": "29002968103",
+          "names": [
+            "ADAM TROY MCKERGOW",
+            "JAMIE BRUCE MULDREW",
+            "JOHNSON CONTROLS AUSTRALIA",
+            "KANE WARWICK HUNT"
+          ]
+        },
+        {
+          "abn": "38063384056",
+          "names": [
+            "BENJAMIN DAVID CHARLES COOPER",
+            "MICHAEL VICENZINO",
+            "PETER JAMES PETE COWEN",
+            "SIMON MATTHEW REYNOLDS"
+          ]
+        }
+      ],
+      "examples_spread": [
+        {
+          "name": "MANDEEP SINGH",
+          "identifiers": 8
+        },
+        {
+          "name": "HARJINDER SINGH",
+          "identifiers": 6
+        },
+        {
+          "name": "SUKHJINDER SINGH",
+          "identifiers": 5
+        },
+        {
+          "name": "GURPREET SINGH",
+          "identifiers": 4
+        },
+        {
+          "name": "HARPREET SINGH",
+          "identifiers": 4
+        }
+      ],
+      "warnings": [
+        "2175 of 56832 ABNs carry names that look unrelated. A valid checksum does not prove the ABN belongs to the name in that row. Either the pairing is unreliable, or several parties legitimately share an ABN (e.g. employees licensed under an employer). Check which."
+      ]
+    }
+  },
+  {
+    "slug": "system_procurement_contract-disclosure-report",
+    "source_id": "datagovau:system_procurement_contract-disclosure-report:09335d0c",
+    "approved": true,
+    "reviewer": "Rudra (approved by Claude on user instruction)",
+    "publisher": "Queensland Health",
+    "resource_url": "https://www.data.qld.gov.au/dataset/2b977e4d-c765-4ce5-8088-65210a744add/resource/09335d0c-cfba-43e0-b036-4461c8345a73/download/sp_contract-disclosure-report-2025-26.csv",
+    "licence": "cc-by-4",
+    "licence_id": "cc-by-4",
+    "licence_flag": null,
+    "raw_sha256": "6b0b17644beaa840514166d05d7c4370cc5689c5f4c6c21a90af692da6875d7b",
+    "approved_raw_sha256": "6b0b17644beaa840514166d05d7c4370cc5689c5f4c6c21a90af692da6875d7b",
+    "source_drifted": false,
+    "truncated_download": false,
+    "records_in_file": 126,
+    "share_of_file_agent_window_covers": 1.0,
+    "rows_beyond_agent_window": 0,
+    "whole_file": {
+      "worst_error_rate": 0.037,
+      "per_mapping": [
+        {
+          "canonical": "entity.legal_name",
+          "source": "Supplier name",
+          "raw_non_empty": 126,
+          "records_with_value": 113,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.103,
+          "error_examples": []
+        },
+        {
+          "canonical": "entity.abn",
+          "source": "Supplier ABN",
+          "raw_non_empty": 109,
+          "records_with_value": 100,
+          "errors": 4,
+          "error_rate": 0.037,
+          "silent_drop_rate": 0.046,
+          "error_examples": [
+            {
+              "raw": "34 161 464 441",
+              "error": "ABN '34161464441' fails checksum"
+            },
+            {
+              "raw": "86 087 097 717",
+              "error": "ABN '86087097717' fails checksum"
+            },
+            {
+              "raw": "82 003 022 673",
+              "error": "ABN '82003022673' fails checksum"
+            },
+            {
+              "raw": "96 126 888 259",
+              "error": "ABN '96126888259' fails checksum"
+            }
+          ]
+        },
+        {
+          "canonical": "address.full",
+          "source": "Supplier address",
+          "raw_non_empty": 106,
+          "records_with_value": 102,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.038,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.state",
+          "source": "Supplier address",
+          "raw_non_empty": 106,
+          "records_with_value": 92,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.132,
+          "error_examples": []
+        },
+        {
+          "canonical": "address.postcode",
+          "source": "Supplier address",
+          "raw_non_empty": 106,
+          "records_with_value": 92,
+          "errors": 0,
+          "error_rate": 0.0,
+          "silent_drop_rate": 0.132,
+          "error_examples": []
+        }
+      ],
+      "record_id_duplicates": 0
+    },
+    "beyond_agent_window": null,
+    "silent_drop_warnings": [],
+    "semantic": {
+      "checked": true,
+      "records_checked": 126,
+      "identifiers": 70,
+      "identifiers_with_several_names": 4,
+      "identifiers_with_unrelated_names": 1,
+      "names": 74,
+      "names_under_several_identifiers": 0,
+      "examples_unrelated": [
+        {
+          "abn": "17007141531",
+          "names": [
+            "KANDA HEALTH AND AGEING",
+            "KANDA PHP"
+          ]
+        }
+      ],
+      "examples_spread": [],
+      "warnings": []
+    }
+  }
+]

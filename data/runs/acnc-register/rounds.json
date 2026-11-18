@@ -1,0 +1,46 @@
+[
+  {
+    "from_version": 1,
+    "no_changes": false,
+    "changes": [
+      {
+        "what": "Rebuilt the address.country transform: added an `upper` step, upper-cased the map keys, moved `case_insensitive` inside `args`, and added more ISO mappings (Singapore, New Zealand, and others).",
+        "why": "All 439 non-empty Country values failed with 'not in map', including plain 'Australia' and 'AUSTRALIA'. The lower-case keys never matched, and the top-level `case_insensitive` flag was evidently ignored. Upper-casing first and using upper-case keys no longer depends on that flag. Singapore also failed because it was not in the map, so I added common countries. Values still not in the map (junk such as a phone number) are dropped rather than defaulted."
+      },
+      {
+        "what": "Kept the postcode mapping as is.",
+        "why": "The single error ('139658', 0.2%) is a genuinely invalid postcode that should be dropped, and it is well under the 5% threshold."
+      },
+      {
+        "what": "Added reviewer notes about the country map and about an anonymised-looking legal name in the preview.",
+        "why": "A reviewer should know that countries outside the map are dropped, and that a legal name like '847219-X8N0N9- PAF' is passed through as source-stated with no ABN."
+      }
+    ],
+    "passed_before": false
+  },
+  {
+    "from_version": 2,
+    "no_changes": false,
+    "changes": [
+      {
+        "what": "address.country: moved the map_values arguments (map, case_insensitive) to the top level of the transform object, so it is {\"op\": \"map_values\", \"map\": {...}, \"case_insensitive\": true}. Previously they were nested under an \"args\" key.",
+        "why": "The vocabulary shape is {\"op\": name, ...args}, so arguments sit beside \"op\". The engine most likely never saw my nested map and treated it as empty. That fits the error \"value 'AUSTRALIA' not in map\" on 100% of values, even for 'Australia' and after the upper transform. The round-1 failure had the same symptom, so case sensitivity was probably not the real cause. I kept the upper-cased keys and case_insensitive as a belt-and-braces measure."
+      },
+      {
+        "what": "Lowered entity.website confidence from 0.75 to 0.65 and made the rationale more explicit.",
+        "why": "The preview shows BHL DALYELLUP TWO APARTMENTS LTD with the website of its parent, bethanie.com.au. A website column that is sometimes a parent's or related organisation's site is not reliably the entity's own website, so the confidence was too high."
+      },
+      {
+        "what": "Updated the country note in notes to reflect the likely root cause.",
+        "why": "The earlier note blamed case sensitivity; the more probable cause was the misplaced argument nesting."
+      }
+    ],
+    "passed_before": false
+  },
+  {
+    "from_version": 3,
+    "no_changes": true,
+    "changes": [],
+    "passed_before": true
+  }
+]

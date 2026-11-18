@@ -1,0 +1,246 @@
+{
+  "record_id": {
+    "strategy": "fields",
+    "fields": [
+      "Licence Number",
+      "Licence Grade",
+      "Licence Class Type"
+    ],
+    "rationale": "The grain is licence number x licence class. Licence Number alone would collide, since one licence spans many class rows. Licence Grade is added because a class name such as 'Builder - Open' appears under both Builder Licence and Site Supervisor. The 'id' column is a sequential row number that is unlikely to be stable across publications, so it is not used. The holdout of 500 rows showed 0 duplicate keys, but uniqueness over the full file is unverified, and a reviewer should check it."
+  },
+  "mappings": [
+    {
+      "canonical": "entity.legal_name",
+      "source": "Licensee Name",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        }
+      ],
+      "confidence": 0.7,
+      "rationale": "Licensee name on a regulator register. For company rows (about 36%, with a Pty Ltd/Ltd suffix and an ACN) it is the registered name. For Individual rows it is the person's own name, likely matching their ABN entity name but not a registered business name. Confidence is lowered because the column mixes both."
+    },
+    {
+      "canonical": "entity.entity_type",
+      "source": "Licensee Name",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "entity_type_from_name"
+        }
+      ],
+      "confidence": 0.8,
+      "rationale": "Company is set only from unambiguous legal suffixes, otherwise unknown. 'Individual' is deliberately not mapped to sole_trader, because the licence type does not establish that."
+    },
+    {
+      "canonical": "entity.acn",
+      "source": "ACN",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "null_if",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "op": "acn"
+        }
+      ],
+      "confidence": 0.95,
+      "rationale": "Space-formatted ('636 110 962'). The acn op strips the spaces and checks the checksum (about 99.4% valid in the holdout). Blank for non-companies."
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "ABN",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "null_if",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "op": "abn"
+        }
+      ],
+      "confidence": 0.95,
+      "rationale": "Space-formatted ('75 158 361 912'). The abn op strips the spaces and checks the checksum (about 99.7% valid in the holdout). Blank for many individuals."
+    },
+    {
+      "canonical": "address.full",
+      "source": "Licensee Business Address",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        }
+      ],
+      "confidence": 0.9,
+      "rationale": "Single free-text address string with irregular whitespace. Whitespace is normalised and nothing else is changed."
+    },
+    {
+      "canonical": "address.state",
+      "source": "Licensee Business Address",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "regex_extract",
+          "pattern": "(?i)\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Territory|Northern Territory)\\s+\\d{4}\\s*$",
+          "group": 1,
+          "required": true
+        },
+        {
+          "op": "upper"
+        },
+        {
+          "op": "state"
+        }
+      ],
+      "confidence": 0.9,
+      "rationale": "The state, as an abbreviation or full name, sits immediately before the 4-digit postcode at the end of the string. Addresses that do not fit the pattern are dropped rather than guessed."
+    },
+    {
+      "canonical": "address.postcode",
+      "source": "Licensee Business Address",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "regex_extract",
+          "pattern": "(\\d{4})\\s*$",
+          "group": 1,
+          "required": true
+        },
+        {
+          "op": "postcode"
+        }
+      ],
+      "confidence": 0.9,
+      "rationale": "The trailing 4 digits of the address are the postcode (500/500 in the holdout)."
+    },
+    {
+      "canonical": "address.country",
+      "constant": "AU",
+      "confidence": 0.85,
+      "rationale": "Queensland regulator register. Every sampled address ends in an AU state and postcode. Not verified across the full file."
+    }
+  ],
+  "unmapped_source_fields": [
+    {
+      "source": "id",
+      "reason": "Sequential row number, not a licensee or licence key, and probably unstable across publications. Not used in the record id."
+    },
+    {
+      "source": "Licence Number",
+      "reason": "Used in the record id. There is no canonical field for a licence identifier. It is not an ABN or ACN."
+    },
+    {
+      "source": "Licence Type DESC",
+      "reason": "Describes the licence holder category (Company/Individual). It is not used for entity_type because Individual does not establish sole_trader. It matches the ACN and company-suffix rates and is useful as evidence only."
+    },
+    {
+      "source": "Licence Type CODE",
+      "reason": "Duplicates Licence Type DESC (C/I)."
+    },
+    {
+      "source": "Financial Category DESC",
+      "reason": "Financial reporting category for the licence. No canonical field."
+    },
+    {
+      "source": "Financial Category CODE",
+      "reason": "Code for Financial Category. No canonical field."
+    },
+    {
+      "source": "Licence Grade",
+      "reason": "Licence kind (Builder, Trade Contractor, Nominee Supervisor, etc.). No canonical field. It does not indicate entity status."
+    },
+    {
+      "source": "Licence Class Type",
+      "reason": "QBCC trade or licence class, not ANZSIC. Mapping it to industry_code would be wrong. Used only in the record id."
+    }
+  ],
+  "unmapped_canonical_fields": [
+    {
+      "canonical": "entity.trading_name",
+      "reason": "No trading or business name column."
+    },
+    {
+      "canonical": "entity.nzbn",
+      "reason": "AU-only source."
+    },
+    {
+      "canonical": "entity.status",
+      "reason": "No status column. The dataset includes Suspended licences but excludes Cancelled ones, and they cannot be told apart, so 'active' cannot be asserted."
+    },
+    {
+      "canonical": "entity.website",
+      "reason": "Not present."
+    },
+    {
+      "canonical": "entity.industry_code",
+      "reason": "No ANZSIC value. Licence Class Type is a different taxonomy."
+    },
+    {
+      "canonical": "entity.date_registered",
+      "reason": "No registration or licence start date."
+    },
+    {
+      "canonical": "address.locality",
+      "reason": "Locality is embedded in free text after the street with no delimiter ('45 Chetwynd St Loganholme QLD 4129'), so it cannot be split reliably with the available transforms."
+    },
+    {
+      "canonical": "observation.observed_at",
+      "reason": "No per-record date column. The engine falls back to the resource last-modified date."
+    },
+    {
+      "canonical": "observation.valid_from",
+      "reason": "No licence start date column."
+    },
+    {
+      "canonical": "observation.valid_to",
+      "reason": "No licence expiry column."
+    }
+  ],
+  "relationships": [],
+  "source_reliability": {
+    "value": 0.85,
+    "rationale": "Statutory regulator register, authoritative for licensee name, ABN/ACN and licence status. Lowered slightly because the extract is a denormalised snapshot, and the generation date and download header disagree."
+  },
+  "notes": [
+    "Grain is one row per licence x class, so a licensee appears on many rows (e.g. 19 rows for Wormald Australia Pty Ltd). Identical entity-level observations (name, ABN, ACN, address) will repeat per row. Dedupe or group on Licence Number downstream.",
+    "About 64% of rows are Individuals. legal_name is now emitted for them as the person's name (confidence 0.7), and entity_type stays 'unknown' for them. Their names and business addresses are likely personal data, and the business address may be a home address. Reviewer decision: whether to keep individual names and addresses, or restrict legal_name to company-suffix names (a regex filter was tried and rejected because it produces a parse error on every individual row).",
+    "Individual rows without an ABN have no identifier beyond the licence number, so linking them to entities will be weak. Downstream linking should not rely on name alone.",
+    "Licence is CC-BY-4.0 per the dataset metadata, so no licence flag is needed.",
+    "Date discrepancy for a reviewer to reconcile: metadata_modified is 2026-09-23, the resource says current as at 23/09/2026, and the download header says 30 Oct 2026. observed_at will fall back to the resource last-modified date.",
+    "Suspended licensees are included and cannot be distinguished, so status is deliberately unmapped.",
+    "The address.state regex uses the inline (?i) flag and assumes Python-style regex semantics in the engine. If the engine does not support it, state values will be dropped.",
+    "The state mapping accepts abbreviations and full names. Addresses ending in neither (about 0 in the holdout after this fix) are dropped.",
+    "Only the first 5000 records were profiled, and 500 held-out records were checked. Encoding is assumed to be UTF-8 and was not verified beyond the sample. The file is about 37 MB.",
+    "Name casing is inconsistent (upper-case, mixed-case) and is preserved as-is. A few ABN/ACN values fail the checksum (<1%) and are dropped rather than emitted."
+  ]
+}

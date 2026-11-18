@@ -1,0 +1,325 @@
+{
+  "record_id": {
+    "strategy": "fields",
+    "fields": [
+      "Licence number",
+      "Address",
+      "Suburb"
+    ],
+    "rationale": "Licence number is the natural key (one row = one licence at one premises), but the profile shows 4995 distinct values in 5000 rows, with several appearing twice. The key alone does not identify a raw row. Adding Address and Suburb separates repeats that are the same licence at different premises. Exact duplicate rows would still share an id, which is harmless because they are identical. Reviewer: please check what the repeated licence numbers are."
+  },
+  "mappings": [
+    {
+      "canonical": "entity.legal_name",
+      "source": "Licensee",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "regex_extract",
+          "pattern": "(?i)^.+\\b(PTY\\.?\\s+LIMITED|PTY\\.?\\s+LTD|LIMITED|LTD|INCORPORATED|INC)\\.?$",
+          "group": 0,
+          "required": true
+        }
+      ],
+      "confidence": 0.85,
+      "rationale": "Licensee is a mix of registered-style names (clubs and companies ending in LTD, LIMITED, PTY LTD, INC) and personal names of individuals (e.g. 'Kenneth Whaler'). Only values with a legal suffix are kept as legal_name. Personal names are dropped rather than recorded as registered names."
+    },
+    {
+      "canonical": "entity.entity_type",
+      "source": "Licensee",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "regex_extract",
+          "pattern": "(?i)^.+\\b(PTY\\.?\\s+LIMITED|PTY\\.?\\s+LTD|LIMITED|LTD|INCORPORATED|INC)\\.?$",
+          "group": 0,
+          "required": true
+        },
+        {
+          "op": "entity_type_from_name"
+        }
+      ],
+      "confidence": 0.8,
+      "rationale": "Derived only from unambiguous legal suffixes in the Licensee name, and only for values that pass the legal_name filter. Individuals get no entity_type observation, so they stay at the ontology default of unknown. sole_trader is never inferred."
+    },
+    {
+      "canonical": "entity.trading_name",
+      "source": "Licence name",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        }
+      ],
+      "confidence": 0.7,
+      "rationale": "Licence name is the premises or venue name (e.g. 'Sporties Tuncurry', 'Royal Hotel'), which differs from the licensee. About 31% carry a company-style suffix, and some clubs use their legal name here, so it is a trading name and not a verified registered name. It is not split on commas or '&'."
+    },
+    {
+      "canonical": "address.full",
+      "source": [
+        "Address",
+        "Suburb",
+        "Postcode"
+      ],
+      "transforms": [
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "regex_extract",
+          "pattern": "(?i)^(?!.*\\bNULL\\b).+$",
+          "group": 0,
+          "required": true
+        }
+      ],
+      "confidence": 0.7,
+      "rationale": "Street line, suburb and postcode joined with ', '. The source uses the literal string 'NULL' as a placeholder in about 3% of rows, so any value containing NULL is dropped rather than emitting 'NULL, NULL, NULL'. The street line is partial (e.g. 'Cobb Hwy', 'Market St') and has no state, so this is not a complete postal address."
+    },
+    {
+      "canonical": "address.locality",
+      "source": "Suburb",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "null_if",
+          "values": [
+            "NULL",
+            ""
+          ]
+        },
+        {
+          "op": "collapse_ws"
+        }
+      ],
+      "confidence": 0.9,
+      "rationale": "Suburb is upper-case locality names. 'NULL' is treated as missing."
+    },
+    {
+      "canonical": "address.postcode",
+      "source": "Postcode",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "null_if",
+          "values": [
+            "NULL",
+            ""
+          ]
+        },
+        {
+          "op": "postcode"
+        }
+      ],
+      "confidence": 0.9,
+      "rationale": "4-digit postcodes. 'NULL' (about 3% of rows) is treated as missing."
+    },
+    {
+      "canonical": "address.state",
+      "constant": "NSW",
+      "confidence": 0.9,
+      "rationale": "NSW Liquor & Gaming register. Premises are licensed in NSW, and the sample shows only 2xxx postcodes, LGAs and SA2s from NSW. There is no state column, so this is a constant."
+    },
+    {
+      "canonical": "address.country",
+      "constant": "AU",
+      "confidence": 0.95,
+      "rationale": "Australian state government register."
+    },
+    {
+      "canonical": "observation.valid_from",
+      "source": "Start date",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "date",
+          "args": {
+            "formats": [
+              "%d/%m/%Y"
+            ]
+          }
+        }
+      ],
+      "confidence": 0.6,
+      "rationale": "Licence start date (dd/mm/yyyy, 100% date-like). It is when the licence began, not necessarily when the current licensee or name began, because licences can be transferred. Moderate confidence for that reason."
+    }
+  ],
+  "unmapped_source_fields": [
+    {
+      "source": "Licence number",
+      "reason": "Used in record_id. It is a licence identifier, not an entity identifier (ABN, ACN or NZBN). About 10% of values pass the ACN checksum, which is chance level, so it is not an ACN."
+    },
+    {
+      "source": "Licence type",
+      "reason": "Licence category (hotel, club, limited, on-premises). It is not an entity type or an industry code."
+    },
+    {
+      "source": "Status",
+      "reason": "Status of the licence ('Current'/'Suspended'), not the business's registration status. Mapping it to entity.status would be a guess."
+    },
+    {
+      "source": "Trading Status",
+      "reason": "Whether the premises is currently trading. It is not the entity's registration status."
+    },
+    {
+      "source": "Latitude",
+      "reason": "No canonical field in this ontology subset. 'NULL' placeholders are present."
+    },
+    {
+      "source": "Longitude",
+      "reason": "No canonical field in this ontology subset. 'NULL' placeholders are present."
+    },
+    {
+      "source": "LGA",
+      "reason": "No canonical field. 'NULL' placeholders are present."
+    },
+    {
+      "source": "Precinct",
+      "reason": "No canonical field. It is sparse (4.7% populated)."
+    },
+    {
+      "source": "Business type",
+      "reason": "Venue-type description (e.g. 'Full hotel', 'Restaurant'), not ANZSIC. It is not mapped to industry_code."
+    },
+    {
+      "source": "Authorisation restriction name",
+      "reason": "Comma-joined list, truncated at about 80-100 characters in the source. It is not parsed as a list because the truncated values would be wrong. No canonical field."
+    },
+    {
+      "source": "Extended trading",
+      "reason": "Licence attribute flag with no canonical field."
+    },
+    {
+      "source": "Reduced trading",
+      "reason": "Licence attribute flag with no canonical field."
+    },
+    {
+      "source": "Primary service",
+      "reason": "Licence attribute flag with no canonical field."
+    },
+    {
+      "source": "Right to keep gaming",
+      "reason": "Licence attribute flag with no canonical field."
+    },
+    {
+      "source": "Unrestricted",
+      "reason": "Licence attribute flag with no canonical field."
+    },
+    {
+      "source": "After12am",
+      "reason": "Trading hours flag with no canonical field."
+    },
+    {
+      "source": "After3am",
+      "reason": "Trading hours flag with no canonical field."
+    },
+    {
+      "source": "After5am",
+      "reason": "Trading hours flag with no canonical field."
+    },
+    {
+      "source": "SA2",
+      "reason": "Statistical area with no canonical field."
+    },
+    {
+      "source": "Band",
+      "reason": "Gaming/licence band with no canonical field."
+    },
+    {
+      "source": "GMEs",
+      "reason": "Gaming machine count with no canonical field."
+    },
+    {
+      "source": "PMPs",
+      "reason": "Gaming machine count with no canonical field."
+    },
+    {
+      "source": "Auth limit",
+      "reason": "Gaming machine count with no canonical field."
+    },
+    {
+      "source": "Unfulfilled Quota",
+      "reason": "Gaming machine count with no canonical field."
+    },
+    {
+      "source": "GMT",
+      "reason": "Gaming machine count with no canonical field."
+    },
+    {
+      "source": "EGMs",
+      "reason": "Gaming machine count with no canonical field."
+    }
+  ],
+  "unmapped_canonical_fields": [
+    {
+      "canonical": "entity.abn",
+      "reason": "No ABN column in the source."
+    },
+    {
+      "canonical": "entity.acn",
+      "reason": "No ACN column in the source."
+    },
+    {
+      "canonical": "entity.nzbn",
+      "reason": "Not an NZ source and no NZBN column."
+    },
+    {
+      "canonical": "entity.status",
+      "reason": "Only licence and trading status are present, which describe the licence and premises, not the entity. Left as the default of unknown."
+    },
+    {
+      "canonical": "entity.website",
+      "reason": "Not present."
+    },
+    {
+      "canonical": "entity.industry_code",
+      "reason": "No ANZSIC code. Business type is a different classification."
+    },
+    {
+      "canonical": "entity.date_registered",
+      "reason": "Start date is the licence start, not entity registration."
+    },
+    {
+      "canonical": "observation.observed_at",
+      "reason": "No per-record column says when the source stated the claim. The engine will use the resource's last-modified date."
+    },
+    {
+      "canonical": "observation.valid_to",
+      "reason": "No licence end or expiry column."
+    }
+  ],
+  "relationships": [],
+  "source_reliability": {
+    "value": 0.8,
+    "rationale": "Official NSW regulator register (Department of Customer Service, Liquor & Gaming NSW) and authoritative for licence, licensee and premises claims. The score is below 0.9 because it is a 2021 snapshot with no ABN/ACN, because licensee names are free text, and because some addresses are partial."
+  },
+  "notes": [
+    "LICENCE: CKAN metadata says CC BY 3.0 AU but the description text says CC BY 4.0. Record the CKAN licence value and flag the conflict for human review before use.",
+    "OBSERVED_AT: The data is a snapshot as at 8 Feb 2021 (resource last-modified 9 Feb 2021). CKAN metadata_modified (2025-06-24) is a later metadata edit and must not be used as observed_at. Check that the engine takes the resource's last-modified date and not the package metadata date.",
+    "NO IDENTIFIERS: There is no ABN, ACN or NZBN, so entity linking must rely on name and address. Expect low link_confidence and do not auto-merge on the licensee name alone.",
+    "LICENSEE MIX: Licensee holds both registered-style names and individuals' personal names (about 35% have a company suffix; the rest include many individuals, e.g. hotel and on-premises licences). Only suffix-matched values become legal_name or entity_type. Individuals' names are intentionally not emitted, so their records get a trading_name and address but no legal_name. The regex also drops legitimate registered names without a listed suffix (e.g. a trust name or a name ending 'CO-OPERATIVE'). Review the dropped-value counts after the first run and extend the suffix list if needed.",
+    "TRADING NAME: Licence name is sometimes a club's registered name (e.g. 'Concordia Club Ltd', 'Wingham Show Society Inc'), so trading_name can contain legal-style names. Reconciliation later should treat it as a lower-trust name claim.",
+    "VALID_FROM: valid_from comes from the licence start date. It is applied at record level and may predate the current licensee's tenure. Reviewer may prefer to unmap it if the engine applies valid_from to every observation in the record.",
+    "DUPLICATE KEYS: Licence number has 4995 distinct values over 5000 rows. record_id is a composite for that reason. Confirm whether the repeats are exact duplicate rows or the same licence at different premises.",
+    "PLACEHOLDERS: The literal string 'NULL' is used for missing Address, Suburb, Postcode, Latitude, Longitude and LGA. It is handled for the mapped address fields above. About 3% of rows have no usable address.",
+    "UNSEEN ROWS: Only the first rows were inspected. Trailing summary rows, encoding oddities in names containing '&' or apostrophes, and non-4-digit postcodes may exist. The 'postcode' transform will drop invalid ones.",
+    "Address typos exist in the source (e.g. '68 Bluehaven Dribe'). Values are passed through as stated and not corrected."
+  ]
+}

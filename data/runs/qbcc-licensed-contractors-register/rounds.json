@@ -1,0 +1,27 @@
+[
+  {
+    "from_version": 1,
+    "no_changes": false,
+    "changes": [
+      {
+        "what": "entity.legal_name: removed the regex_extract (required) company-suffix filter. The mapping is now strip + collapse_ws only, with confidence lowered from 0.85 to 0.7.",
+        "why": "The filter turned every Individual row (65% of the holdout) into a parse error, so the mapping failed at 0.65 against the 0.05 limit. The filter was also a fragile way to express a judgement. Licensee Name is the licensee's name on a statutory register: for companies it is the registered name (Pty Ltd), and for individuals it is the person's own name, which is also their name on the ABN record. The column is mixed, so confidence is lower. entity_type is derived from the name suffix and stays 'unknown' for individuals. The privacy and individual-name question is flagged for the reviewer."
+      },
+      {
+        "what": "address.state: extended the regex to also accept full state names (Queensland, New South Wales, etc.) before the 4-digit postcode. The upper and state ops then normalise them.",
+        "why": "10 of 500 holdout addresses (2%) ended in 'Queensland 4818' rather than 'QLD 4818' and were dropped. This is under the 0.05 threshold but a systematic, cheap miss. The postcode mapping already handled these rows."
+      },
+      {
+        "what": "Removed the Licensee Name entry from unmapped_source_fields and rewrote the notes about individuals.",
+        "why": "The column is now mapped. The notes previously said individual names were not emitted as legal_name, which would no longer be true."
+      }
+    ],
+    "passed_before": false
+  },
+  {
+    "from_version": 2,
+    "no_changes": true,
+    "changes": [],
+    "passed_before": true
+  }
+]

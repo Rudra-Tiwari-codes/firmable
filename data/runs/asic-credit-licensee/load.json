@@ -1,0 +1,29 @@
+{
+  "reader": {
+    "format": "csv",
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "header_row": 0
+  },
+  "records_loaded": 4313,
+  "columns": [
+    "\ufeffREGISTER_NAME",
+    "CRED_LIC_NUM",
+    "CRED_LIC_NAME",
+    "CRED_LIC_START_DT",
+    "CRED_LIC_END_DT",
+    "CRED_LIC_STATUS",
+    "CRED_LIC_ABN_ACN",
+    "CRED_LIC_AFSL_NUM",
+    "CRED_LIC_STATUS_HISTORY",
+    "CRED_LIC_LOCALITY",
+    "CRED_LIC_STATE",
+    "CRED_LIC_PCODE",
+    "CRED_LIC_LAT",
+    "CRED_LIC_LNG",
+    "CRED_LIC_EDRS",
+    "CRED_LIC_BN",
+    "CRED_LIC_AUTHORISATIONS"
+  ],
+  "attempts": []
+}

@@ -1,0 +1,21 @@
+{
+  "what_it_is": "A NSW Liquor & Gaming register of liquor licence premises as at 8 Feb 2021, published by the Department of Customer Service. Each row is one licence for one premises, with licence type, status, start date, trading status, premises name and address, geocoordinates, LGA, licensee name, authorisations and gaming machine counts.",
+  "record_grain": "one record = one liquor licence (identified by Licence number) at one premises. A licensee can hold many licences, so the same business will appear on multiple rows.",
+  "contains_business_entities": true,
+  "evidence": "The 'Licensee' column holds registered-style names in upper case (e.g. 'CHARLESTOWN GOLF CLUB LTD', 'CYPRUS COMMUNITY OF N.S.W. LIMITED'). 'Licence name' holds the premises or trading name, which often differs from the licensee (e.g. 'Sporties Tuncurry' vs 'FORSTER-TUNCURRY MEMORIAL SERVICES CLUB LTD'; 'Club Dalmeny' vs 'NAROOMA SPORTING AND SERVICES CLUB LTD'). The file has no ABN or ACN column. Each row has a unique licence number such as LIQC300200019.",
+  "reader": {
+    "format": "csv",
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "header_row": 0
+  },
+  "concerns": [
+    "No ABN/ACN/NZBN column, so entity resolution will have to rely on names and addresses, which is a weaker link.",
+    "The licence metadata says CC BY 3.0 AU, but the description text says CC BY 4.0. The two conflict, so the licence should be recorded and flagged for review.",
+    "The file is a snapshot as at 8 Feb 2021 (Last-Modified 9 Feb 2021), while the CKAN metadata_modified is 2025. The per-record observation time should be the 2021 snapshot date, not the 2025 metadata date.",
+    "The 'Authorisation restriction name' column is a comma-joined list inside quotes and appears truncated at about 100 characters in the sample ('Unrestr'). Do not parse it as a list.",
+    "The sample shows no title rows or notes rows, but I have only seen the first rows. Trailing summary rows and encoding oddities (e.g. in names with '&') are not ruled out.",
+    "Postcodes are 4 digits in the sample, and the dataset is NSW-only, so state would be a constant rather than a column. 'Licensee' might be blank or hold individuals' names on some licence types (e.g. hotel or packaged liquor), so the entity type cannot be assumed from this column.",
+    "Some licensees may be individuals (sole traders), so check later whether the Licensee values are all registered company names."
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "record_id": {
+    "strategy": "fields",
+    "fields": [
+      ":id"
+    ],
+    "rationale": "Socrata row id: unique in all 5000 profiled rows, and the only per-row key in the source. Row grain is one invoice payment. Reviewer should confirm it persists across re-downloads; if it does not, switch to row_hash."
+  },
+  "mappings": [
+    {
+      "canonical": "entity.legal_name",
+      "source": "supplier_name",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        }
+      ],
+      "confidence": 0.55,
+      "rationale": "Only 56.5% of values carry a company suffix. Others such as 'ADACAS', 'FINITY CONSULTING' and 'ARJOHUNTLEIGH' look like trading names or short forms, so this is ambiguous between registered and trading name. collapse_ws is needed because some values contain embedded newlines (e.g. 'AMERICAN EXPRESS AUSTRALIA\\nLIMITED')."
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "supplier_abn",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "digits_only"
+        },
+        {
+          "op": "abn"
+        }
+      ],
+      "confidence": 0.95,
+      "rationale": "Spaced 11-digit ABNs ('86 004 651 512'), 99.5% pass the real checksum. The ~0.5% that fail are dropped as parse errors, not emitted."
+    },
+    {
+      "canonical": "entity.entity_type",
+      "source": "supplier_name",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "entity_type_from_name"
+        }
+      ],
+      "confidence": 0.8,
+      "rationale": "Derived only from unambiguous legal suffixes (PTY LTD, LIMITED, INC), otherwise unknown. Names without a suffix stay unknown, which is the ontology default. No other column states entity type."
+    }
+  ],
+  "unmapped_source_fields": [
+    {
+      "source": ":version",
+      "reason": "Socrata row-version metadata, not a claim about the business."
+    },
+    {
+      "source": ":created_at",
+      "reason": "Socrata load timestamp, not when the publisher stated the claim. It is the same value for ~99.8% of rows, so it is no use as observed_at."
+    },
+    {
+      "source": ":updated_at",
+      "reason": "Socrata row update timestamp, not a per-record statement time. Left to the engine's resource last-modified default for observed_at."
+    },
+    {
+      "source": "reporting_entity",
+      "reason": "The government payer, not an attribute of the supplier. Captured as a relationship instead."
+    },
+    {
+      "source": "publish_description",
+      "reason": "Free-text spend category or description of the purchase (e.g. 'CONTRACTORS'). It is not an ANZSIC industry code and does not describe the supplier's industry."
+    },
+    {
+      "source": "payment_date",
+      "reason": "Date the invoice was paid. It does not say when the supplier's name or ABN became true or stopped being true, so it must not feed valid_from/valid_to. It is also not the time the source stated the claim, since publication follows up to ~21 days after month end. No canonical field in the subset fits."
+    },
+    {
+      "source": "date_invoice_received",
+      "reason": "Invoice event date, empty for ~32% of rows. It is not a validity date for any entity claim."
+    },
+    {
+      "source": "payment_amount",
+      "reason": "Transaction amount (string). No canonical field in the ontology subset."
+    },
+    {
+      "source": "contract_number",
+      "reason": "Contract reference, populated in only 0.5% of rows. No canonical field; could support linking to the ACT Contracts Register later."
+    }
+  ],
+  "unmapped_canonical_fields": [
+    {
+      "canonical": "entity.acn",
+      "reason": "No ACN column. Deriving it from the last 9 ABN digits is unreliable for non-companies (sole traders, trusts, associations), so it is not derived here."
+    },
+    {
+      "canonical": "entity.nzbn",
+      "reason": "Not present; this is an ACT source."
+    },
+    {
+      "canonical": "entity.trading_name",
+      "reason": "Cannot tell which supplier_name values are trading names. Left unmapped to avoid duplicating the ambiguous name into both fields."
+    },
+    {
+      "canonical": "entity.status",
+      "reason": "Receiving a payment says nothing about registration status. Default is unknown."
+    },
+    {
+      "canonical": "entity.website",
+      "reason": "Not present."
+    },
+    {
+      "canonical": "entity.industry_code",
+      "reason": "Not present; publish_description is a spend category, not ANZSIC."
+    },
+    {
+      "canonical": "entity.date_registered",
+      "reason": "Not present."
+    },
+    {
+      "canonical": "address.full",
+      "reason": "No supplier address in the source."
+    },
+    {
+      "canonical": "address.locality",
+      "reason": "No supplier address in the source."
+    },
+    {
+      "canonical": "address.state",
+      "reason": "No supplier address in the source."
+    },
+    {
+      "canonical": "address.postcode",
+      "reason": "No supplier address in the source."
+    },
+    {
+      "canonical": "address.country",
+      "reason": "No address data. The ontology default AU applies; no constant is asserted here since supplier location is not stated."
+    },
+    {
+      "canonical": "observation.observed_at",
+      "reason": "No per-record column states when the source made the claim. The engine falls back to the resource's last-modified date."
+    },
+    {
+      "canonical": "observation.valid_from",
+      "reason": "No column says when the supplier claim became true."
+    },
+    {
+      "canonical": "observation.valid_to",
+      "reason": "No column says when the supplier claim stopped being true."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "reporting_entity",
+      "kind": "other",
+      "note": "ACT Government entity that paid the supplier (e.g. AHD, ACTIA). This is a customer/payer relationship, not a parent or agent of the supplier. It is a short code or name, not a registry-resolved entity."
+    }
+  ],
+  "source_reliability": {
+    "value": 0.8,
+    "rationale": "Statutory ACT Government publication under the Government Procurement Act, and ABNs are largely checksum-valid. Supplier names are free text from agency finance systems and are not guaranteed to match the ABR registered name, so this is not higher."
+  },
+  "notes": [
+    "Grain is invoice payments, not businesses. Suppliers repeat (e.g. one hospital supplier has 550 of 5000 profiled rows). Expect many observations per supplier; deduplicate and resolve downstream, not at ingest.",
+    "supplier_name has 569 distinct values against 468 distinct ABNs, so the same ABN appears under several name variants. Treat the ABN as the stronger identifier and the name as a lower-confidence claim.",
+    "Licence in the dataset metadata is 'Other', which is unclear. Record observation.licence as 'unknown' and flag it for review; check the ACT Open Data terms before downstream use.",
+    "Several profiler pattern hits are coincidences, not signals: payment_amount 'acn_checksum_valid' 0.1%, publish_description 'date_like' 3.5%, contract_number 'postcode_like' 4%. None of these columns are mapped.",
+    "The dataset description is truncated, so caveats about date_invoice_received and other fields may be missing. No mapping depends on them.",
+    "File is ~55 MB / 127k rows. The root is a JSON list, so no records_path is needed; the extractor should stream it.",
+    "Fields supplier_name and supplier_abn were 100% populated in the profiled sample. If blank ABNs appear in the full file, they simply produce no abn observation."
+  ]
+}

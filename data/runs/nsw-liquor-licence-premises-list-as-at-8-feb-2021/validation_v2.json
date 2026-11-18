@@ -1,0 +1,483 @@
+{
+  "passed": true,
+  "structural_issues": [],
+  "failing": [],
+  "empirical": {
+    "holdout_records": 500,
+    "per_mapping": [
+      {
+        "index": 0,
+        "canonical": "entity.legal_name",
+        "source": "Licensee",
+        "raw_non_empty": 500,
+        "records_with_value": 184,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 1,
+        "canonical": "entity.entity_type",
+        "source": "Licensee",
+        "raw_non_empty": 500,
+        "records_with_value": 184,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 2,
+        "canonical": "entity.trading_name",
+        "source": "Licence name",
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 3,
+        "canonical": "address.full",
+        "source": [
+          "Address",
+          "Suburb",
+          "Postcode"
+        ],
+        "raw_non_empty": 500,
+        "records_with_value": 485,
+        "errors": 15,
+        "error_rate": 0.03,
+        "error_examples": [
+          {
+            "raw": "NULL, NULL, NULL",
+            "error": "'NULL, NULL, NULL' does not match '(?i)^(?!.*\\\\bNULL\\\\b).+$'"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "canonical": "address.locality",
+        "source": "Suburb",
+        "raw_non_empty": 500,
+        "records_with_value": 485,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 5,
+        "canonical": "address.postcode",
+        "source": "Postcode",
+        "raw_non_empty": 500,
+        "records_with_value": 485,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 6,
+        "canonical": "address.state",
+        "source": null,
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 7,
+        "canonical": "address.country",
+        "source": null,
+        "raw_non_empty": 500,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      }
+    ],
+    "record_id_duplicates": 0,
+    "preview": [
+      {
+        "entity.legal_name": {
+          "raw": "Sean Henderson",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "Sean Henderson",
+          "values": []
+        },
+        "entity.trading_name": {
+          "raw": "Royal Hotel",
+          "values": [
+            "Royal Hotel"
+          ]
+        },
+        "address.full": {
+          "raw": "Renshaw St, BINNAWAY, 2395",
+          "values": [
+            "Renshaw St, BINNAWAY, 2395"
+          ]
+        },
+        "address.locality": {
+          "raw": "BINNAWAY",
+          "values": [
+            "BINNAWAY"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2395",
+          "values": [
+            "2395"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "POTTSVILLE DISTRICT BOWLS & SPORTS CLUB LIMITED",
+          "values": [
+            "POTTSVILLE DISTRICT BOWLS & SPORTS CLUB LIMITED"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "POTTSVILLE DISTRICT BOWLS & SPORTS CLUB LIMITED",
+          "values": [
+            "company"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "Pottsville District Bowls & Sports Club Limited",
+          "values": [
+            "Pottsville District Bowls & Sports Club Limited"
+          ]
+        },
+        "address.full": {
+          "raw": "479 Coast Rd, POTTSVILLE, 2489",
+          "values": [
+            "479 Coast Rd, POTTSVILLE, 2489"
+          ]
+        },
+        "address.locality": {
+          "raw": "POTTSVILLE",
+          "values": [
+            "POTTSVILLE"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2489",
+          "values": [
+            "2489"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "The trustee for Merri Merri Creek Trust",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "The trustee for Merri Merri Creek Trust",
+          "values": []
+        },
+        "entity.trading_name": {
+          "raw": "Sundowner Hotel",
+          "values": [
+            "Sundowner Hotel"
+          ]
+        },
+        "address.full": {
+          "raw": "Tucka Tucka St, QUAMBONE, 2831",
+          "values": [
+            "Tucka Tucka St, QUAMBONE, 2831"
+          ]
+        },
+        "address.locality": {
+          "raw": "QUAMBONE",
+          "values": [
+            "QUAMBONE"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2831",
+          "values": [
+            "2831"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Nathan Roberts",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "Nathan Roberts",
+          "values": []
+        },
+        "entity.trading_name": {
+          "raw": "Guildford Hotel",
+          "values": [
+            "Guildford Hotel"
+          ]
+        },
+        "address.full": {
+          "raw": "309 Guildford Rd, GUILDFORD, 2161",
+          "values": [
+            "309 Guildford Rd, GUILDFORD, 2161"
+          ]
+        },
+        "address.locality": {
+          "raw": "GUILDFORD",
+          "values": [
+            "GUILDFORD"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2161",
+          "values": [
+            "2161"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "INVERELL EAST BOWLING CLUB LTD",
+          "values": [
+            "INVERELL EAST BOWLING CLUB LTD"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "INVERELL EAST BOWLING CLUB LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "Inverell East Bowling Club Ltd",
+          "values": [
+            "Inverell East Bowling Club Ltd"
+          ]
+        },
+        "address.full": {
+          "raw": "21-29 Glen Innes Rd, INVERELL, 2360",
+          "values": [
+            "21-29 Glen Innes Rd, INVERELL, 2360"
+          ]
+        },
+        "address.locality": {
+          "raw": "INVERELL",
+          "values": [
+            "INVERELL"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2360",
+          "values": [
+            "2360"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Andrew Murray",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "Andrew Murray",
+          "values": []
+        },
+        "entity.trading_name": {
+          "raw": "The Commercial Hotel Crookwell",
+          "values": [
+            "The Commercial Hotel Crookwell"
+          ]
+        },
+        "address.full": {
+          "raw": "34 Goulburn Street, CROOKWELL, 2583",
+          "values": [
+            "34 Goulburn Street, CROOKWELL, 2583"
+          ]
+        },
+        "address.locality": {
+          "raw": "CROOKWELL",
+          "values": [
+            "CROOKWELL"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2583",
+          "values": [
+            "2583"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "WEST LINDFIELD SPORT & RECREATION CLUB CO-OPERATIVE LIMITED",
+          "values": [
+            "WEST LINDFIELD SPORT & RECREATION CLUB CO-OPERATIVE LIMITED"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "WEST LINDFIELD SPORT & RECREATION CLUB CO-OPERATIVE LIMITED",
+          "values": [
+            "company"
+          ]
+        },
+        "entity.trading_name": {
+          "raw": "Lindfield Sport & Recreation Club",
+          "values": [
+            "Lindfield Sport & Recreation Club"
+          ]
+        },
+        "address.full": {
+          "raw": "76A Highfield Rd, LINDFIELD, 2070",
+          "values": [
+            "76A Highfield Rd, LINDFIELD, 2070"
+          ]
+        },
+        "address.locality": {
+          "raw": "LINDFIELD",
+          "values": [
+            "LINDFIELD"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2070",
+          "values": [
+            "2070"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      },
+      {
+        "entity.legal_name": {
+          "raw": "Patrick Pignataro",
+          "values": []
+        },
+        "entity.entity_type": {
+          "raw": "Patrick Pignataro",
+          "values": []
+        },
+        "entity.trading_name": {
+          "raw": "Royal Oak Hotel",
+          "values": [
+            "Royal Oak Hotel"
+          ]
+        },
+        "address.full": {
+          "raw": "46 Railway St, LIDCOMBE, 2141",
+          "values": [
+            "46 Railway St, LIDCOMBE, 2141"
+          ]
+        },
+        "address.locality": {
+          "raw": "LIDCOMBE",
+          "values": [
+            "LIDCOMBE"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2141",
+          "values": [
+            "2141"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.country": {
+          "raw": "AU",
+          "values": [
+            "AU"
+          ]
+        }
+      }
+    ]
+  },
+  "max_error_rate": 0.05
+}

@@ -1,0 +1,305 @@
+{
+  "record_id": {
+    "strategy": "row_hash",
+    "rationale": "No stable key. Contract reference number repeats across suppliers (109843 x17, HSQ84570 x8), has typos and placeholders ('TBC', 'HSQ109250 -4'), and sometimes holds several references in one cell. Even reference + supplier + dates can collide: Becton Dickinson HSQ102882-1 appears twice with different award dates. A hash of the full row is deterministic and traces back to one physical record."
+  },
+  "mappings": [
+    {
+      "canonical": "entity.legal_name",
+      "source": "Supplier name",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "null_if",
+          "values": [
+            "Refer to Queensland Government Arrangements Directory"
+          ]
+        },
+        {
+          "op": "regex_extract",
+          "pattern": "(?i)^(.*?)(?:\\s*\\((?:trading\\s+as|t/as)[^)]*\\)?)?\\s*$",
+          "group": 1
+        }
+      ],
+      "confidence": 0.7,
+      "rationale": "About 80% of values carry Pty Ltd/Limited/Inc style suffixes, so these are mostly registered names. The placeholder is nulled, and a trailing '(Trading As ...)' is cut off so only the registered part is kept. Some values have no company suffix (e.g. 'Kerr Australia', 'Switch Transformation Consultancy'), so those may be trading names or sole traders and the confidence is held down."
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "Supplier ABN",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "digits_only"
+        },
+        {
+          "op": "length_in",
+          "lengths": [
+            11
+          ]
+        },
+        {
+          "op": "abn"
+        }
+      ],
+      "confidence": 0.95,
+      "rationale": "Spaced 11-digit ABNs. Digits are extracted, anything that is not exactly 11 digits (multi-ABN cells, 12-digit typos) gives no value, and the real ABN checksum is then enforced. Cells that fail the checksum (about 3.5% in the holdout) are dropped, not emitted."
+    },
+    {
+      "canonical": "address.full",
+      "source": "Supplier address",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "null_if",
+          "values": [
+            "Refer to Queensland Government Arrangements Directory"
+          ]
+        }
+      ],
+      "confidence": 0.85,
+      "rationale": "Free-text street address of the supplier. The placeholder is nulled. Embedded newlines are collapsed. A few cells hold two addresses separated by ';', which are kept as one string and flagged in the notes."
+    },
+    {
+      "canonical": "address.state",
+      "source": "Supplier address",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "null_if",
+          "values": [
+            "Refer to Queensland Government Arrangements Directory"
+          ]
+        },
+        {
+          "op": "regex_extract",
+          "pattern": "(?is)^(?!.*;).*\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)\\b\\W*(?<!\\d)\\d{4}\\s*$",
+          "group": 1,
+          "required": false
+        },
+        {
+          "op": "state"
+        }
+      ],
+      "confidence": 0.85,
+      "rationale": "Takes the state token immediately before a trailing 4-digit postcode. It only matches a recognised AU state name or abbreviation (case-insensitive), then normalises it. Multi-address cells (containing ';'), placeholders, blanks, addresses with no state token and non-AU addresses give no value instead of a guess."
+    },
+    {
+      "canonical": "address.postcode",
+      "source": "Supplier address",
+      "transforms": [
+        {
+          "op": "strip"
+        },
+        {
+          "op": "collapse_ws"
+        },
+        {
+          "op": "null_if",
+          "values": [
+            "Refer to Queensland Government Arrangements Directory"
+          ]
+        },
+        {
+          "op": "regex_extract",
+          "pattern": "(?is)^(?!.*;).*\\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Northern Territory)\\b\\W*((?<!\\d)\\d{4})\\s*$",
+          "group": 1,
+          "required": false
+        },
+        {
+          "op": "postcode"
+        }
+      ],
+      "confidence": 0.85,
+      "rationale": "Takes the 4-digit postcode only when it directly follows an AU state token. This keeps NZ and overseas codes out of an AU field, and multi-address cells are excluded so one address's postcode is not attributed to the other."
+    }
+  ],
+  "unmapped_source_fields": [
+    {
+      "source": "Agency (Dept or Stat Body)",
+      "reason": "Buyer (Queensland Health), identical on every row. Not the supplier entity. Captured as a relationship instead."
+    },
+    {
+      "source": "Agency address",
+      "reason": "Buyer address, identical on every row. Must not be attached to the supplier."
+    },
+    {
+      "source": "Description",
+      "reason": "Contract free text with embedded newlines and truncation. No canonical field. Not a business name."
+    },
+    {
+      "source": "Contract description/name",
+      "reason": "Contract title. No canonical field."
+    },
+    {
+      "source": "Award contract date",
+      "reason": "Date the contract was awarded, not when the source stated the claim. Some values are after the dataset's last-modified date (e.g. 1/07/2026), so it is not safe as observed_at."
+    },
+    {
+      "source": "Contract value",
+      "reason": "Mixed free text ('$10,000 or more', '$90,000,000 (8 years)', bare numbers). Repeated across suppliers in shared arrangements. No canonical field in this ontology."
+    },
+    {
+      "source": "Variation to contract (Yes/No)",
+      "reason": "Contract attribute, no canonical field."
+    },
+    {
+      "source": "Specific confidentiality provision used",
+      "reason": "Contract attribute, no canonical field."
+    },
+    {
+      "source": "Procurement method",
+      "reason": "Contract attribute, no canonical field."
+    },
+    {
+      "source": "Reason for use of limited tendering",
+      "reason": "Contract free text, no canonical field."
+    },
+    {
+      "source": "Form of contract",
+      "reason": "Contract attribute, no canonical field."
+    },
+    {
+      "source": "Number of offers sought",
+      "reason": "Free-text contract attribute, no canonical field."
+    },
+    {
+      "source": "Evaluation criteria and weightings",
+      "reason": "Contract attribute, no canonical field."
+    },
+    {
+      "source": "Deliverables",
+      "reason": "Contract attribute, no canonical field."
+    },
+    {
+      "source": "Contract milestones",
+      "reason": "Contract attribute, no canonical field."
+    },
+    {
+      "source": "Contract performance management",
+      "reason": "Contract attribute, no canonical field."
+    },
+    {
+      "source": "Contract reference number",
+      "reason": "Not a business identifier. Not unique, with typos, placeholders ('TBC') and multi-value cells, so it is not used as record_id either."
+    },
+    {
+      "source": "Contract category group",
+      "reason": "Procurement category, not ANZSIC. Not mapped to industry_code."
+    },
+    {
+      "source": "Parent contract number/SOA",
+      "reason": "Parent of the contract, not a parent entity."
+    },
+    {
+      "source": "Variation comments",
+      "reason": "Free text about the contract variation."
+    },
+    {
+      "source": "Commence date",
+      "reason": "Contract start. It does not say when the supplier's name, ABN or address became true, so it is not used as valid_from. It also has bad values (e.g. 31/12/2029 equal to the finish date) and multi-value cells."
+    },
+    {
+      "source": "Finish date",
+      "reason": "Contract end, not the end of a claim about the entity. It contains annotations such as '01/04/2029 (initial term)' and multi-value cells, so it is not used as valid_to."
+    }
+  ],
+  "unmapped_canonical_fields": [
+    {
+      "canonical": "entity.trading_name",
+      "reason": "The only signal is an explicit '(Trading As X)' inside Supplier name, which appears in about 1 of 101 holdout rows. The extraction needed required:true, which errors on every other row (99% error rate). A non-required variant risks emitting the legal name as a trading name, so it is left unmapped."
+    },
+    {
+      "canonical": "entity.acn",
+      "reason": "No ACN column. Taking the last 9 digits of the ABN would assert an ACN for trusts, sole traders and partnerships, where it is not one. Left for the resolver."
+    },
+    {
+      "canonical": "entity.nzbn",
+      "reason": "Australian source, not present."
+    },
+    {
+      "canonical": "entity.entity_type",
+      "reason": "No type column. The names include trustee-style cells ('PTY LTD as Trustee for The ... Family Trust') and names with no suffix, and a wrong type does downstream harm. Left as the ontology default 'unknown'."
+    },
+    {
+      "canonical": "entity.status",
+      "reason": "Contract being current says nothing reliable about entity registration status. Default 'unknown'."
+    },
+    {
+      "canonical": "entity.website",
+      "reason": "Not present."
+    },
+    {
+      "canonical": "entity.industry_code",
+      "reason": "No ANZSIC or other industry code in the source."
+    },
+    {
+      "canonical": "entity.date_registered",
+      "reason": "Not present."
+    },
+    {
+      "canonical": "address.locality",
+      "reason": "Locality is not reliably separable from the free-text address (variable street/suburb formats, PO Boxes, 'c/-' prefixes)."
+    },
+    {
+      "canonical": "address.country",
+      "reason": "No country column, and suppliers could in principle be overseas. The ontology default AU applies and is not asserted here."
+    },
+    {
+      "canonical": "observation.observed_at",
+      "reason": "No per-record statement date. The engine falls back to the resource's last-modified date."
+    },
+    {
+      "canonical": "observation.valid_from",
+      "reason": "Contract dates do not describe when the entity claims became true."
+    },
+    {
+      "canonical": "observation.valid_to",
+      "reason": "Contract dates do not describe when the entity claims stopped being true."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Agency (Dept or Stat Body)",
+      "kind": "other",
+      "note": "Buyer/customer (Queensland Health) in a contract with the supplier on this row. A procurement relationship, not parent or agent. Do not treat as a parent of the supplier."
+    }
+  ],
+  "source_reliability": {
+    "value": 0.8,
+    "rationale": "Official agency disclosure register under CC-BY-4.0. Supplier names and ABNs are mostly well-formed, but entry is manual: typos (e.g. 'Austalia'), a few percent of ABNs fail checksum, placeholder suppliers, and several rows pack multiple suppliers into one cell."
+  },
+  "notes": [
+    "Revision v3: entity.trading_name is unmapped (99% error rate with required:true, and a non-required version could pass the legal name through). Because '(Trading As X)' is still stripped from legal_name, a trading name that appears in that text is lost in this config. A later version could emit it once the engine has a safe way to extract it.",
+    "Revision v3: address.state and address.postcode now null the placeholder first and use required:false on the regex. Rows without a state-plus-postcode ending, and multi-address cells, should give no value rather than an error. Please check on the next report that a non-match yields no value, not a pass-through of the whole cell. If it passes through, the state/postcode transform will reject it and the rows will count as errors again.",
+    "legal_name had 0 errors on the holdout (90 of 101 records have a value, and the rest are the placeholder). ABN had a 3.5% error rate, all genuine checksum failures in the source (e.g. 86 087 097 717, 96 126 888 259, 34 161 464 441). They are dropped on purpose.",
+    "Parse with a quote-aware CSV reader. Quoted cells contain embedded newlines, including in Supplier address, Contract reference number and Variation comments.",
+    "Check the raw bytes for encoding (U+FFFD seen in free-text columns). Only free-text columns are affected. The mapped columns are ASCII in the samples.",
+    "About 10% of rows have the placeholder 'Refer to Queensland Government Arrangements Directory' as the supplier. They get no legal_name and usually no ABN or address, so they will carry few or no entity claims.",
+    "Multi-supplier rows exist (e.g. Elite Nursing Professionals row with two ABNs, two addresses and two contract refs, with one name). The ABN is skipped, and state and postcode are skipped. address.full is kept as one string containing both addresses. Please review these rows. A later version may need row-level splitting.",
+    "Some legal_name values have no company suffix (e.g. 'Kerr Australia'). They may be trading names, which is why legal_name confidence is 0.7.",
+    "Some addresses lack a state or postcode (e.g. '805/220 Collins Street, Melbourne', '77-79 Ricketts Rd Mt Waverley', 'Bowen Hills 4006'). State and postcode are deliberately not inferred from the suburb or a bare postcode, so only address.full is emitted for these.",
+    "Names such as 'X PTY LTD as Trustee for The Y Family Trust' come through as legal_name with the trust part included. A trustee relationship would be better modelled once the engine can extract it.",
+    "legal_name is source-as-stated, including typos (e.g. 'ICU Medical Austalia Pty Ltd'). Do not correct at ingest.",
+    "The same supplier appears on many rows (e.g. Slade Health x12). This yields many observations per entity, which is expected and left to reconciliation.",
+    "Dates, contract value and contract reference are deliberately not mapped, so this config emits entity and address claims only. If valid_from/valid_to are wanted for 'supplier on contract' claims, that should be a separate relationship or contract observation type, not an attribute validity window.",
+    "Licence: cc-by-4 from CKAN metadata."
+  ]
+}

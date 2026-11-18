@@ -1,0 +1,54 @@
+[
+  {
+    "from_version": 1,
+    "no_changes": false,
+    "changes": [
+      {
+        "what": "entity.legal_name: set regex_extract to required=false",
+        "why": "Individuals' names such as 'Sean Henderson' are deliberately not registered names. With required=true the engine counted each one as a parse error (63% error rate). The suffix filter is meant to produce no value for them, not an error. Registered-style values still pass through. Reviewer: on the next run confirm that a non-match yields no value rather than the raw string being passed through. If it passes through, unmap legal_name instead."
+      },
+      {
+        "what": "entity.entity_type: set regex_extract to required=false",
+        "why": "Same reason as legal_name. Individuals should get no entity_type observation, so they stay at the ontology default of unknown. sole_trader is still never inferred."
+      },
+      {
+        "what": "observation.valid_from: unmapped Start date",
+        "why": "The first fix is that the date transform had its formats nested under 'args', so the engine ignored them and fell back to ['iso'], giving 100% errors. Transform arguments must be flat, e.g. {\"op\":\"date\",\"formats\":[\"%d/%m/%Y\"]}. The meaning check then showed that mapping is wrong anyway. Start date is when the licence began, and the preview has 19/07/1948 for a licensee named 'Sean Henderson' and 1945 for 'Nathan Roberts'. A person did not become the licensee in 1948, and valid_from would apply to the legal_name and entity_type claims in the record. A wrong validity date is worse than none, so the column is unmapped. If the engine later supports per-field validity, the licence start could be reconsidered for the trading name or premises claim."
+      },
+      {
+        "what": "Updated notes and unmapped lists",
+        "why": "Reflects the valid_from removal, the new required=false behaviour, and the dropped 'trustee for ...' licensees."
+      }
+    ],
+    "passed_before": false
+  },
+  {
+    "from_version": 2,
+    "no_changes": false,
+    "changes": [
+      {
+        "what": "address.full: set regex_extract required to false.",
+        "why": "The 15 errors (3%) were all 'NULL, NULL, NULL', which is a legitimately missing address and not a parse failure. required=false drops them as 'no value' instead of flagging them as errors. That keeps the error counts meaningful. Locality and postcode behave the same way. The holdout confirmed that required=false on a regex_extract yields no value, not a pass-through."
+      },
+      {
+        "what": "entity.legal_name and entity.entity_type: added a negative lookahead to the suffix regex that excludes values containing 'trustee for', 'as trustee', 'ATF', 'T/AS' or 'trading as'.",
+        "why": "The preview shows the Licensee column contains trustee-style values ('The trustee for Merri Merri Creek Trust'). A value such as 'The trustee for Foo Pty Ltd' or 'X ATF Y Pty Ltd' would pass the suffix test and be recorded as a registered name, or as company, for the wrong entity. Under 'a wrong mapping is worse than no mapping' these are now dropped. Some genuine registered names, such as 'Perpetual Trustee Company Limited', are only dropped when they contain the phrases above, so that loss is small. I could not test this on holdout data, so the reviewer should check the dropped-value counts."
+      },
+      {
+        "what": "Updated notes (placeholders, review check, trusts).",
+        "why": "The holdout preview confirmed that non-matching Licensee values (e.g. 'Sean Henderson') produce no value and are not passed through, so that review check is resolved. The placeholder note no longer describes the address.full drops as errors. The trust note now describes the new exclusion."
+      },
+      {
+        "what": "Reviewed the other mappings against the preview and left them unchanged.",
+        "why": "The legal_name and entity_type values are correct company names and 'company'. Trading name, locality, postcode and the NSW/AU constants match their canonical meaning. Start date, Status, Trading Status and Business type remain unmapped because mapping them would be a guess."
+      }
+    ],
+    "passed_before": true
+  },
+  {
+    "from_version": 3,
+    "no_changes": true,
+    "changes": [],
+    "passed_before": true
+  }
+]

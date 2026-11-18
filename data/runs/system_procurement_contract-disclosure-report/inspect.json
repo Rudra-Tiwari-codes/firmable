@@ -1,0 +1,24 @@
+{
+  "what_it_is": "A Queensland Health (System Procurement Branch) contract disclosure register for 2025-26, listing current contracts and standing offer arrangements valued over $10,000. It is a comma-delimited CSV with a single header row and 25 columns, including supplier name, supplier address, supplier ABN, contract value, award date, commence date and finish date.",
+  "record_grain": "one record = one contract or standing offer arrangement disclosure line (one supplier per contract line). Contract reference number is not unique, because the HSQ97217-n and HSQ109250 families share a parent number, so identity needs a composite key or a row hash.",
+  "contains_business_entities": true,
+  "evidence": "The Supplier name column holds registered-style company names (Everlight Radiology Pty Ltd, Becton Dickinson Pty Ltd, Queensland X-Ray Pty Ltd). The Supplier ABN column holds spaced 11-digit ABNs (e.g. '38 120 630 784'), and Supplier address holds full street addresses with state and postcode. The agency (Queensland Health) is also a business entity, but it is the buyer, not the supplier.",
+  "reader": {
+    "format": "csv",
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "header_row": 0
+  },
+  "concerns": [
+    "Some quoted cells contain embedded newlines (e.g. the SOA708 record's Contract description splits across physical lines). The reader must be a proper quote-aware CSV parser, not line-based, or those rows will be split in two.",
+    "Encoding is uncertain. The sample shows U+FFFD replacement characters ('Estimated \ufffdcontract value\ufffd'), so the file is probably Windows-1252 or already damaged upstream. Decoding as cp1252 may not recover the characters, because the damage may be in the source bytes. Check the raw bytes before choosing; utf-8 with replacement is the fallback, and only free-text description fields are affected.",
+    "Many rows have Supplier name = 'Refer to Queensland Government Arrangements Directory' with blank address and ABN. This is a placeholder, not a business name, and must be nulled or dropped, never emitted as a legal_name.",
+    "Supplier name often has a bracketed trading name or brand appended, e.g. 'Premier Medical Imaging Pty Ltd (Qscan)' and 'I-Telerad Pty Ltd (I-Med)'. The legal name and trading name are mixed in one cell and need a careful split.",
+    "Supplier ABN is formatted with spaces and is blank for many rows. It must be checksum-validated, not just length-checked.",
+    "Dates are d/m/yyyy, non-zero-padded and day-first. Contract value is a string with '$' and thousands commas. Several rows repeat the same estimated value across suppliers in a shared arrangement, so it is not a per-supplier amount.",
+    "Supplier address is a single free-text string with state and postcode embedded, so it would need parsing to populate address.state and address.postcode and is not safely split with the available transforms.",
+    "The Agency columns describe the buyer (Queensland Health), the same on every row. They should not be mapped as the supplier entity.",
+    "Contract reference number has typos and inconsistencies (e.g. 'HSQ109250 -4' with a stray space), so it is not a clean key.",
+    "The sample shows only the first rows, so I cannot confirm whether trailing blank rows, totals or footnotes exist further down."
+  ]
+}

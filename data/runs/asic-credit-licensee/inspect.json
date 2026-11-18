@@ -1,0 +1,23 @@
+{
+  "what_it_is": "ASIC Credit Licensee Register snapshot: a comma-delimited CSV listing Australian credit licensees, with licence number, name, start/end dates, status, ABN/ACN, AFSL number, locality/state/postcode, lat/lng, EDR scheme membership, business names and a long free-text licence authorisation description.",
+  "record_grain": "one record = one credit licence (one licensee per row, keyed by CRED_LIC_NUM). Licence number appears to be unique per row in the sampled rows, but uniqueness is not confirmed across the whole file.",
+  "contains_business_entities": true,
+  "evidence": "Header row is on line 1: REGISTER_NAME,CRED_LIC_NUM,CRED_LIC_NAME,CRED_LIC_START_DT,CRED_LIC_END_DT,CRED_LIC_STATUS,CRED_LIC_ABN_ACN,CRED_LIC_AFSL_NUM,CRED_LIC_STATUS_HISTORY,CRED_LIC_LOCALITY,CRED_LIC_STATE,CRED_LIC_PCODE,CRED_LIC_LAT,CRED_LIC_LNG,CRED_LIC_EDRS,CRED_LIC_BN,CRED_LIC_AUTHORISATIONS. Sample rows show registered company names (RELI CAPITAL LTD, GLOBAL MUTUAL FUNDS PTY LTD, PLANNING PARTNERS PTY. LTD.), 11-digit ABNs, dd/mm/yyyy dates, and status code APPR. CRED_LIC_BN holds a business name (e.g. PLANNING PARTNERS) when present. All values are quoted. The sniffed content is delimited text and matches the declared CSV format.",
+  "reader": {
+    "format": "csv",
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "header_row": 0
+  },
+  "concerns": [
+    "CRED_LIC_AUTHORISATIONS is a very long free-text field containing '~' separators (and possibly embedded newlines or commas). It must be read with proper CSV quote handling. The sample was truncated mid-field, so I could not confirm that every row is well-formed.",
+    "CRED_LIC_ABN_ACN is a mixed column that could hold either an 11-digit ABN or a 9-digit ACN. In the samples every value is 11 digits, but the whole file has not been checked. Leading zeros may also have been dropped. Use length routing and checksum validation downstream.",
+    "CRED_LIC_EDRS and possibly CRED_LIC_BN may contain multiple '~'-separated values (e.g. 'AFCA~FOS'), so they may need splitting.",
+    "CRED_LIC_STATUS uses codes such as APPR. Only that one value is seen in the sample, so the full code set is unknown and any status mapping would be a guess until the distinct values are profiled.",
+    "CRED_LIC_STATUS_HISTORY is empty in all sampled rows, so its format is unknown.",
+    "CRED_LIC_END_DT is empty in the sampled current licences. Rows with end dates (ceased or cancelled licences) may exist. The resource is named 'Current', but this has not been verified.",
+    "The snapshot date is 29/10/2026 per the resource description and the Last-Modified header. There is no per-row observed_at column, so the resource's last-modified date will serve as the observation date.",
+    "CRED_LIC_AFSL_NUM equals the licence number in the samples, which suggests it is an AFSL number, not an ACN or ABN. It is not a business identifier we can map.",
+    "The licence is CC BY 3.0 AU. The description says the data is a point-in-time snapshot of the register, updated weekly."
+  ]
+}

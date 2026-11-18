@@ -1,0 +1,54 @@
+[
+  {
+    "from_version": 1,
+    "no_changes": false,
+    "changes": [
+      {
+        "what": "Flattened transform arguments in every transform that had them (null_if, regex_extract, and the new length_in). They now sit at the top level of the transform object, e.g. {\"op\": \"regex_extract\", \"pattern\": ..., \"group\": 1}, instead of under an \"args\" key.",
+        "why": "The engine raised KeyError: 'pattern' on all 101 rows of legal_name, trading_name, address.state and address.postcode. The vocabulary shape is {\"op\": name, ...args}, so I had wrapped the arguments wrongly. The null_if on address.full did not error, but its args were nested too and may have been silently ignored, so I flattened it as well."
+      },
+      {
+        "what": "Changed the ABN transforms to strip, digits_only, length_in [11], abn.",
+        "why": "The ABN error rate was 0.07, above the 0.05 limit. Some of the failures were not checksum failures at all. They were cells that cannot be a single ABN, such as the semicolon-joined multi-ABN cell (33 digits) and 12-digit values like '520 583 909 917'. These now route to 'no value' instead of a parse error, and they are still never emitted. Genuine 11-digit checksum failures (e.g. 86 087 097 717) are still rejected by the abn transform. I did not loosen the checksum, because emitting an invalid ABN is worse than dropping it. The remaining error rate is real source data-entry error."
+      },
+      {
+        "what": "Updated the ABN rationale and notes to say that residual checksum failures are genuine source errors.",
+        "why": "Reviewers should know that any remaining ABN errors come from the data and are not a mapping bug."
+      },
+      {
+        "what": "Checked the preview against meaning. No mappings were added or removed, and confidences are unchanged.",
+        "why": "The address.full values are supplier street addresses, and the ABNs shown are plausible. The preview rows for legal_name, trading_name, state and postcode all errored, so those values still need checking on the next run. Names like 'Kerr Australia' have no company suffix, so I kept legal_name at 0.7 and flagged it."
+      }
+    ],
+    "passed_before": false
+  },
+  {
+    "from_version": 2,
+    "no_changes": false,
+    "changes": [
+      {
+        "what": "Removed the entity.trading_name mapping and moved it to unmapped_canonical_fields.",
+        "why": "It had a 99% error rate because regex_extract with required:true raises an error on every row without '(Trading As ...)'. Only 1 of 101 rows produced a value. Setting required:false is not a safe fix, because I can't confirm what the engine emits on a non-match. If it passed the whole cell through, the legal name would be emitted as a trading name, which is worse than no mapping. Prefer unmapping over a fragile transform."
+      },
+      {
+        "what": "Added a null_if for 'Refer to Queensland Government Arrangements Directory' to the start of the address.state and address.postcode chains.",
+        "why": "The placeholder rows were a direct source of errors (error rate 0.141, above the 0.05 limit). They are now treated as missing, as address.full already does."
+      },
+      {
+        "what": "Set required:false on the regex_extract in address.state and address.postcode.",
+        "why": "Addresses with no state token or no trailing postcode, and multi-address cells, are expected and should give no value rather than a parse error. Examples are '805/220 Collins Street, Melbourne', '77-79 Ricketts Rd Mt Waverley', 'Bowen Hills 4006' and the ';'-separated cells. The regex stays anchored to 'STATE postcode' at the end, so it still never guesses. If a non-match fell through unchanged, the following state/postcode transform would reject it, so no wrong value could be emitted."
+      },
+      {
+        "what": "Updated the notes.",
+        "why": "Recorded that trading_name is dropped, that '(Trading As X)' text is now stripped from legal_name and lost, and that the reviewer should confirm required:false gives no value on a non-match."
+      }
+    ],
+    "passed_before": false
+  },
+  {
+    "from_version": 3,
+    "no_changes": true,
+    "changes": [],
+    "passed_before": true
+  }
+]

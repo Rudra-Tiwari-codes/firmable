@@ -1,0 +1,565 @@
+{
+  "passed": false,
+  "structural_issues": [],
+  "failing": [
+    {
+      "index": 8,
+      "canonical": "address.country",
+      "source": "Country",
+      "raw_non_empty": 439,
+      "records_with_value": 0,
+      "errors": 439,
+      "error_rate": 1.0,
+      "error_examples": [
+        {
+          "raw": "Australia",
+          "error": "value 'AUSTRALIA' not in map"
+        },
+        {
+          "raw": "Singapore",
+          "error": "value 'SINGAPORE' not in map"
+        },
+        {
+          "raw": "Austria",
+          "error": "value 'AUSTRIA' not in map"
+        }
+      ]
+    }
+  ],
+  "empirical": {
+    "holdout_records": 500,
+    "per_mapping": [
+      {
+        "index": 0,
+        "canonical": "entity.abn",
+        "source": "ABN",
+        "raw_non_empty": 488,
+        "records_with_value": 488,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 1,
+        "canonical": "entity.legal_name",
+        "source": "Charity_Legal_Name",
+        "raw_non_empty": 499,
+        "records_with_value": 499,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 2,
+        "canonical": "entity.entity_type",
+        "source": "Charity_Legal_Name",
+        "raw_non_empty": 499,
+        "records_with_value": 500,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 3,
+        "canonical": "entity.website",
+        "source": "Charity_Website",
+        "raw_non_empty": 338,
+        "records_with_value": 338,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 4,
+        "canonical": "address.full",
+        "source": [
+          "Address_Line_1",
+          "Address_Line_2",
+          "Address_Line_3",
+          "Town_City",
+          "State",
+          "Postcode"
+        ],
+        "raw_non_empty": 437,
+        "records_with_value": 437,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 5,
+        "canonical": "address.locality",
+        "source": "Town_City",
+        "raw_non_empty": 430,
+        "records_with_value": 430,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 6,
+        "canonical": "address.state",
+        "source": "State",
+        "raw_non_empty": 434,
+        "records_with_value": 434,
+        "errors": 0,
+        "error_rate": 0.0,
+        "error_examples": []
+      },
+      {
+        "index": 7,
+        "canonical": "address.postcode",
+        "source": "Postcode",
+        "raw_non_empty": 435,
+        "records_with_value": 434,
+        "errors": 1,
+        "error_rate": 0.002,
+        "error_examples": [
+          {
+            "raw": "139658",
+            "error": "postcode '139658' is not 4 digits"
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "canonical": "address.country",
+        "source": "Country",
+        "raw_non_empty": 439,
+        "records_with_value": 0,
+        "errors": 439,
+        "error_rate": 1.0,
+        "error_examples": [
+          {
+            "raw": "Australia",
+            "error": "value 'AUSTRALIA' not in map"
+          },
+          {
+            "raw": "Singapore",
+            "error": "value 'SINGAPORE' not in map"
+          },
+          {
+            "raw": "Austria",
+            "error": "value 'AUSTRIA' not in map"
+          }
+        ]
+      }
+    ],
+    "record_id_duplicates": 0,
+    "preview": [
+      {
+        "entity.abn": {
+          "raw": "74428878865",
+          "values": [
+            "74428878865"
+          ]
+        },
+        "entity.legal_name": {
+          "raw": "Ridges Christian Fellowship",
+          "values": [
+            "Ridges Christian Fellowship"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "Ridges Christian Fellowship",
+          "values": [
+            "unknown"
+          ]
+        },
+        "entity.website": {
+          "raw": "ridgeschristianfellowship.org",
+          "values": [
+            "http://ridgeschristianfellowship.org"
+          ]
+        },
+        "address.full": {
+          "raw": "66 Rifle Range Rd, Wollongbar, NSW, 2477",
+          "values": [
+            "66 Rifle Range Rd, Wollongbar, NSW, 2477"
+          ]
+        },
+        "address.locality": {
+          "raw": "Wollongbar",
+          "values": [
+            "Wollongbar"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2477",
+          "values": [
+            "2477"
+          ]
+        },
+        "address.country": {
+          "raw": "Australia",
+          "error": "value 'AUSTRALIA' not in map"
+        }
+      },
+      {
+        "entity.abn": {
+          "raw": "92686361428",
+          "values": [
+            "92686361428"
+          ]
+        },
+        "entity.legal_name": {
+          "raw": "BHL DALYELLUP TWO APARTMENTS LTD",
+          "values": [
+            "BHL DALYELLUP TWO APARTMENTS LTD"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "BHL DALYELLUP TWO APARTMENTS LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "entity.website": {
+          "raw": "https://www.bethanie.com.au/",
+          "values": [
+            "https://www.bethanie.com.au"
+          ]
+        },
+        "address.full": {
+          "raw": "L 4 1060 Hay St, West Perth, WA, 6005",
+          "values": [
+            "L 4 1060 Hay St, West Perth, WA, 6005"
+          ]
+        },
+        "address.locality": {
+          "raw": "West Perth",
+          "values": [
+            "West Perth"
+          ]
+        },
+        "address.state": {
+          "raw": "WA",
+          "values": [
+            "WA"
+          ]
+        },
+        "address.postcode": {
+          "raw": "6005",
+          "values": [
+            "6005"
+          ]
+        },
+        "address.country": {
+          "raw": "Australia",
+          "error": "value 'AUSTRALIA' not in map"
+        }
+      },
+      {
+        "entity.abn": {
+          "raw": "64685869729",
+          "values": [
+            "64685869729"
+          ]
+        },
+        "entity.legal_name": {
+          "raw": "DISABILITY ENTREPRENEURSHIP AND INNOVATION AUSTRALIA LTD",
+          "values": [
+            "DISABILITY ENTREPRENEURSHIP AND INNOVATION AUSTRALIA LTD"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "DISABILITY ENTREPRENEURSHIP AND INNOVATION AUSTRALIA LTD",
+          "values": [
+            "company"
+          ]
+        },
+        "entity.website": {
+          "raw": "www.deiaustralia.com.au",
+          "values": [
+            "http://www.deiaustralia.com.au"
+          ]
+        },
+        "address.full": {
+          "raw": "U 5 60 Princes Hwy, Yallah, NSW, 2530",
+          "values": [
+            "U 5 60 Princes Hwy, Yallah, NSW, 2530"
+          ]
+        },
+        "address.locality": {
+          "raw": "Yallah",
+          "values": [
+            "Yallah"
+          ]
+        },
+        "address.state": {
+          "raw": "NSW",
+          "values": [
+            "NSW"
+          ]
+        },
+        "address.postcode": {
+          "raw": "2530",
+          "values": [
+            "2530"
+          ]
+        },
+        "address.country": {
+          "raw": "Australia",
+          "error": "value 'AUSTRALIA' not in map"
+        }
+      },
+      {
+        "entity.abn": {
+          "raw": "",
+          "values": []
+        },
+        "entity.legal_name": {
+          "raw": "847219-X8N0N9- PAF",
+          "values": [
+            "847219-X8N0N9- PAF"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "847219-X8N0N9- PAF",
+          "values": [
+            "unknown"
+          ]
+        },
+        "entity.website": {
+          "raw": "",
+          "values": []
+        },
+        "address.full": {
+          "raw": "",
+          "values": []
+        },
+        "address.locality": {
+          "raw": "",
+          "values": []
+        },
+        "address.state": {
+          "raw": "",
+          "values": []
+        },
+        "address.postcode": {
+          "raw": "",
+          "values": []
+        },
+        "address.country": {
+          "raw": "",
+          "values": []
+        }
+      },
+      {
+        "entity.abn": {
+          "raw": "57679353103",
+          "values": [
+            "57679353103"
+          ]
+        },
+        "entity.legal_name": {
+          "raw": "ENCOUNTERCARE LIMITED",
+          "values": [
+            "ENCOUNTERCARE LIMITED"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "ENCOUNTERCARE LIMITED",
+          "values": [
+            "company"
+          ]
+        },
+        "entity.website": {
+          "raw": "www.encountercare.com.au",
+          "values": [
+            "http://www.encountercare.com.au"
+          ]
+        },
+        "address.full": {
+          "raw": "77 Girrawheen Ave, Girrawheen, WA, 6064",
+          "values": [
+            "77 Girrawheen Ave, Girrawheen, WA, 6064"
+          ]
+        },
+        "address.locality": {
+          "raw": "Girrawheen",
+          "values": [
+            "Girrawheen"
+          ]
+        },
+        "address.state": {
+          "raw": "WA",
+          "values": [
+            "WA"
+          ]
+        },
+        "address.postcode": {
+          "raw": "6064",
+          "values": [
+            "6064"
+          ]
+        },
+        "address.country": {
+          "raw": "Australia",
+          "error": "value 'AUSTRALIA' not in map"
+        }
+      },
+      {
+        "entity.abn": {
+          "raw": "39968438512",
+          "values": [
+            "39968438512"
+          ]
+        },
+        "entity.legal_name": {
+          "raw": "CAPES COMMUNITY CHURCH INC.",
+          "values": [
+            "CAPES COMMUNITY CHURCH INC."
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "CAPES COMMUNITY CHURCH INC.",
+          "values": [
+            "incorporated_association"
+          ]
+        },
+        "entity.website": {
+          "raw": "https://capeschurch.org/",
+          "values": [
+            "https://capeschurch.org"
+          ]
+        },
+        "address.full": {
+          "raw": "8/24 Discovery Dr, BIBRA LAKE, WA, 6163",
+          "values": [
+            "8/24 Discovery Dr, BIBRA LAKE, WA, 6163"
+          ]
+        },
+        "address.locality": {
+          "raw": "BIBRA LAKE",
+          "values": [
+            "BIBRA LAKE"
+          ]
+        },
+        "address.state": {
+          "raw": "WA",
+          "values": [
+            "WA"
+          ]
+        },
+        "address.postcode": {
+          "raw": "6163",
+          "values": [
+            "6163"
+          ]
+        },
+        "address.country": {
+          "raw": "Australia",
+          "error": "value 'AUSTRALIA' not in map"
+        }
+      },
+      {
+        "entity.abn": {
+          "raw": "45729508993",
+          "values": [
+            "45729508993"
+          ]
+        },
+        "entity.legal_name": {
+          "raw": "The Theatre Association of South Australia Incorporated",
+          "values": [
+            "The Theatre Association of South Australia Incorporated"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "The Theatre Association of South Australia Incorporated",
+          "values": [
+            "incorporated_association"
+          ]
+        },
+        "entity.website": {
+          "raw": "www.tasaonline.org.au",
+          "values": [
+            "http://www.tasaonline.org.au"
+          ]
+        },
+        "address.full": {
+          "raw": "",
+          "values": []
+        },
+        "address.locality": {
+          "raw": "",
+          "values": []
+        },
+        "address.state": {
+          "raw": "",
+          "values": []
+        },
+        "address.postcode": {
+          "raw": "",
+          "values": []
+        },
+        "address.country": {
+          "raw": "Australia",
+          "error": "value 'AUSTRALIA' not in map"
+        }
+      },
+      {
+        "entity.abn": {
+          "raw": "20871496843",
+          "values": [
+            "20871496843"
+          ]
+        },
+        "entity.legal_name": {
+          "raw": "MOUNT ROUSE AND DISTRICT HISTORICAL SOCIETY INCORPORATED",
+          "values": [
+            "MOUNT ROUSE AND DISTRICT HISTORICAL SOCIETY INCORPORATED"
+          ]
+        },
+        "entity.entity_type": {
+          "raw": "MOUNT ROUSE AND DISTRICT HISTORICAL SOCIETY INCORPORATED",
+          "values": [
+            "incorporated_association"
+          ]
+        },
+        "entity.website": {
+          "raw": "https://mountrousehistoricalsociety.org.au/",
+          "values": [
+            "https://mountrousehistoricalsociety.org.au"
+          ]
+        },
+        "address.full": {
+          "raw": "33 Martin St, Penshurst, VIC, 3289",
+          "values": [
+            "33 Martin St, Penshurst, VIC, 3289"
+          ]
+        },
+        "address.locality": {
+          "raw": "Penshurst",
+          "values": [
+            "Penshurst"
+          ]
+        },
+        "address.state": {
+          "raw": "VIC",
+          "values": [
+            "VIC"
+          ]
+        },
+        "address.postcode": {
+          "raw": "3289",
+          "values": [
+            "3289"
+          ]
+        },
+        "address.country": {
+          "raw": "Australia",
+          "error": "value 'AUSTRALIA' not in map"
+        }
+      }
+    ]
+  },
+  "max_error_rate": 0.05
+}

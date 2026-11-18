@@ -1,0 +1,20 @@
+{
+  "what_it_is": "The ACT Government Notifiable Invoices Register: a Socrata JSON export listing each invoice of $25,000 or more paid by an ACT Territory entity, with the supplier's name and ABN, the reporting entity, a description, and the invoice-received and payment dates and amount.",
+  "record_grain": "one record = one notifiable invoice payment (a supplier paid by a reporting entity on a payment date). Suppliers repeat across rows, so this is not one row per business.",
+  "contains_business_entities": true,
+  "evidence": "The file is a top-level JSON list of 127,437 flat objects. Each has supplier_name (e.g. 'MARSH PTY LTD') and supplier_abn (e.g. '86 004 651 512'), so supplier businesses are identifiable. reporting_entity (e.g. 'ACTIA') names the government payer. The remaining fields are invoice facts: publish_description, date_invoice_received, payment_date and payment_amount. The ':id', ':version', ':created_at' and ':updated_at' fields are Socrata row metadata.",
+  "reader": {
+    "format": "json",
+    "encoding": "utf-8"
+  },
+  "concerns": [
+    "The declared and sniffed formats agree (JSON). The root is already a list, so no records_path is needed, and there are no title rows or multiple sheets.",
+    "The grain is invoices, not entities. The same supplier appears many times, and each row is an observation of a supplier-government relationship, not a registry entry. Deduplicate and resolve downstream, not at ingest.",
+    "supplier_abn is formatted with spaces ('86 004 651 512'). It needs digits_only and the ABN checksum, and some values may be blank or invalid.",
+    "The dates are ISO-like strings with a T00:00:00.000 suffix and no timezone. payment_amount is a string. Neither is a canonical field in the ontology subset.",
+    "The licence is listed as 'Other', which is unclear, so record it as unknown and flag it for review.",
+    "Socrata ':id' is a row identifier that may be stable and usable as source_record_id. Verify it is unique and persists across re-downloads before relying on it.",
+    "The file is 55 MB and has 127k rows, so the extractor should stream it. The description is truncated, so some caveats about date_invoice_received (missing for some entities) may be hidden.",
+    "Records do not say whether a supplier is a company, sole trader or other. entity_type must stay unknown unless it is derived from an unambiguous suffix."
+  ]
+}

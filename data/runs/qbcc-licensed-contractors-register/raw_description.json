@@ -1,0 +1,28 @@
+{
+  "bytes": 36806705,
+  "extension": ".csv",
+  "sniffed": "delimited text",
+  "first_lines": [
+    "id,Licence Number,Licensee Name,ACN,ABN,Licensee Business Address,Licence Type DESC,Licence Type CODE,Financial Category DESC,Financial Category CODE,Licence Grade,Licence Class Type",
+    "1,1140280,GREGORY LAWRENCE TOWNLEY,,81 804 232 956,24 -26 Little Ave Hughenden QLD 4821,Individual,I,Self Certification - Builder/Trade,SC2,Trade Contractor Licence,Carpentry",
+    "2,1140280,GREGORY LAWRENCE TOWNLEY,,81 804 232 956,24 -26 Little Ave Hughenden QLD 4821,Individual,I,Self Certification - Builder/Trade,SC2,Trade Contractor Licence,\"Sheds, Carports and Garages\"",
+    "3,1140280,GREGORY LAWRENCE TOWNLEY,,81 804 232 956,24 -26 Little Ave Hughenden QLD 4821,Individual,I,Self Certification - Builder/Trade,SC2,Trade Contractor Licence,Joinery",
+    "4,1140280,GREGORY LAWRENCE TOWNLEY,,81 804 232 956,24 -26 Little Ave Hughenden QLD 4821,Individual,I,Self Certification - Builder/Trade,SC2,Trade Contractor Licence,Metal Fascias and Gutters",
+    "5,1140280,GREGORY LAWRENCE TOWNLEY,,81 804 232 956,24 -26 Little Ave Hughenden QLD 4821,Individual,I,Self Certification - Builder/Trade,SC2,Trade Contractor Licence,Roof and Wall Cladding",
+    "6,1140280,GREGORY LAWRENCE TOWNLEY,,81 804 232 956,24 -26 Little Ave Hughenden QLD 4821,Individual,I,Self Certification - Builder/Trade,SC2,Trade Contractor Licence,Floor Finishing and Covering (Hard Sector)",
+    "7,1140280,GREGORY LAWRENCE TOWNLEY,,81 804 232 956,24 -26 Little Ave Hughenden QLD 4821,Individual,I,Self Certification - Builder/Trade,SC2,Trade Contractor Licence,Structural Landscaping (Trade)",
+    "8,703580,GEOFFREY PAUL CASE,,,Fy 4  5 Ramly Dr Burleigh Heads QLD 4220,Individual,I,Self Certification - Trade,SCT1,Trade Contractor Licence,Waterproofing",
+    "9,1023400,RAINVALE PTY. LIMITED,010 637 877,78 010 637 877,73 PRINCESS STREET BUNDABERG QLD 4670,Company,C,Category 6,6,Builder Licence,Builder - Open",
+    "10,1023400,RAINVALE PTY. LIMITED,010 637 877,78 010 637 877,73 PRINCESS STREET BUNDABERG QLD 4670,Company,C,Category 6,6,Builder Licence,Builder - Low Rise",
+    "11,704482,DARREN ROSS LOVERIDGE,,,SHOP 3     12 NISSEN STREET PIALBA QLD 4655,Individual,I,No Financials Required,N/A,Nominee Supervisor,Termite Management - Chemical",
+    "12,704482,DARREN ROSS LOVERIDGE,,,SHOP 3     12 NISSEN STREET PIALBA QLD 4655,Individual,I,No Financials Required,N/A,Nominee Supervisor,Termite Management - Physical",
+    "13,1180882,MATTHEW JOHN DAVIN RAMAGE,,,18 STONEY COURT TANNUM SANDS QLD 4680,Individual,I,No Financials Required,N/A,Nominee Supervisor,Gasfitting",
+    "14,746175,WARREN STEWART SMITH,,,59 BRIGGS ROAD RACEVIEW QLD 4305,Individual,I,No Financials Required,N/A,Nominee Supervisor,Mechanical Services - Air-conditioning and Refrigeration (Limited Design)"
+  ],
+  "delimiter_counts": {
+    "','": 11,
+    "'\\t'": 0,
+    "';'": 0,
+    "'|'": 0
+  }
+}

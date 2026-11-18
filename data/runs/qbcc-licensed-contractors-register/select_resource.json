@@ -1,0 +1,5 @@
+{
+  "resource_id": "25608781-b28c-44f8-8545-0ab18d84082f",
+  "fallback_ids": [],
+  "reason": "The only resource is a downloadable CSV with the datastore active, holding the active QBCC licensee register with licence number, licensee name, business address and licence class. Rows are per licence, so a licensee may appear more than once, and some may be individuals rather than businesses. The dataset licence is CC-BY-4.0."
+}

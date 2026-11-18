@@ -1,0 +1,8 @@
+{
+  "resource_id": "35953a01-a9a8-4609-8566-c9fa7de465d3",
+  "fallback_ids": [
+    "3abf1383-c4e5-4c1a-8331-8434b17b6f10",
+    "98c39279-7a9a-40ec-9d30-3d1bbc0aabca"
+  ],
+  "reason": "The current Credit Licence CSV is the plain machine-readable register snapshot (about 6.9 MB, datastore active). Its content matches the TSV and XLSX copies, so the TSV is the first fallback. The National Map CSV is a geo-aligned variant with renamed lat/lon columns, so it is the last fallback. The PDF help file is excluded because it is a data dictionary."
+}

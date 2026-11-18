@@ -1,0 +1,7 @@
+{
+  "resource_id": "8fb32972-24e9-4c95-885e-7140be51be8a",
+  "fallback_ids": [
+    "eb1e6be4-5b13-4feb-b28e-388bf7c26f93"
+  ],
+  "reason": "The CSV of the ACNC charity register has one row per registered charity, is about 15 MB, and is also datastore-active, so it is the simplest machine-readable choice. The XLSX holds the same data, at the same last-modified time, in a heavier format, so it is the fallback. The PDF user notes are excluded because they are documentation, not data."
+}
