@@ -1,0 +1,58 @@
+{
+  "slug": "kzmf-7uhp",
+  "source_id": "datagovau:kzmf-7uhp:5cf1e4ea",
+  "review_status": "approved",
+  "records": 1000,
+  "observations": 2990,
+  "observations_by_field": {
+    "entity.legal_name": 1000,
+    "entity.abn": 990,
+    "entity.entity_type": 1000
+  },
+  "errors_by_field": {
+    "entity.abn": 6
+  },
+  "error_examples": [
+    {
+      "canonical": "entity.abn",
+      "source": "supplier_abn",
+      "raw": "20 607 773 205",
+      "error": "ABN '20607773205' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "supplier_abn",
+      "raw": "91 555 716 819",
+      "error": "ABN '91555716819' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "supplier_abn",
+      "raw": "75 490 121 060",
+      "error": "ABN '75490121060' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "supplier_abn",
+      "raw": "20 607 773 205",
+      "error": "ABN '20607773205' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "supplier_abn",
+      "raw": "76 288 172 749",
+      "error": "ABN '76288172749' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "supplier_abn",
+      "raw": "00 932 137 7",
+      "error": "ABN '009321377' fails checksum"
+    }
+  ],
+  "extractor_version": "engine-0.1.0+config-52abf38919b8",
+  "raw_sha256": "5f1ef1fd815f0817ff2b1e12403707566a13a6b7e09b985f592bd97a35f5f1ca",
+  "approved_raw_sha256": "5f1ef1fd815f0817ff2b1e12403707566a13a6b7e09b985f592bd97a35f5f1ca",
+  "source_drifted": false,
+  "truncated_download": false
+}

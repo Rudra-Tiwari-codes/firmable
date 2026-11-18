@@ -1,0 +1,101 @@
+{
+  "slug": "qbcc-licensed-contractors-register",
+  "source_id": "datagovau:qbcc-licensed-contractors-register:25608781",
+  "review_status": "approved",
+  "records": 1000,
+  "observations": 6703,
+  "observations_by_field": {
+    "entity.legal_name": 1000,
+    "entity.entity_type": 1000,
+    "entity.abn": 511,
+    "address.full": 1000,
+    "address.state": 996,
+    "address.postcode": 999,
+    "address.country": 1000,
+    "entity.acn": 197
+  },
+  "errors_by_field": {
+    "address.state": 4,
+    "address.postcode": 1,
+    "entity.abn": 7
+  },
+  "error_examples": [
+    {
+      "canonical": "address.state",
+      "source": "Licensee Business Address",
+      "raw": "2-8 PERCEVAL COURT NEW BEITH 4124 AUSTRALIA",
+      "error": "'2-8 PERCEVAL COURT NEW BEITH 4124 AUSTRALIA' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Territory|Northern Territory)\\\\s+\\\\d{4}\\\\s*$'"
+    },
+    {
+      "canonical": "address.postcode",
+      "source": "Licensee Business Address",
+      "raw": "2-8 PERCEVAL COURT NEW BEITH 4124 AUSTRALIA",
+      "error": "'2-8 PERCEVAL COURT NEW BEITH 4124 AUSTRALIA' does not match '(\\\\d{4})\\\\s*$'"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "ABN",
+      "raw": "42 277 568 976",
+      "error": "ABN '42 277 568 976' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "ABN",
+      "raw": "42 277 568 976",
+      "error": "ABN '42 277 568 976' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "ABN",
+      "raw": "42 277 568 976",
+      "error": "ABN '42 277 568 976' fails checksum"
+    },
+    {
+      "canonical": "address.state",
+      "source": "Licensee Business Address",
+      "raw": "24 Chappell St Kawana Region 4701",
+      "error": "'24 Chappell St Kawana Region 4701' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Territory|Northern Territory)\\\\s+\\\\d{4}\\\\s*$'"
+    },
+    {
+      "canonical": "address.state",
+      "source": "Licensee Business Address",
+      "raw": "24 Chappell St Kawana Region 4701",
+      "error": "'24 Chappell St Kawana Region 4701' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Territory|Northern Territory)\\\\s+\\\\d{4}\\\\s*$'"
+    },
+    {
+      "canonical": "address.state",
+      "source": "Licensee Business Address",
+      "raw": "159 Torquay Street Kaikoura South Island 7300",
+      "error": "'159 Torquay Street Kaikoura South Island 7300' does not match '(?i)\\\\b(NSW|VIC|QLD|WA|SA|TAS|ACT|NT|New South Wales|Victoria|Queensland|Western Australia|South Australia|Tasmania|Australian Capital Territory|Northern Territory)\\\\s+\\\\d{4}\\\\s*$'"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "ABN",
+      "raw": "57 697 443 023",
+      "error": "ABN '57 697 443 023' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "ABN",
+      "raw": "18 129 065 094",
+      "error": "ABN '18 129 065 094' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "ABN",
+      "raw": "85 610 847 129",
+      "error": "ABN '85 610 847 129' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "ABN",
+      "raw": "85 610 847 129",
+      "error": "ABN '85 610 847 129' fails checksum"
+    }
+  ],
+  "extractor_version": "engine-0.1.0+config-ce419bdbd2c5",
+  "raw_sha256": "6c1292863088dfc7844faff92b3dfac937d1c9e7f32b21af013c356e8dca7af2",
+  "approved_raw_sha256": "6c1292863088dfc7844faff92b3dfac937d1c9e7f32b21af013c356e8dca7af2",
+  "source_drifted": false,
+  "truncated_download": false
+}

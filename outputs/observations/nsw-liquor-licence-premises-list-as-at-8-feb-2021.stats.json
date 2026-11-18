@@ -1,0 +1,24 @@
+{
+  "slug": "nsw-liquor-licence-premises-list-as-at-8-feb-2021",
+  "source_id": "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc",
+  "review_status": "approved",
+  "records": 1000,
+  "observations": 7856,
+  "observations_by_field": {
+    "entity.legal_name": 928,
+    "entity.entity_type": 928,
+    "entity.trading_name": 1000,
+    "address.full": 1000,
+    "address.locality": 1000,
+    "address.postcode": 1000,
+    "address.state": 1000,
+    "address.country": 1000
+  },
+  "errors_by_field": {},
+  "error_examples": [],
+  "extractor_version": "engine-0.1.0+config-8b5a7f1b322a",
+  "raw_sha256": "efc86dc4fb1a6a1070e3c0fc7544bdca4cbff67a068bc56d04d0164d6a17e6e0",
+  "approved_raw_sha256": "efc86dc4fb1a6a1070e3c0fc7544bdca4cbff67a068bc56d04d0164d6a17e6e0",
+  "source_drifted": false,
+  "truncated_download": false
+}

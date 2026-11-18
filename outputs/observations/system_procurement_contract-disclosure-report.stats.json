@@ -1,0 +1,48 @@
+{
+  "slug": "system_procurement_contract-disclosure-report",
+  "source_id": "datagovau:system_procurement_contract-disclosure-report:09335d0c",
+  "review_status": "approved",
+  "records": 126,
+  "observations": 499,
+  "observations_by_field": {
+    "entity.legal_name": 113,
+    "address.full": 102,
+    "address.state": 92,
+    "address.postcode": 92,
+    "entity.abn": 100
+  },
+  "errors_by_field": {
+    "entity.abn": 4
+  },
+  "error_examples": [
+    {
+      "canonical": "entity.abn",
+      "source": "Supplier ABN",
+      "raw": "34 161 464 441",
+      "error": "ABN '34161464441' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "Supplier ABN",
+      "raw": "86 087 097 717",
+      "error": "ABN '86087097717' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "Supplier ABN",
+      "raw": "82 003 022 673",
+      "error": "ABN '82003022673' fails checksum"
+    },
+    {
+      "canonical": "entity.abn",
+      "source": "Supplier ABN",
+      "raw": "96 126 888 259",
+      "error": "ABN '96126888259' fails checksum"
+    }
+  ],
+  "extractor_version": "engine-0.1.0+config-080e758c3fc7",
+  "raw_sha256": "6b0b17644beaa840514166d05d7c4370cc5689c5f4c6c21a90af692da6875d7b",
+  "approved_raw_sha256": "6b0b17644beaa840514166d05d7c4370cc5689c5f4c6c21a90af692da6875d7b",
+  "source_drifted": false,
+  "truncated_download": false
+}

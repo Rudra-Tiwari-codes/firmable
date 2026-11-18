@@ -1,0 +1,40 @@
+{
+  "slug": "acnc-register",
+  "source_id": "datagovau:acnc-register:8fb32972",
+  "review_status": "approved",
+  "records": 1000,
+  "observations": 8005,
+  "observations_by_field": {
+    "entity.abn": 981,
+    "entity.legal_name": 999,
+    "entity.entity_type": 1000,
+    "address.full": 883,
+    "address.locality": 877,
+    "address.state": 877,
+    "address.postcode": 877,
+    "address.country": 866,
+    "entity.website": 645
+  },
+  "errors_by_field": {
+    "entity.website": 2
+  },
+  "error_examples": [
+    {
+      "canonical": "entity.website",
+      "source": "Charity_Website",
+      "raw": "Instagram",
+      "error": "'Instagram' is not a URL"
+    },
+    {
+      "canonical": "entity.website",
+      "source": "Charity_Website",
+      "raw": "https://https//avocatrust.asn.au",
+      "error": "'https://https//avocatrust.asn.au' is not a URL"
+    }
+  ],
+  "extractor_version": "engine-0.1.0+config-41c253d033b9",
+  "raw_sha256": "1ff76b510e8155d7ab35df4b45b8791315c1f0a15f43f9c3057dff16646f816d",
+  "approved_raw_sha256": "1ff76b510e8155d7ab35df4b45b8791315c1f0a15f43f9c3057dff16646f816d",
+  "source_drifted": false,
+  "truncated_download": false
+}
