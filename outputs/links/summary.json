@@ -1,0 +1,145 @@
+{
+  "matcher_version": "rules-0.2.0",
+  "blocking_version": "blocks-0.1.0",
+  "threshold": 0.8,
+  "loose_threshold": 0.6,
+  "created_at": "2026-11-06T03:49:03+00:00",
+  "sources": [
+    {
+      "slug": "acnc-register",
+      "source_id": "datagovau:acnc-register:8fb32972",
+      "records": 66541,
+      "source_entities": 66327,
+      "review_status": "approved",
+      "approved": true,
+      "extractor_version": "engine-0.1.0+config-41c253d033b9",
+      "source_reliability": 0.9,
+      "raw_sha256": "1ff76b510e8155d7ab35df4b45b8791315c1f0a15f43f9c3057dff16646f816d",
+      "approved_raw_sha256": "1ff76b510e8155d7ab35df4b45b8791315c1f0a15f43f9c3057dff16646f816d",
+      "source_drifted": false,
+      "truncated_download": false
+    },
+    {
+      "slug": "asic-credit-licensee",
+      "source_id": "datagovau:asic-credit-licensee:35953a01",
+      "records": 4313,
+      "source_entities": 4313,
+      "review_status": "approved",
+      "approved": true,
+      "extractor_version": "engine-0.1.0+config-4eae363ed2ff",
+      "source_reliability": 0.9,
+      "raw_sha256": "eb5ff4e62da65bb117ab554d41e6b1ef397111014b60f780ddb776580904301f",
+      "approved_raw_sha256": "eb5ff4e62da65bb117ab554d41e6b1ef397111014b60f780ddb776580904301f",
+      "source_drifted": false,
+      "truncated_download": false
+    },
+    {
+      "slug": "kzmf-7uhp",
+      "source_id": "datagovau:kzmf-7uhp:5cf1e4ea",
+      "records": 127437,
+      "source_entities": 5398,
+      "review_status": "approved",
+      "approved": true,
+      "extractor_version": "engine-0.1.0+config-52abf38919b8",
+      "source_reliability": 0.8,
+      "raw_sha256": "5f1ef1fd815f0817ff2b1e12403707566a13a6b7e09b985f592bd97a35f5f1ca",
+      "approved_raw_sha256": "5f1ef1fd815f0817ff2b1e12403707566a13a6b7e09b985f592bd97a35f5f1ca",
+      "source_drifted": false,
+      "truncated_download": false
+    },
+    {
+      "slug": "nsw-liquor-licence-premises-list-as-at-8-feb-2021",
+      "source_id": "datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc",
+      "records": 18747,
+      "source_entities": 17949,
+      "review_status": "approved",
+      "approved": true,
+      "extractor_version": "engine-0.1.0+config-8b5a7f1b322a",
+      "source_reliability": 0.8,
+      "raw_sha256": "efc86dc4fb1a6a1070e3c0fc7544bdca4cbff67a068bc56d04d0164d6a17e6e0",
+      "approved_raw_sha256": "efc86dc4fb1a6a1070e3c0fc7544bdca4cbff67a068bc56d04d0164d6a17e6e0",
+      "source_drifted": false,
+      "truncated_download": false
+    },
+    {
+      "slug": "qbcc-licensed-contractors-register",
+      "source_id": "datagovau:qbcc-licensed-contractors-register:25608781",
+      "records": 206226,
+      "source_entities": 110121,
+      "review_status": "approved",
+      "approved": true,
+      "extractor_version": "engine-0.1.0+config-ce419bdbd2c5",
+      "source_reliability": 0.85,
+      "raw_sha256": "6c1292863088dfc7844faff92b3dfac937d1c9e7f32b21af013c356e8dca7af2",
+      "approved_raw_sha256": "6c1292863088dfc7844faff92b3dfac937d1c9e7f32b21af013c356e8dca7af2",
+      "source_drifted": false,
+      "truncated_download": false
+    },
+    {
+      "slug": "system_procurement_contract-disclosure-report",
+      "source_id": "datagovau:system_procurement_contract-disclosure-report:09335d0c",
+      "records": 126,
+      "source_entities": 82,
+      "review_status": "approved",
+      "approved": true,
+      "extractor_version": "engine-0.1.0+config-080e758c3fc7",
+      "source_reliability": 0.8,
+      "raw_sha256": "6b0b17644beaa840514166d05d7c4370cc5689c5f4c6c21a90af692da6875d7b",
+      "approved_raw_sha256": "6b0b17644beaa840514166d05d7c4370cc5689c5f4c6c21a90af692da6875d7b",
+      "source_drifted": false,
+      "truncated_download": false
+    }
+  ],
+  "all_configs_approved": true,
+  "any_source_drifted": false,
+  "source_entities": 204190,
+  "candidate_pairs": 946,
+  "candidate_pairs_by_tier": {
+    "abn_exact": 551,
+    "name": 395
+  },
+  "accepted_links": 656,
+  "accepted_by_tier": {
+    "abn_exact": 532,
+    "name": 124
+  },
+  "accepted_by_confidence": {
+    "0.82": 73,
+    "0.85": 74,
+    "0.9": 51,
+    "0.99": 458
+  },
+  "links_at_loose_threshold": 705,
+  "refused_merges_conflicting_identifier": 0,
+  "entities": 654,
+  "entities_by_n_sources": {
+    "3": 1,
+    "2": 653
+  },
+  "links_by_source_pair": {
+    "datagovau:acnc-register:8fb32972 x datagovau:kzmf-7uhp:5cf1e4ea": 386,
+    "datagovau:acnc-register:8fb32972 x datagovau:qbcc-licensed-contractors-register:25608781": 14,
+    "datagovau:kzmf-7uhp:5cf1e4ea x datagovau:qbcc-licensed-contractors-register:25608781": 83,
+    "datagovau:kzmf-7uhp:5cf1e4ea x datagovau:system_procurement_contract-disclosure-report:09335d0c": 33,
+    "datagovau:asic-credit-licensee:35953a01 x datagovau:kzmf-7uhp:5cf1e4ea": 12,
+    "datagovau:acnc-register:8fb32972 x datagovau:asic-credit-licensee:35953a01": 1,
+    "datagovau:qbcc-licensed-contractors-register:25608781 x datagovau:system_procurement_contract-disclosure-report:09335d0c": 2,
+    "datagovau:asic-credit-licensee:35953a01 x datagovau:qbcc-licensed-contractors-register:25608781": 1,
+    "datagovau:acnc-register:8fb32972 x datagovau:nsw-liquor-licence-premises-list-as-at-8-feb-2021:530d86bc": 124
+  },
+  "individual_records_excluded_from_employer_entities": 1155,
+  "name_blocks_truncated": [],
+  "unlinked_queue": 380,
+  "unlinked_by_reason": {
+    "name matches but location does not corroborate it": 162,
+    "same or similar name but different valid ABNs": 105,
+    "looks like a person's name": 54,
+    "ABN matches but one side names a person and the other an organisation (e.g. an individual licensed under an employer's ABN)": 29,
+    "common name": 10,
+    "matched on a premises or trading name, but the two legal names differ": 7,
+    "ABN matches, but no name agrees and one side's ABN carries unrelated names in its own source": 6,
+    "the matched name is a minor name on an identifier that carries unrelated names, so it may not belong to that identifier": 5,
+    "same name but different legal forms (e.g. Limited vs Incorporated)": 2
+  },
+  "relationships": 253
+}
